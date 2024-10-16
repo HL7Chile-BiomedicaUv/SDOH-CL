@@ -27,6 +27,7 @@ publisher:
 dependencies:
   hl7.fhir.cl.clcore: 1.9.1
   hl7.fhir.us.sdoh-clinicalcare: 2.2.0
+  hl7.fhir.uv.sdc: 3.0.0
 #   hl7.fhir.us.core: 3.1.0
 #   hl7.fhir.us.mcode:
 #     id: mcode
