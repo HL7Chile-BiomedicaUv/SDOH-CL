@@ -10,7 +10,7 @@ Alias: $sdc-questionnaireresponse = http://hl7.org/fhir/uv/sdc/StructureDefiniti
 Profile: SDOHCCConditionCL
 Parent: $CoreDiagnosticoCL
 Id: SDOHCC-ConditionCL
-Title: "Condición de SDOHCC"
+Title: "Condición SDOHCC"
 Description: "Perfil de las condiciones de los Determinantes Sociales de la Salud (SDOH)."
 * ^version = "0.1.0"
 * ^publisher = "HL7 Chile"

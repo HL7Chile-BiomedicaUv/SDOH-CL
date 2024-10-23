@@ -8,7 +8,7 @@ Context: SDOHCCConditionCL
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #draft
 * ^extension[=].valueCode.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
-* ^extension[=].valueCode.extension.valueCanonical = https://hl7chile.cl/fhir/ig/gravitycl/ImplementationGuide/GravityCL
+* ^extension[=].valueCode.extension.valueCanonical = "http://hl7.org/fhir/us/sdoh-clinicalcare/ImplementationGuide/hl7.fhir.us.sdoh-clinicalcare" // PREGUNTAR SI SE DEBE MODIFICAR LA CANONICA
 * ^contact.telecom[0].system = #url
 * ^contact.telecom[=].value = "http://hl7chile.cl"
 * ^contact.telecom[+].system = #email
