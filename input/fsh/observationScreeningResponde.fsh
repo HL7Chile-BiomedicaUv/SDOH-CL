@@ -7,10 +7,6 @@ Alias: $CoreOrganizacionCl = https://hl7chile.cl/fhir/ig/clcore/StructureDefinit
 Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
 Alias: $CoreObservacionCL = https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CoreObservacionCL
 Alias: $sdc-questionnaireresponse = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse
-Alias: $ValueSetObservationStatus = http://hl7.org/fhir/ValueSet/observation-status|4.0.1
-
-// CAMBIAR CUANDO LA GUÍA ESTE COMPLETA
-Alias: $SDOHCC-ValueSetSDOHCategory = http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetSDOHCategory
 
 Profile: SDOHCCObservationScreeninigResponseCL
 Parent: $CoreObservacionCL
@@ -36,8 +32,8 @@ Description: "Perfil para observaciones que representan pares de preguntas y res
 * . ^definition = "Para observaciones derivadas de encuestas(cuestionarios de detección de SDOH.)"
 * . ^comment = "Se utiliza para observaciones simples,como el estado educativo,observaciones sobre la inseguridad alimentaria,etc.\r\nEste perfil permite la representación de observaciones de los Determinantes Sociales de la Salud (SDOH) basadas en las respuestas a cuestionarios de detección de SDOH (que también pueden ser representadas utilizando SDC QuestionnaireResponse).\r\n\r\nMuchos de los perfiles de SDOHCC hacen referencia entre sí.Un flujo soportado por esta IG es que las respuestas a los cuestionarios resultran en observaciones que puedne ser usadas como evidencia para condiciones que pueden llevar a metas, solicitudes de servicios y procedimientos.Sin embargo, también son posibles caminos alternativos."
 * status MS
-* status from $ValueSetObservationStatus (required)
-* status ^short = "registered|preliminary|final|amended|corrected|cancelled|entered-in-error|unknown"
+* status from SDOHCCValueSetObservationStatusCL (required)
+* status ^short = "registered|preliminary|final|amended|corrected|cancelled|entered-in-error|unknown" //MODIFICAR PARAMETROS
 * status ^definition = "Estado de la observación"
 * status ^requirements = "Limitado adicionalmente a valores que son relevantes para los SDOH."
 * category ^slicing.discriminator.type = #value
@@ -52,7 +48,7 @@ Description: "Perfil para observaciones que representan pares de preguntas y res
 * category[SocialHistory] ^requirements = "Se utiliza para filtrar observaciones de la historia social."
 * category[Survey] = $observation-category#survey
 * category[Survey] ^requirements = "Se utiliza para filtrar observaciones derivadas de una encuesta/cuestionario."
-* category[SDOH] from $SDOHCC-ValueSetSDOHCategory (required)
+* category[SDOH] from SDOHCCValueSetSDOHCategoryCL (required)
 * category[SDOH] ^short = "Por ejemplo, inseguridad alimentaria | inseguridad en el transporte."
 * category[SDOH] ^definition = "Una categoría de SDOH asignada a la observación."
 * category[SDOH] ^requirements = "Los códigos de este value set pueden usarse para asignar una o más categorías de SDOH (por ejemplo,inseguridad alimentaria, inseguridad en el transporte,etc.) a una observación.Se recomienda que se utilicen los códigos de categorías de SDOH para facilitar la búsqueda de observaciones de SDOH."

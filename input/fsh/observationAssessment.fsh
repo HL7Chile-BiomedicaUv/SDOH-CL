@@ -6,10 +6,6 @@ Alias: $CoreRolClinicoCl = https://hl7chile.cl/fhir/ig/clcore/StructureDefinitio
 Alias: $CoreOrganizacionCl = https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CoreOrganizacionCl
 Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
 
-//CAMBIAR CUANDO YA ESTEN CREADOS PARA LA GUÍA
-Alias: $SDOHCC-ValueSetSDOHCategory = http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetSDOHCategory
-Alias: $SDOHCC-ValueSetLOINCSNOMEDCT = http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetLOINCSNOMEDCT
-
 Profile: SDOHCCObservacionAssessmentCL
 Parent: ObservacionCL
 Id: SDOHCC-ObservationAssessmentCL
@@ -42,13 +38,13 @@ Description: "Perfil para observaciones de Determinantes Sociales de la Salud (S
     SDOH 0..* MS
 * category[SocialHistory] = $observation-category#social-history
 * category[SocialHistory] ^requirements = "Utilizado para filtrar que se trata de una observación de historia social."
-* category[SDOH] from $SDOHCC-ValueSetSDOHCategory (required) // CAMBIAR CUANDO SE HAGA VALUESET DE LA GUÍA
+* category[SDOH] from SDOHCCValueSetSDOHCategoryCL (required) 
 * category[SDOH] ^short = "Por ejemplo, inseguridad alimentaria | inseguridad en el transporte."
 * category[SDOH] ^definition = "Una categoría de SDOH asignada a la observación."
 * category[SDOH] ^requirements = "Los códigos de este conjunto de valores pueden usarse para asignar una o más categorías de SDOH (por ejemplo, inseguridad alimentaria, inseguridad en el transporte, etc.) a una observación. Se recomienda que se utilicen códigos de categoría de SDOH para facilitar la búsqueda de observaciones de SDOH."
 * category[SDOH] ^binding.description = " Códigos para categorías de SDOH de alto nivel."
 * code MS
-* code from $SDOHCC-ValueSetLOINCSNOMEDCT (preferred)  //CAMBIAR CUANDO SE HAGAN LOS VALUESET DE LA GUÍA
+* code from SDOHCCValueSetLOINCSNOMEDCTCL (preferred)  //CAMBIAR CUANDO SE HAGAN LOS VALUESET DE LA GUÍA
 * code ^comment = "*Todos los pares de* code-value y, si están presentes, los pares de component.code-component.value deben tenerse en cuenta para comprender correctamente el significado de la observación.\r\n\r\nA medida que Gravity Project continúa refinnado el contenido para las categorías de SDOH (por ejempli, alimentos, viviendas, transporte, etc.), la fuerza de vinculación de este conjunto de valores puede cambiar y puede ser refinada a códigos (incluyendo LOINC y SNOMED) que corresponden a las categorías de SDOH."
 * subject 1.. MS
 * subject only Reference(Group or $CorePacienteCl)
