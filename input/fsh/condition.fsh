@@ -7,12 +7,6 @@ Alias: $CorePrestadorCl = https://hl7chile.cl/fhir/ig/clcore/StructureDefinition
 Alias: $CoreRolClinicoCl = https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CoreRolClinicoCl
 Alias: $sdc-questionnaireresponse = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse
 
-//CAMBIAR CUANDO YA ESTEN CREADOS PARA LA GUÍA
-Alias: $SDOHCC-ValueSetSDOHCategory = http://hl7.org/fhir/us/sdoh-clinicalcare/ValueSet/SDOHCC-ValueSetSDOHCategory
-Alias: $SDOHCC-ObservationScreeningResponse = http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse
-Alias: $SDOHCC-ObservationAssessment = http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment
-
-
 Profile: SDOHCCConditionCL
 Parent: $CoreDiagnosticoCL
 Id: SDOHCC-ConditionCL
@@ -43,7 +37,7 @@ Description: "Perfil de las condiciones de los Determinantes Sociales de la Salu
 * category ^slicing.rules = #open
 * category ^slicing.description = ""
 * category contains SDOH 0..*
-* category[SDOH] from $SDOHCC-ValueSetSDOHCategory (required)
+* category[SDOH] from SDOHCCValueSetSDOHCategoryCL (required)
 * category[SDOH] ^short = "Por ejemplo, inseguridad alimentaria | inseguridad en el transporte."
 * category[SDOH] ^definition = "Una categoría de SDOH asignada a la condición."
 * category[SDOH] ^requirements = "Los códigos de este conjunto de valores se pueden usar para asignar una o más categorías de SDOH (por ejemplo,inseguridad alimentaria, inseguridad en el transporte,etc.)a una condición.Se recomienda utilizar los códigos de categorías de SDOH para facilitar la búsqueda de condiciones de SDOH."
@@ -77,7 +71,7 @@ Description: "Perfil de las condiciones de los Determinantes Sociales de la Salu
 * evidence.detail ^slicing.rules = #open
 * evidence.detail ^comment = "Las referencias DEBEN ser a un recurso FHIR real y DEBEN ser resolubles (permitiendo el control de acceso, la indisponibilidad temporal,etc.).La resolución puede ser mediante la recuperación desde la URL o, cuando sea aplicable por tipo de recurso,tratando una referencia absoluta como una URL canónica y buscándola en un registro/repositorio local.\r\n\r\nAdemás,consulte el comentario para Condition.evidence.code."
 * evidence.detail contains SupportedDetail 0..* MS
-* evidence.detail[SupportedDetail] only Reference($SDOHCC-ObservationScreeningResponse or SDOHCCConditionCL or $SDOHCC-ObservationAssessment or $sdc-questionnaireresponse)
+* evidence.detail[SupportedDetail] only Reference(SDOHCCObservationScreeninigResponseCL or SDOHCCConditionCL or SDOHCCObservacionAssessmentCL or $sdc-questionnaireresponse)
 * evidence.detail[SupportedDetail] ^definition = "Links a otra información relevante."
 * evidence.detail[SupportedDetail] ^requirements = "Cuando una condición se basa en una o más observaciones de SDOH generadas a partir de respuestas a cuestionarios, Condition.evidence.detail debe referenciar instancias que cumplan con la Observación de Detección SDOHCC o la Respuesta al Cuestionario SDC.Sin embargo,también son posibles referencias a otros tipos de instancias."
 
