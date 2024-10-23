@@ -14,7 +14,7 @@ Profile: SDOHCCObservacionAssessmentCL
 Parent: ObservacionCL
 Id: SDOHCC-ObservationAssessmentCL
 Title: "Evaluación de Observación de SDOHCC"
-Description: "Perfil para observaciones de Determinantes Sociales de la Salud (SDOH) que implican evaluación (por ejemplo, por parte de un proveedor, pagador, etc.) en lugar de ser derivadas únicamente de encuestas de detección (como ocurre con la Observación de Respuesta de la detección SDOHCC)."
+Description: "Perfil para observaciones de Determinantes Sociales de la Salud (SDOH) que implican evaluación (por ejemplo, por parte de un proveedor, pagador, etc.) en lugar de ser derivadas únicamente de encuestas de detección (como ocurre con la Respuesta de Detección de Observación de SDOHCC)."
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension[=].valueCode = #pc
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
