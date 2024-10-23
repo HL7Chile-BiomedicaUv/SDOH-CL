@@ -15,7 +15,7 @@ Alias: $SDOHCC-ValueSetSDOHCategory = http://hl7.org/fhir/us/sdoh-clinicalcare/V
 Profile: SDOHCCObservationScreeninigResponseCL
 Parent: $CoreObservacionCL
 Id: SDOHCC-ObservationScreeningResponseCL
-Title: "Respuesta de Evaluación de Observación  de SDOHCC"
+Title: "Respuesta de Detección de Observación de SDOHCC "
 Description: "Perfil para observaciones que representan pares de preguntas y respuestas de los instrumentos de evaluación de Determinantes Sociales de la Salud (SDOH)."
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension[=].valueCode = #pc

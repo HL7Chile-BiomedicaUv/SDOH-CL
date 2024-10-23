@@ -4,7 +4,7 @@
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: GravityCL
-canonical: http://example.org
+canonical: https://hl7chile.cl/fhir/ig/gravitycl
 name: GravityCL
 # title: Example Title
 # description: Example Implementation Guide for getting started with SUSHI
@@ -16,8 +16,8 @@ releaseLabel: ci-build
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 publisher:
-  name: Catalina
-  url: http://example.org/example-publisher
+  name: HL7 Chile
+  url: http://hl7chile.cl
   # email: test@example.org
 
 # The dependencies property corresponds to IG.dependsOn. The key is the

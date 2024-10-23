@@ -12,6 +12,7 @@ Alias: $SDOHCC-ValueSetSDOHCategory = http://hl7.org/fhir/us/sdoh-clinicalcare/V
 Alias: $SDOHCC-ObservationScreeningResponse = http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationScreeningResponse
 Alias: $SDOHCC-ObservationAssessment = http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ObservationAssessment
 
+
 Profile: SDOHCCConditionCL
 Parent: $CoreDiagnosticoCL
 Id: SDOHCC-ConditionCL
@@ -47,12 +48,11 @@ Description: "Perfil de las condiciones de los Determinantes Sociales de la Salu
 * category[SDOH] ^definition = "Una categoría de SDOH asignada a la condición."
 * category[SDOH] ^requirements = "Los códigos de este conjunto de valores se pueden usar para asignar una o más categorías de SDOH (por ejemplo,inseguridad alimentaria, inseguridad en el transporte,etc.)a una condición.Se recomienda utilizar los códigos de categorías de SDOH para facilitar la búsqueda de condiciones de SDOH."
 * category[SDOH] ^binding.description = "Códigos para categorías de SDOH de alto nivel. "
+* code 1..1 MS
 * code from $VSDiagnosticosSCT (required)
 * code ^requirements = "El código es obligatorio y debe seleccionarse del value set enlazado."
 * code ^binding.description = "Value set para describir el problema real experimentado por el paciente."
 * bodySite ..0
-* subject ^definition = "Indica el paciente con el que está asociada la ficha de la condición."
-* subject ^requirements = "El perfil de condicón de CL Core restringe el sujeto al paciente."
 * onset[x] only dateTime or Period
 * onset[x] MS
 * onset[x] ^short = "Fecha y hora o período estimados."
