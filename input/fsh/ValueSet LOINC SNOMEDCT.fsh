@@ -9,7 +9,7 @@ Description: "Este value set contiene todo LOINC y SNOMED CT."
 * ^extension[=].valueCode.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
 * ^extension[=].valueCode.extension.valueCanonical = "http://example.org/ImplementationGuide/GravityCL" //CAMBIAR
 * ^status = #active
-* ^experimental = true
+* ^experimental = false
 * ^contact.name = "HL7 Chile"
 * ^contact.telecom[0].system = #url
 * ^contact.telecom[=].value = "http://hl7chile.cl"
