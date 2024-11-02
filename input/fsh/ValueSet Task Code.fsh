@@ -10,7 +10,8 @@ Description: "Códigos para la acción general que implica una tarea."
 * ^extension[=].valueCode = #draft
 * ^extension[=].valueCode.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
 * ^extension[=].valueCode.extension.valueCanonical = "http://example.org/ImplementationGuide/GravityCL" //CAMBIAR
-* ^experimental = false
+* ^status = #active
+* ^experimental = true
 * ^contact.name = "HL7 Chile"
 * ^contact.telecom[0].system = #url
 * ^contact.telecom[=].value = "http://hl7chile.cl"

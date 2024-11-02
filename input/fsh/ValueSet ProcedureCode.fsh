@@ -8,7 +8,8 @@ Description: "Conceptos de sistema de códigos alfanuméricos MAI que se pueden 
 * ^extension[=].valueCode = #draft
 * ^extension[=].valueCode.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
 * ^extension[=].valueCode.extension.valueCanonical = "http://example.org/ImplementationGuide/GravityCL" //CAMBIAR
-* ^experimental = false
+* ^status = #active
+* ^experimental = true
 * ^contact.name = "HL7 Chile"
 * ^contact.telecom[0].system = #url
 * ^contact.telecom[=].value = "http://hl7chile.cl"
@@ -763,7 +764,7 @@ Description: "Conceptos de sistema de códigos alfanuméricos MAI que se pueden 
 * CodigoMAIFONASSA#077704010430000500 "RADIOGRAFÍA DE COLUMNA CERVICAL (FRONTAL, LATERAL Y OBLICUAS)"
 * CodigoMAIFONASSA#077804010440000500 "RADIOGRAFÍA DE COLUMNA CERVICAL  FLEXIÓN Y  EXTENSIÓN (DINÁMICAS)"
 * CodigoMAIFONASSA#077904010450000500 "RADIOGRAFÍA DE COLUMNA DORSAL O DORSOLUMBAR LOCALIZADA, PARRILLA COSTAL  (FRONTAL Y LATERAL)"
-* CodigoMAIFONASSA#078004010460000500 "RADIOGRAFÍA COLUMNA LUMBAR O LUMBOSACRA ( FRONTAL, LATERAL Y FOCALIZADA EN EL 5° ESPACIO)  "
+* CodigoMAIFONASSA#078004010460000500 "RADIOGRAFÍA COLUMNA LUMBAR O LUMBOSACRA (FRONTAL, LATERAL Y FOCALIZADA EN EL 5° ESPACIO)"
 * CodigoMAIFONASSA#078104010470000500 "RADIOGRAFÍA COLUMNA LUMBAR O LUMBOSACRA  FLEXIÓN Y  EXTENSIÓN (DINÁMICAS)"
 * CodigoMAIFONASSA#078204010480000500 "RADIOGRAFÍA COLUMNA LUMBAR O LUMBOSACRA, OBLICUAS ADICIONALES"
 * CodigoMAIFONASSA#078304010490000500 "RADIOGRAFÍA DE COLUMNA TOTAL, PANORÁMICA CON FOLIO GRADUADO  FRONTAL O LATERAL"
