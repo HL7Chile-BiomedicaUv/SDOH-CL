@@ -36,7 +36,7 @@ Description: "Perfil para observaciones de Determinantes Sociales de la Salud (S
 * category[SDOH] ^short = "Por ejemplo, inseguridad alimentaria | inseguridad en el transporte."
 * category[SDOH] ^definition = "Una categoría de SDOH asignada a la observación."
 * category[SDOH] ^requirements = "Los códigos de este conjunto de valores pueden usarse para asignar una o más categorías de SDOH (por ejemplo, inseguridad alimentaria, inseguridad en el transporte, etc.) a una observación. Se recomienda que se utilicen códigos de categoría de SDOH para facilitar la búsqueda de observaciones de SDOH."
-* category[SDOH] ^binding.description = " Códigos para categorías de SDOH de alto nivel."
+* category[SDOH] ^binding.description = "Códigos para categorías de SDOH de alto nivel."
 * code MS
 * code from SDOHCCValueSetLOINCSNOMEDCTCL (preferred)  
 * code ^comment = "*Todos los pares de* code-value y, si están presentes, los pares de component.code-component.value deben tenerse en cuenta para comprender correctamente el significado de la observación.\r\n\r\nA medida que Gravity Project continúa refinnado el contenido para las categorías de SDOH (por ejempli, alimentos, viviendas, transporte, etc.), la fuerza de vinculación de este conjunto de valores puede cambiar y puede ser refinada a códigos (incluyendo LOINC y SNOMED) que corresponden a las categorías de SDOH."
