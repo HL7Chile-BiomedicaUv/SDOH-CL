@@ -56,7 +56,7 @@ Description: "Un sistema de códigos local definido dentro del contexto de la g�
 * #personal-characteristics-questionnaire "Cuestionario de características personales" "Un tipo de cuestionarios que obtiene información sobre las características personales de un individuo (por ejemplo, orientación sexualmidentidad de género,etc.)."
 * #contact-entity "Entidad de contacto" "Identifica una entidad (por ejemplo, un profesiona,organización o servicio) que necesita ser contactada."
 * #general-information-response "Respuesta de información general" "Cuando Task.code es \"información general\",\"respuesta de información general\" para Task.output.type indica que se puede proporcionar una respuesta en texto libre." 
-* #questionnaire-category " Categoría de cuestionario" "Identifica la categoría de cuestionario que debe completarse."
+* #questionnaire-category "Categoría de cuestionario" "Identifica la categoría de cuestionario que debe completarse."
 * #questionnaire-pdf "Cuestionario PDF" "Identifica el PDF del cuestionario que debe completarse."
 * #questionnaire-url "Cuestionario URL" "Identifica la URL donde se puede acceder a un cuestionario que debe completarse."
 * #questionnaire-pdf-completed "Cuestionario Completado PDF" "Indica el PDF del cuestionario completado."

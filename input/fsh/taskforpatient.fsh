@@ -27,7 +27,7 @@ Description: "Perfil para las tareas relacionadas con SDOH que deben ser realiza
 * partOf ^slicing.discriminator.path = "resolve()"
 * partOf ^slicing.rules = #open
 * partOf contains SupportedPartOf 0..* MS
-* partOf[SupportedPartOf] only Reference($SDOHCC-TaskForReferralManagement or SDOHCCTaskForPatientCL) //CAMBIAR EL PRIMERO
+* partOf[SupportedPartOf] only Reference(SDOHCCTaskForReferralManagementCL or SDOHCCTaskForPatientCL) 
 * status MS
 * status from SDOHCCValueSetTaskStatusCL (required)
 * status ^comment = "Para obtener más detalles sobre Task.status, consulte [Checking Task Status](checking_task_status.html)."
