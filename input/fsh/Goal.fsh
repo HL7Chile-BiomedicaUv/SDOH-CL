@@ -1,7 +1,7 @@
 Profile: SDOHCCGoalCL
 Parent: Goal
 Id: SDOHCC-GoalCL
-Title: "Metas/Objetivos SDOHCC "
+Title: "Metas/Objetivos SDOHCC"
 Description: "Perfil para metas/objetivos que abordan los Determinantes Sociales de la Salud (SDOH)."
 * ^version = "0.1.0"
 * ^publisher = "HL7 Chile"

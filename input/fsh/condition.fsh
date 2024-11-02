@@ -41,7 +41,7 @@ Description: "Perfil de las condiciones de los Determinantes Sociales de la Salu
 * category[SDOH] ^short = "Por ejemplo, inseguridad alimentaria | inseguridad en el transporte."
 * category[SDOH] ^definition = "Una categoría de SDOH asignada a la condición."
 * category[SDOH] ^requirements = "Los códigos de este conjunto de valores se pueden usar para asignar una o más categorías de SDOH (por ejemplo,inseguridad alimentaria, inseguridad en el transporte,etc.)a una condición.Se recomienda utilizar los códigos de categorías de SDOH para facilitar la búsqueda de condiciones de SDOH."
-* category[SDOH] ^binding.description = "Códigos para categorías de SDOH de alto nivel. "
+* category[SDOH] ^binding.description = "Códigos para categorías de SDOH de alto nivel."
 * code 1..1 MS
 * code from $VSDiagnosticosSCT (required)
 * code ^requirements = "El código es obligatorio y debe seleccionarse del value set enlazado."
