@@ -11,12 +11,6 @@ Parent: ObservacionCL
 Id: SDOHCC-ObservationAssessmentCL
 Title: "Evaluación de Observación de SDOHCC"
 Description: "Perfil para observaciones de Determinantes Sociales de la Salud (SDOH) que implican evaluación (por ejemplo, por parte de un proveedor, pagador, etc.) en lugar de ser derivadas únicamente de encuestas de detección (como ocurre con la Respuesta de Detección de Observación de SDOHCC)."
-* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
-* ^extension[=].valueCode = #pc
-* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
-* ^extension[=].valueCode = #draft
-* ^extension[=].valueCode.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
-* ^extension[=].valueCode.extension.valueCanonical = "http://hl7.org/fhir/us/sdoh-clinicalcare/ImplementationGuide/hl7.fhir.us.sdoh-clinicalcare"
 * ^version = "0.1.0"
 * ^publisher = "HL7 Chile"
 * ^contact.name = "HL7 Chile"
@@ -44,7 +38,7 @@ Description: "Perfil para observaciones de Determinantes Sociales de la Salud (S
 * category[SDOH] ^requirements = "Los códigos de este conjunto de valores pueden usarse para asignar una o más categorías de SDOH (por ejemplo, inseguridad alimentaria, inseguridad en el transporte, etc.) a una observación. Se recomienda que se utilicen códigos de categoría de SDOH para facilitar la búsqueda de observaciones de SDOH."
 * category[SDOH] ^binding.description = " Códigos para categorías de SDOH de alto nivel."
 * code MS
-* code from SDOHCCValueSetLOINCSNOMEDCTCL (preferred)  //CAMBIAR CUANDO SE HAGAN LOS VALUESET DE LA GUÍA
+* code from SDOHCCValueSetLOINCSNOMEDCTCL (preferred)  
 * code ^comment = "*Todos los pares de* code-value y, si están presentes, los pares de component.code-component.value deben tenerse en cuenta para comprender correctamente el significado de la observación.\r\n\r\nA medida que Gravity Project continúa refinnado el contenido para las categorías de SDOH (por ejempli, alimentos, viviendas, transporte, etc.), la fuerza de vinculación de este conjunto de valores puede cambiar y puede ser refinada a códigos (incluyendo LOINC y SNOMED) que corresponden a las categorías de SDOH."
 * subject 1.. MS
 * subject only Reference(Group or $CorePacienteCl)
