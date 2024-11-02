@@ -6,6 +6,7 @@ Alias: $CoreDiagnosticoCL = https://hl7chile.cl/fhir/ig/clcore/StructureDefiniti
 Alias: $CorePrestadorCl = https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CorePrestadorCl
 Alias: $CoreRolClinicoCl = https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CoreRolClinicoCl
 Alias: $sdc-questionnaireresponse = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse
+Alias: $SDOHCC-ExtensionConditionAsserter = http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ExtensionConditionAsserter
 
 Profile: SDOHCCConditionCL
 Parent: $CoreDiagnosticoCL
@@ -28,7 +29,7 @@ Description: "Perfil de las condiciones de los Determinantes Sociales de la Salu
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
-* extension contains SDOHCCExtensionConditionAsserterCL named asserterDevice 0..1 MS
+* extension contains $SDOHCC-ExtensionConditionAsserter named asserterDevice 0..1 MS
 * extension[asserterDevice] ^condition = "SDOH-Con-1"
 * extension[asserterDevice].value[x] only Reference(Device)
 * verificationStatus ^comment = "El estado de verificación no es obligatorio.Por ejemplo, cuando un paciente se queja de estrés durante una consulta con un proveedor, es poco probable que haya un estado de verificación.El tipo de datos es CodeableConcept porque el estado de verificación implica cierto juicio clínico, de modo que podría ser necesaria más especificidad de la que permite el conjunto de valores requerido de FHIR.Por ejemplo, una codificación SNOMED podría permitir una mayor especificidad.\r\n\r\nPara las condiciones SDOH que se generan automáticamente en función de la respuesta a un cuestionario, el asertor de la condición es un \"Dispositivo\" y la categoría de la condición debe ser \"preocupación de salud\". En ese caso, el estado de verificación de la condicón debe ser \"no confirmado\" y debe cambiarse a \"confirmado\" solo después de una revisión y acuerdo por parte del proveedor y el paciente."
@@ -78,7 +79,7 @@ Description: "Perfil de las condiciones de los Determinantes Sociales de la Salu
 Invariant: SDOH-Con-1
 Description: "Can only have a max of one asserter."
 * severity = #error
-* expression = "extension('SDOHCCExtensionConditionAsserterCL').count()+asserter.count()<=1"
+* expression = "extension('http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ExtensionConditionAsserter').count()+asserter.count()<=1"
 * xpath = "true()"
 
 Mapping: argonaut-dq-dstu2
