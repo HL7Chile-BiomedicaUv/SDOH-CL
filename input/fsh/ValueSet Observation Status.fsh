@@ -1,6 +1,6 @@
 ValueSet: SDOHCCValueSetObservationStatusCL
 Id: SDOHCC-ValueSetObservationStatus-CL
-Title: "Valueset SDOHCC Estado de observación "
+Title: "Valueset SDOHCC Estado de observación"
 Description: "Códigos para el estado de una observación de respuesta a una detección. "
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension[=].valueCode = #pc

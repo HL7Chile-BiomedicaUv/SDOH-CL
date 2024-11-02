@@ -11,7 +11,7 @@ Alias: $sdc-questionnaireresponse = http://hl7.org/fhir/uv/sdc/StructureDefiniti
 Profile: SDOHCCObservationScreeninigResponseCL
 Parent: $CoreObservacionCL
 Id: SDOHCC-ObservationScreeningResponseCL
-Title: "Respuesta de Detección de Observación de SDOHCC "
+Title: "Respuesta de Detección de Observación de SDOHCC"
 Description: "Perfil para observaciones que representan pares de preguntas y respuestas de los instrumentos de evaluación de Determinantes Sociales de la Salud (SDOH)."
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension[=].valueCode = #pc
