@@ -14,7 +14,7 @@ Description: "Perfil para identificar grupos de pacientes que tienen una condici
 * ^contact.telecom[=].value = "chair@hl7chile.cl"
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 * ^copyright = "Usado con el permiso de HL7 International, todos los derechos resevados en los Licencias de HL7 Internacional."
-* . ^short = "Grupo de pacientes de SDOH para un pagador. " //Pagador: ISAPRE-FONASA-CUALQUIER OTRO SISTEMA
+* . ^short = "Grupo de pacientes de SDOH para un pagador." //Pagador: ISAPRE-FONASA-CUALQUIER OTRO SISTEMA
 * . ^definition = "Para la consolidación de individuos que comparten un conjunto común de características (como el mismo pagador y cualquier condición en las categorías SDOH especificadas),con el fin de facilitar a las organizaciones, que cuenten con los permisos adecuados,la recuperación sencilla de información relacionada con la cohorte de personas por las que tienen una responsabilidad compartida."
 * active 1..
 * active = true (exactly)
