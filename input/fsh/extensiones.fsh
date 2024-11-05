@@ -20,3 +20,7 @@ Context: HealthcareService.telecom
 * value[x] 1..
 * value[x] only boolean
 * value[x] = true (exactly)
+
+
+
+
