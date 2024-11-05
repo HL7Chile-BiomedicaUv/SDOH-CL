@@ -27,7 +27,7 @@ Description: "Perfil para tareas que solicitan el cumplimiento de un ServiceRequ
 * partOf[SupportedPartOf] ^requirements = "Permite a una organización (por ejemplo, una plataforma de coordinación) crear una tarea,basada en una tarea SDOHCC de una fuente de referencia,para pasarla a otra organización (por ejemplo,una organización comunitaria)."
 * status MS
 * status from SDOHCCValueSetReferralTaskStatusCL (required)
-//* status ^comment = "Tenga en cuenta que las cadenas FHIR NO DEBEN exceder 1 MB de tamaño.Para más detalles sobre Task.status,consulte [Checking Task Status](checking_task_status.html)."
+* status ^comment = "Tenga en cuenta que las cadenas FHIR NO DEBEN exceder 1 MB de tamaño.Para más detalles sobre Task.status,consulte [Checking Task Status](checking_task_status.html)."
 * statusReason MS
 * statusReason ^comment = "Esto se aplica el estado actual.Consulte el historial de la tarea para ver las razones de los estados anteriores.Si el Task.status es rechazado,cancelado,en espera o fallido,entonces se debe incluir Task.statusReason.text."
 * statusReason.text 1.. MS
