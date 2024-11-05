@@ -30,8 +30,7 @@ Description: "Perfil para las tareas relacionadas con SDOH que deben ser realiza
 * partOf[SupportedPartOf] only Reference(SDOHCCTaskForReferralManagementCL or SDOHCCTaskForPatientCL) 
 * status MS
 * status from SDOHCCValueSetTaskStatusCL (required)
-* status ^comment = "For further details on Task.status see [Checking Task Status](checking_task_status.html)."
-//* status ^comment = "Para obtener más detalles sobre Task.status, consulte [Checking Task Status]($checkingStatus)."
+//* status ^comment = "Para obtener más detalles sobre Task.status, consulte [Checking Task Status](checking_task_status.html)"
 * status ^requirements = "Estos estados permiten la coordinación del estado de la tarea con soluciones de flujo de trabajo listas para usar que respaldan la automatización de tareas."
 * statusReason MS
 * statusReason ^definition = "Si la tarea es cancelada por el paciente, se debe proporcionar una explicación de por qué."
