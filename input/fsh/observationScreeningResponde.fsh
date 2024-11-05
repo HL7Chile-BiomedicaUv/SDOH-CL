@@ -33,7 +33,7 @@ Description: "Perfil para observaciones que representan pares de preguntas y res
 * . ^comment = "Se utiliza para observaciones simples,como el estado educativo,observaciones sobre la inseguridad alimentaria,etc.\r\nEste perfil permite la representación de observaciones de los Determinantes Sociales de la Salud (SDOH) basadas en las respuestas a cuestionarios de detección de SDOH (que también pueden ser representadas utilizando SDC QuestionnaireResponse).\r\n\r\nMuchos de los perfiles de SDOHCC hacen referencia entre sí.Un flujo soportado por esta IG es que las respuestas a los cuestionarios resultran en observaciones que puedne ser usadas como evidencia para condiciones que pueden llevar a metas, solicitudes de servicios y procedimientos.Sin embargo, también son posibles caminos alternativos."
 * status MS
 * status from SDOHCCValueSetObservationStatusCL (required)
-* status ^short = "registered|preliminary|final|amended|corrected|cancelled|entered-in-error|unknown" //MODIFICAR PARAMETROS
+* status ^short = "Final | Corregido | Ingresado por error | Desconocido" 
 * status ^definition = "Estado de la observación"
 * status ^requirements = "Limitado adicionalmente a valores que son relevantes para los SDOH."
 * category ^slicing.discriminator.type = #value
@@ -62,7 +62,7 @@ Description: "Perfil para observaciones que representan pares de preguntas y res
 * subject ^comment = "La cardinalidad es 1..1"
 * effective[x] 1.. MS
 * effective[x] only dateTime or Period
-* effective[x] ^definition = "El tiempo o período de tiempo en el que se afirma que el valor observado es verdadero.Para sujetos biológicos, por ejemplo, pacientes humanos, esto se llama generalmente el \"tiempo fisiológicamente relevante\". "
+* effective[x] ^definition = "El tiempo o período de tiempo en el que se afirma que el valor observado es verdadero.Para sujetos biológicos, por ejemplo, pacientes humanos, esto se llama generalmente el \"tiempo fisiológicamente relevante\"."
 * effective[x] ^comment = "Al menos una fecha debe estar presente a menos que esta observación sea un informe histórico."
 * performer only Reference(RelatedPerson or $CorePacienteCl or $CorePrestadorCl or $CoreRolClinicoCl or $CoreOrganizacionCl or CareTeam)
 * performer MS
@@ -85,7 +85,7 @@ Description: "Perfil para observaciones que representan pares de preguntas y res
 * valueCodeableConcept ^comment = "El conjunto de códigos permitidos será determinado por Observation.code.Se utilizaría un CodeableConcept con solo un texto en lugar de una cadena si el campo normalmente se codifica, o si el tipo asociado con Observation.code define un valor codificado."
 * valueCodeableConcept ^binding.description = "Este value set incluye todos los códigos LOINC."
 * dataAbsentReason MS
-* dataAbsentReason ^comment = "Los valores \"nulos\" o excepcionales pueden ser representados de dos maneras en las observaciones FHIR.Una froma es incluirlos simplemente en el conjunto de valores y representar las excepciones en el valor.La otra forma es usar el elemento de valor para observaciones reales y utilizar el elemento explícito dataAbsentReason para registrar valores excepcionales.Para una pregunta LOINC dada, si la lista de respuestas LOINC incluye conceptos como \"desconocido\" o \"no disponible\", deben usarse para Observation.value.Cuando estos conceptos no son parte del conjunto de valores para Observation.value.Cuando estos conceptos no son parte del conjunto de valores para Observation.value, se puede utilizar Observation.dataAbsentReason si es necesario y apropiado. "
+* dataAbsentReason ^comment = "Los valores \"nulos\" o excepcionales pueden ser representados de dos maneras en las observaciones FHIR.Una froma es incluirlos simplemente en el conjunto de valores y representar las excepciones en el valor.La otra forma es usar el elemento de valor para observaciones reales y utilizar el elemento explícito dataAbsentReason para registrar valores excepcionales.Para una pregunta LOINC dada, si la lista de respuestas LOINC incluye conceptos como \"desconocido\" o \"no disponible\", deben usarse para Observation.value.Cuando estos conceptos no son parte del conjunto de valores para Observation.value.Cuando estos conceptos no son parte del conjunto de valores para Observation.value, se puede utilizar Observation.dataAbsentReason si es necesario y apropiado."
 * bodySite ..0
 * specimen ..0
 * hasMember ^slicing.discriminator.type = #profile
@@ -99,7 +99,7 @@ Description: "Perfil para observaciones que representan pares de preguntas y res
 * hasMember[SupportedHasMember] ^short = "Para un agrupamiento de observaciones, las observaciones generadas a partir de un instrumento de evaluación."
 * hasMember[SupportedHasMember] ^definition = "Este es el conjunto de observaciones hijas que se espera que sean soportadas por las implementaciones de SDOH." 
 * hasMember[SupportedHasMember] ^comment = "Se pueden enviar otros tipos de observaciones o recursos, pero los sistemas SDOH no están obligados a prestarles atención."
-* hasMember[SupportedHasMember] ^requirements = "Proporciona contexto a las observaciones hijas sobre \"en qué instrumento/panle se recopiló esta información\", lo cual es crítico en situaciones donde las observaciones hijas no tienen relaciones derivedFrom con un QuestionnaireResponse. "
+* hasMember[SupportedHasMember] ^requirements = "Proporciona contexto a las observaciones hijas sobre \"en qué instrumento/panle se recopiló esta información\", lo cual es crítico en situaciones donde las observaciones hijas no tienen relaciones derivedFrom con un QuestionnaireResponse."
 * derivedFrom only Reference(DocumentReference or QuestionnaireResponse or ObservacionCL)
 * derivedFrom MS
 * derivedFrom ^slicing.discriminator.type = #profile
@@ -110,8 +110,8 @@ Description: "Perfil para observaciones que representan pares de preguntas y res
 * derivedFrom ^comment = "Todas las opciones de referencia que se enumeran en este elemento pueden representar observaciones clínicas y otras mediciones que pueden ser la fuente de un valor derivado."
 * derivedFrom contains SupportedDerivedFrom 0..* MS
 * derivedFrom[SupportedDerivedFrom] only Reference(SDOHCCObservationScreeninigResponseCL or $sdc-questionnaireresponse) 
-* derivedFrom[SupportedDerivedFrom] ^short = "Las reglas de asignación deben incluir al menos un espacio tanto antes como después del signo \"=\". "
-* derivedFrom[SupportedDerivedFrom] ^definition = "Los tipos de recursos \"derivedFrom\" que deben ser soportados por las implementaciones que se ajustan a esta IG. "
+* derivedFrom[SupportedDerivedFrom] ^short = "Las reglas de asignación deben incluir al menos un espacio tanto antes como después del signo \"=\"."
+* derivedFrom[SupportedDerivedFrom] ^definition = "Los tipos de recursos \"derivedFrom\" que deben ser soportados por las implementaciones que se ajustan a esta IG."
 * derivedFrom[SupportedDerivedFrom] ^comment = "Se permiten objetivos de derivación adicionales (según lo admitido por el recurso de observación subyacente), pero no se espera que los implementadores de esta IG les presten atención."
 * derivedFrom[SupportedDerivedFrom] ^requirements = "Permite la trazabilidad (y el contexto) para las observaciones derivadas de un QuestionnaireResponse y también establece vínculos para observaciones que fueron calculadas o inferidas basándose en otras observaciones (por ejemplo,para puntajes calculados)."
  
