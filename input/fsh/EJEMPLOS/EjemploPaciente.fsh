@@ -67,4 +67,4 @@ Description: "Ejemplo de un paciente. Este ejemplo se utiliza como paciente de r
 * contact.name.given[0] = "Juana"
 * contact.name.given[+] = "Josefa"
 * communication.language = $CSCodigoslenguaje#es-CL "Spanish"
-* generalPractitioner = Reference(Organization/OrganizacionClEjemplo1)
+* generalPractitioner = Reference(Organization/OrganizacionClEjemplo1.1)
