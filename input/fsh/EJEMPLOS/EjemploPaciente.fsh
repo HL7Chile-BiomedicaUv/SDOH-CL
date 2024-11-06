@@ -8,7 +8,7 @@ Alias: $CSCodRegionCL = https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodRegio
 Alias: $v2-0131 = http://terminology.hl7.org/CodeSystem/v2-0131
 Alias: $CSCodigoslenguaje = https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodigoslenguaje
 
-Instance: pat-2945
+Instance: EjemploRecursoPaciente
 InstanceOf: Patient
 Usage: #example
 * meta.profile = "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CorePacienteCl"
