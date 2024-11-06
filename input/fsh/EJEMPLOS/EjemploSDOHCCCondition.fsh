@@ -21,5 +21,5 @@ Description: "Un ejemplo de una condición (un problema de salud) que se basa en
 * code.text = "Desempleada"
 * subject = Reference(Patient/EjemploRecursoPaciente) "María Martínez"
 * onsetPeriod.start = "2021-04-26T13:56:33.747Z"
-* asserter = Reference(Patient/EjemploRecursoPaciente) 
+* asserter = Reference(Patient/EjemploRecursoPaciente) "María Martínez"
 //* evidence.detail = Reference(Observation/SDOHCC-ObservationResponsePRAPAREEmploymentStatusExample)
