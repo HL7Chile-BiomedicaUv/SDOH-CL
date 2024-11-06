@@ -1,7 +1,7 @@
 Instance: SDOHCC-EjemploGrupoPacientesSDOHparaPagador
 InstanceOf: Group
 Usage: #example
-Title: "Ejemplo SDOHCC para pacientes de un grupo SDOH para un pagador."
+Title: "Ejemplo SDOHCC-Pacientes de un grupo SDOH para un pagador."
 Description: "Un ejemplo de grupo para pacientes que tienen alguna condición SDOH y son miembros de una organización pagadora específica."
 
 * meta.profile = "https://hl7chile.cl/fhir/ig/gravitycl/StructureDefinition/SDOHCC-GroupCL"

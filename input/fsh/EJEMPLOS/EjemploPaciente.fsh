@@ -11,7 +11,7 @@ Alias: $CSCodigoslenguaje = https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodi
 Instance: EjemploRecursoPaciente
 InstanceOf: Patient
 Usage: #example
-Title: "Ejemplo paciente María Martínez"
+Title: "Ejemplo Paciente María Martínez"
 Description: "Ejemplo de un paciente. Este ejemplo se utiliza como paciente de referencia en otros ejemplos de esta IG."
 
 * meta.profile = "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CorePacienteCl"
