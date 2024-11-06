@@ -6,7 +6,7 @@ Alias: $CodPais = https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CodPais
 Instance: OrganizacionClEjemplo1.1
 InstanceOf: Organization
 Usage: #example
-Title: "Ejemplo organización"
+Title: "Ejemplo Organización"
 Description: "Ejemplo de una organización. Este ejemplo se utiliza como organización de referencia en otros ejemplos de esta IG."
 
 * meta.profile = "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CoreOrganizacionCl"

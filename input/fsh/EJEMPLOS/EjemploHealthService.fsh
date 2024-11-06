@@ -1,7 +1,7 @@
 Instance: SDOHCC-EjemplocitaTelecomunicacionesServicioAtencionMedica
 InstanceOf: HealthcareService
 Usage: #example
-Title: "Ejemplo SDOHCC de cita de telecomunicaciones de servicio de atención médica"
+Title: "Ejemplo SDOHCC-Cita de telecomunicaciones de servicio de atención médica"
 Description: "Ejemplo de un servicio de atención médica con telecomunicación que se utiliza para marcar una cita. Este ejemplo se utiliza como referencia en otros ejemplos de la IG."
 
 * meta.profile = "https://hl7chile.cl/fhir/ig/gravitycl/StructureDefinition/SDOHCC-HealthcareServiceCL"

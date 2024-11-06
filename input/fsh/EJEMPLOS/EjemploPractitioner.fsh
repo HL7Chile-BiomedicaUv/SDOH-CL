@@ -7,8 +7,8 @@ Alias: $CodPais = https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CodPais
 Instance: SDOHCC-EjemploPrestadorDraJohannaSilva
 InstanceOf: Practitioner
 Usage: #example
-Title: "Ejemplo SDOHCC del prestador, Dra. Johanna Silva"
-Description: "Ejemplom de un profesiona. Este ejemplo se utiliza como profesional de referencia en otros ejemplos de la IG."
+Title: "Ejemplo SDOHCC-Prestador Dra. Johanna Silva"
+Description: "Ejemplo de un profesional. Este ejemplo se utiliza como profesional de referencia en otros ejemplos de la IG."
 
 * meta.profile = "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CorePrestadorCl"
 * identifier.use = #official
