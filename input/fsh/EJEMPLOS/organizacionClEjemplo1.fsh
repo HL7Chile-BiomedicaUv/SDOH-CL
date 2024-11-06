@@ -6,6 +6,9 @@ Alias: $CodPais = https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CodPais
 Instance: OrganizacionClEjemplo1
 InstanceOf: Organization
 Usage: #example
+Title: "Ejemplo organización"
+Description: "Ejemplo de una organización. Este ejemplo se utiliza como organización de referencia en otros ejemplos de esta IG."
+
 * meta.profile = "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CoreOrganizacionCl"
 * identifier.system = "https://datos.gob.cl/dataset/establecimientos-de-salud-vigentes/resource/2c44d782-3365-44e3-aefb-2c8b8363a1bc"
 * identifier.value = "107100"
