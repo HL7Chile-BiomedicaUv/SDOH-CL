@@ -1,7 +1,7 @@
 Alias: $sct = http://snomed.info/sct
 
 Instance: SDOHCC-EjemploObservacionEvaluacionTransporte
-InstanceOf: Observation
+InstanceOf: ObservacionCL
 Usage: #example
 Title: "Ejemplo de evaluación de la observación de SDOHCC sobre transporte con alto costo"
 Description: "Ejemplo de una observación de transporte que no se deriva necesariamente de una encuesta de detección.Esta observación implica una evaluación adicional.Este ejemplo también incluye una categoría de observación (es decir,inseguridad en el transporte) que está incluida en \"ValueSet SDOHCC Categoría SDOH\".Además,se incluye una subcategoría de inseguridad en el transporte (es decir, inseguridad financiera en el transporte) para ilustrar que es posible subcategorizar aún más un código de \"ValueSet SDOHCC Categoría SDOH\" con un código que no está en el ValueSet."

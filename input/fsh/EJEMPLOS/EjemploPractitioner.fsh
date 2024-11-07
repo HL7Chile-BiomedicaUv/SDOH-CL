@@ -5,7 +5,7 @@ Alias: $CSCodRegionCL = https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodRegio
 Alias: $CodPais = https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CodPais
 
 Instance: SDOHCC-EjemploPrestadorDraJohannaSilva
-InstanceOf: Practitioner
+InstanceOf:  PrestadorCL
 Usage: #example
 Title: "Ejemplo SDOHCC-Prestador Dra. Johanna Silva"
 Description: "Ejemplo de un profesional. Este ejemplo se utiliza como profesional de referencia en otros ejemplos de la IG."

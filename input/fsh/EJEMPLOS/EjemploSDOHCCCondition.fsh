@@ -4,9 +4,9 @@ Alias: $sct = http://snomed.info/sct
 Alias: $condition-category = http://hl7.org/fhir/us/core/CodeSystem/condition-category
 
 Instance: SDOHCC-EjemploCondicionDesempleo
-InstanceOf: Condition
+InstanceOf: DiagnosticoCl
 Usage: #example
-Title: "Ejemplo SDOHCC-Condición de desempleo."
+Title: "Ejemplo SDOHCC-Condición de desempleo"
 Description: "Un ejemplo de una condición (un problema de salud) que se basa en una observación relacionada con el estado de empleo que se deriva de una respuesa al cuestionario de PRAPARE (representada en LOINC)."
 
 * meta.profile = "https://hl7chile.cl/fhir/ig/gravitycl/StructureDefinition/SDOHCC-ConditionCL"

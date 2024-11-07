@@ -4,7 +4,7 @@ Alias: $CSCodRegionCL = https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodRegio
 Alias: $CodPais = https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CodPais
 
 Instance: OrganizacionClEjemplo1.1
-InstanceOf: Organization
+InstanceOf: OrganizacionCL
 Usage: #example
 Title: "Ejemplo Organización"
 Description: "Ejemplo de una organización. Este ejemplo se utiliza como organización de referencia en otros ejemplos de esta IG."
