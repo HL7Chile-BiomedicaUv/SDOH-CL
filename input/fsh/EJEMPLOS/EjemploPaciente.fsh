@@ -9,7 +9,7 @@ Alias: $v2-0131 = http://terminology.hl7.org/CodeSystem/v2-0131
 Alias: $CSCodigoslenguaje = https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodigoslenguaje
 
 Instance: EjemploRecursoPaciente
-InstanceOf: Patient
+InstanceOf: PacienteCl
 Usage: #example
 Title: "Ejemplo Paciente María Martínez"
 Description: "Ejemplo de un paciente. Este ejemplo se utiliza como paciente de referencia en otros ejemplos de esta IG."

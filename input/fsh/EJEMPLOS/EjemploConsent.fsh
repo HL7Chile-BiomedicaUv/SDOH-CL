@@ -5,8 +5,9 @@ Alias: $consentpolicycodes = http://terminology.hl7.org/CodeSystem/consentpolicy
 Instance: SDOHCC-EjemploDivulgacionInformacionConsentimiento
 InstanceOf: Consent
 Usage: #example
-Title: "Ejemplo SDOHCC-Divulgación de informacion de consentimiento."
+Title: "Ejemplo SDOHCC-Divulgación de informacion de consentimiento"
 Description: "Ejemplo de consentimiento para la divulgación de información relacionada con los SDOH. Se adjunta un PDF a este consentimiento."
+
 // BUSCAR UN CONSENTIMIENTO INFORMADO PARA MODIFICAR EL PDF 
 * meta.profile = "https://hl7chile.cl/fhir/ig/gravitycl/StructureDefinition/SDOHCC-ConsentCL"
 * status = #active

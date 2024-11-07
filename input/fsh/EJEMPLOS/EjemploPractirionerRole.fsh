@@ -1,7 +1,7 @@
 Alias: $CSEspecialidadesDeisCL = https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSEspecialidadesDeisCL
 
 Instance: EjemploRoldelpracticante
-InstanceOf: PractitionerRole
+InstanceOf: CoreRolClinicoCl
 Usage: #example
 Title: "Ejemplo SDOHCC-Rol del prestador, Dra.Johanna Silva"
 Description: "Ejemplo del rol médico. Este ejemplo se utiliza como rol de médico al que se hace referencia en otros ejemplos de la IG."

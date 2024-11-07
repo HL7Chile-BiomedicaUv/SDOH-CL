@@ -1,7 +1,7 @@
 Alias: $sct = http://snomed.info/sct
 
 Instance: SDOHCC-EjemploObservacionEvaluacionIngestaInadecuadaAlimentos
-InstanceOf: Observation
+InstanceOf: ObservacionCL
 Usage: #example
 Title: "Ejemplo de evaluación de la observación de SDOHCC sobre ingesta inadecuada de alimentos"
 Description: "Ejemplo de una observación de ingesta de alientos inadecuada que no necesariamente proviene únicamente de una encuesta de detección. Esta observación implica una evaluación adicional (por ejemplo, por parte de un médico, nutricionista,etc.)."
