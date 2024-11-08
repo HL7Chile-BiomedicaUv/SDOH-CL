@@ -16,7 +16,7 @@ Title: "Ejemplo Paciente"
 Description: "Ejemplo de un paciente.Este ejemplo se utiliza como paciente de referencia en otros ejemplos de esta IG."
 
 * extension[0].url = "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/IdentidadDeGenero"
-* extension[=].valueCodeableConcept = $CSIdentidaddeGenero#2 "Fememnina"
+* extension[=].valueCodeableConcept = $CSIdentidaddeGenero#2 "Femenina"
 * extension[+].url = "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/SexoBiologico"
 * extension[=].valueCodeableConcept = $administrative-gender#female "Female"
 
