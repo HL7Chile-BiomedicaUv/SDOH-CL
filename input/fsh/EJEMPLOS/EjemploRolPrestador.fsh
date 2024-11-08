@@ -8,6 +8,8 @@ Description: "Ejemplo de de un rol clínico. Este ejemplo se utiliza como rol cl
 
 * active = true
 * practitioner = Reference(Ejemplo-Prestador) "Johanna Silva"
+
 * organization = Reference(Ejemplo-Organizacionprestadora) "Centro de Salud Familiar Arauco"
+
 * specialty = $CSEspecialidadesDeisCL#28 "Medicina Familiar"
 * specialty.text = "Medicina Familiar"
