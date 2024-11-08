@@ -29,7 +29,7 @@ Description: "Perfil para metas/objetivos que abordan los Determinantes Sociales
 * description ^comment = "Si no hay código disponible,utiliza CodeableConcept.text.\r\n\r"
 * description ^binding.description = "Códigos que proporcionan los detalles de un objetivo particular.En muchos sistemas, solo se utilizará el elemento de texto."
 * subject ^definition = "Identifica al paciente para el cual se está estableciendo la meta/objetivo."
-* target.measure from LOINCCodes (preferred)
+* target.measure from  SDOHCCValueSetLOINCSNOMEDCTCL (preferred)
 * target.measure ^binding.extension[0].url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
 * target.measure ^binding.extension[=].valueString = "GoalTargetMeasure"
 * target.measure ^binding.description = "Códigos para identificar el valor que se está rastreando,por ejemplo, peso corporal,presión arterial o nivel de hemoglobina A1c."
