@@ -2,7 +2,7 @@ Instance: Ejemplo-OrganizacionPagadora
 InstanceOf: OrganizacionCL
 Usage: #definition
 Title: "Ejemplo SDOHCC-Organización pagadora"
-Description: "Ejemplo de una organización pagadora.Este ejemplo se utiliza como organización de referencia en otros ejwmplos de esta IG."
+Description: "Ejemplo de una organización pagadora.Este ejemplo se utiliza como organización de referencia en otros ejemplos SDOHCC."
 
 * active = true
 * name = "Fondo Nacional de Salud - FONASA"
