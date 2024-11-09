@@ -8,12 +8,12 @@ Description: "Un ejemplo de un Servicio de Salud con telecomuniciones que puede 
 * location = Reference(Ejemplo-Ubicacion)
 * name = "Centro de Salud Familiar Viña del Mar"
 
-* telecom[0].extension.url = "https://hl7chile.cl/fhir/ig/gravitycl/StructureDefinition/SDOHCC-ExtensionHealthcareServiceTelecomAppointmentCL"
+* telecom[0].extension.url = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ExtensionHealthcareServiceTelecomAppointment"
 * telecom[=].extension.valueBoolean = true
 * telecom[=].system = #phone
 * telecom[=].value = "(345990) agendar"
 * telecom[=].use = #work
-* telecom[+].extension.url = "https://hl7chile.cl/fhir/ig/gravitycl/StructureDefinition/SDOHCC-ExtensionHealthcareServiceTelecomAppointmentCL"
+* telecom[+].extension.url = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ExtensionHealthcareServiceTelecomAppointment"
 * telecom[=].extension.valueBoolean = true
 * telecom[=].system = #email
 * telecom[=].value = "SludFamilarvina@example.com"
