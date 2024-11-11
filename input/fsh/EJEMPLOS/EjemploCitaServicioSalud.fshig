@@ -5,7 +5,7 @@ Title: "Ejemplo SDOHCC-Cita de telecomunicación del servicio de salud"
 Description: "Ejemplo de servicio de salud con telecomunicación que se puede utilizar para agendar una cita. Este ejemplo se utiliza como el servicio de salud de referencia en otros ejemplos de esta IG."
 
 * active = true
-* location = Reference(Ejemplo-Ubicacion)
+//* location = Reference(Ejemplo-Ubicacion)
 * name = "Centro de Salud Familiar Viña del Mar"
 
 * telecom[0].extension.url = "https://hl7chile.cl/fhir/ig/gravitycl/StructureDefinition/SDOHCC-ExtensionHealthcareServiceTelecomAppointmentCL"
