@@ -10,10 +10,10 @@ Description: "Ejemplo de grupo para pacientes que tienen alguna condición SDOH 
 
 * name = "Pacientes con condiciones SDOH pertenecientes a FONASA"
 
-* characteristic[0].code = SDOHCCCodeSystemTemporaryCodesCL#sdoh-condition-category
-* characteristic[=].valueReference = Reference(SDOHCCValueSetSDOHCategoryCL)
-* characteristic[=].exclude = false
+* characteristic[HasSDOHCondition][0].code = SDOHCCCodeSystemTemporaryCodesCL#sdoh-condition-category
+* characteristic[HasSDOHCondition][=].valueReference = Reference(SDOHCCValueSetSDOHCategoryCL)
+* characteristic[HasSDOHCondition][=].exclude = false
 
-* characteristic[+].code = SDOHCCCodeSystemTemporaryCodesCL#payer-coverage
-* characteristic[=].valueReference = Reference(Ejemplo-OrganizacionPagadora)
-* characteristic[=].exclude = false
+* characteristic[HasPayer][+].code = SDOHCCCodeSystemTemporaryCodesCL#payer-coverage
+* characteristic[HasPayer][=].valueReference = Reference(Ejemplo-OrganizacionPagadora)
+* characteristic[HasPayer][=].exclude = false
