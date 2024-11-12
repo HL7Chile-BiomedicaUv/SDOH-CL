@@ -22,10 +22,10 @@ Description: "Instancia de cuestionario que representa las preguntas y respuesta
 * item[=].text = "En los últimos 12 meses nos preocupamos de si la comida se acabaría antes de que tuviéramos dinero para comprar más."
 * item[=].type = #choice
 * item[=].required = false
-* item[=].answerOption[0].valueCoding = $loinc#LA28397-0 "A menudo es cierto"
-* item[=].answerOption[+].valueCoding = $loinc#LA6729-3 "A veces es cierto"
-* item[=].answerOption[+].valueCoding = $loinc#LA28398-8 "Nunca es cierto"
-* item[=].answerOption[+].valueCoding = $loinc#LA15775-2 "No sabe / Se negó"
+* item[=].answerOption[0].valueCoding = $loinc#LA28397-0 "Often true"
+* item[=].answerOption[+].valueCoding = $loinc#LA6729-3 "Sometimes true"
+* item[=].answerOption[+].valueCoding = $loinc#LA28398-8 "Never true"
+* item[=].answerOption[+].valueCoding = $loinc#LA15775-2 "Don't know/refused"
 
 
 * item[+].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
@@ -36,10 +36,10 @@ Description: "Instancia de cuestionario que representa las preguntas y respuesta
 * item[=].text = "En los últimos 12 meses, la comida que compramos simplemente no duró y no teníamos dinero para comprar más."
 * item[=].type = #choice
 * item[=].required = false
-* item[=].answerOption[0].valueCoding = $loinc#LA28397-0 "A menudo es cierto"
-* item[=].answerOption[+].valueCoding = $loinc#LA6729-3 "A veces es cierto"
-* item[=].answerOption[+].valueCoding = $loinc#LA28398-8 "Nunca es cierto"
-* item[=].answerOption[+].valueCoding = $loinc#LA15775-2 "No sabe/ Se negó"
+* item[=].answerOption[0].valueCoding = $loinc#LA28397-0 "Often true"
+* item[=].answerOption[+].valueCoding = $loinc#LA6729-3 "Sometimes true"
+* item[=].answerOption[+].valueCoding = $loinc#LA28398-8 "Never true"
+* item[=].answerOption[+].valueCoding = $loinc#LA15775-2 "Don't know/refused"
 
 
 * item[+].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
@@ -70,8 +70,8 @@ Description: "Instancia de cuestionario que representa las preguntas y respuesta
 * item[=].text = "Riesgo de inseguridad alimentaria"
 * item[=].type = #choice
 * item[=].required = false
-* item[=].answerOption[0].valueCoding = $loinc#LA19952-3 "En riesgo"
-* item[=].answerOption[+].valueCoding = $loinc#LA19983-8 "Sin riesgo"
+* item[=].answerOption[0].valueCoding = $loinc#LA19952-3 "At risk"
+* item[=].answerOption[+].valueCoding = $loinc#LA19983-8 "No risk"
 * item[=].item.extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
 * item[=].item.extension.valueCodeableConcept = $questionnaire-item-control#help "Help-Button"
 * item[=].item.extension.valueCodeableConcept.text = "Botón de ayuda"
