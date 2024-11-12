@@ -27,12 +27,13 @@ Extension: SDOHCCExtensionConditionAsserterCL
 Id: SDOHCC-ExtensionConditionAsserterCL
 Title: "Extensión Afirmación de condición"
 Description: "Extensión para permitir que el afirmador de una condición sea un dispositivo (que fue utilizado para realizar una operación para llegar a la condición)."
-Context: Condition
+Context: SDOHCCConditionCL
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension[=].valueCode = #pc
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #trial-use
 * ^extension[=].valueCode.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
+* ^extension[=].valueCode.extension.valueCanonical = "http://hl7.org/fhir/us/sdoh-clinicalcare/ImplementationGuide/hl7.fhir.us.sdoh-clinicalcare"
 * ^contact.telecom[0].system = #url
 * ^contact.telecom[=].value = "http://hl7chile.cl"
 * ^contact.telecom[+].system = #email
