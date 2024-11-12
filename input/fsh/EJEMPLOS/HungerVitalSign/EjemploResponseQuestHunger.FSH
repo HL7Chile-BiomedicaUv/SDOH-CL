@@ -6,6 +6,10 @@ Usage: #example
 Title: "Ejemplo SDOHCC-Respuesta al cuestionario Signo de inseguridad alimentaria"
 Description: "Ejemplo de una respuesta de cuestionario SDC que representa las preguntas y respuestas seleccionadas del cuestionario Hunger Vital Sign (HVS) de LOINC."
 
+
+* questionnaire = "https://hl7chile.cl/fhir/ig/gravitycl/Questionnaire/Ejemplo-QuestionnaireHunger"
+* questionnaire.extension.url = "http://hl7.org/fhir/StructureDefinition/display"
+* questionnaire.extension.valueString = "SDOHCC Cuestionario Signos de inseguridad alimentaria"
 * status = #completed
 * subject = Reference(Ejemplo-Paciente) "María Díaz"
 * authored = "2020-09-10T21:56:54.671Z"
