@@ -10,7 +10,7 @@ Usage: #example
 Title: "Ejemplo Dispositivo de confirmación de condiciones"
 Description: "Ejemplo de una condición de inseguridad alimentaria que hace referencia, como evidencia a las observaciones derivadas del cuestionario Hunger Vital Sign y utiliza una extensión de Condition.asserter para hacer referencia al dispositivo de software que utiliza las respuestas a las preguntas 1 y 2 del HVS para derivar la respuesta a la pregunta 3 del HVS (en riesgo de inseguridad alimentaria)."
 
-* extension = Reference(Ejemplo-DeviceSoftware)
+* extension.url = "https://hl7chile.cl/fhir/ig/gravitycl/StructureDefinition/SDOHCC-ExtensionConditionAsserterCL"
 * extension.valueReference = Reference(Ejemplo-DeviceSoftware) "Application program software"
 * clinicalStatus = $conditionclinical-n#active "Active"
 * verificationStatus = $conditionverstatus-n#unconfirmed "Unconfirmed"

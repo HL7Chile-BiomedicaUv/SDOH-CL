@@ -33,13 +33,11 @@ Context: Condition
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #trial-use
 * ^extension[=].valueCode.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
-* ^extension[=].valueCode.extension.valueCanonical = "http://hl7.org/fhir/us/sdoh-clinicalcare/ImplementationGuide/hl7.fhir.us.sdoh-clinicalcare"
 * ^contact.telecom[0].system = #url
 * ^contact.telecom[=].value = "http://hl7chile.cl"
 * ^contact.telecom[+].system = #email
 * ^contact.telecom[=].value = "chair@hl7chile.cl"
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
-//* url = "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ExtensionConditionAsserterCL" (exactly)
 * value[x] only Reference
 
 
