@@ -2,7 +2,7 @@ Extension: SDOHCCExtensionHealthcareServiceTelecomAppointmentCL
 Id: SDOHCC-ExtensionHealthcareServiceTelecomAppointmentCL
 Title: "Extensión SDOHCC HealthcareService Telecom Appointment"
 Description: "Extensión para amrcar un HealthcareService.telecom como uno que el paciente puede utilizar para hacer una cita."
-Context: HealthcareService.telecom
+Context: SDOHCCHealthcareServiceCL.telecom
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension[=].valueCode = #pc
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
