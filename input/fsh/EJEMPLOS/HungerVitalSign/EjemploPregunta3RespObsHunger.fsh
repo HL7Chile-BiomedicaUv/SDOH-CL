@@ -22,4 +22,4 @@ Description: "Ejemplo de una respuesta de evaluación que represenra el riesgo d
 * valueCodeableConcept.text = "En riesgo"
 * interpretation = $v3-ObservationInterpretation#POS "Positive"
 * interpretation.text = "Positivo"
-* derivedFrom = Reference(Ejemplo-RespuestaQuestHunger)
+* derivedFrom = Reference(QuestionnaireResponse/Ejemplo-RespuestaQuestHunger)
