@@ -18,9 +18,9 @@ Description: "Perfil que describe los medios por los cuales se puede contactar u
 * location MS
 * location ^requirements = "La ubicación debe incluir Location.address para que el paciente conozca las direcciones potenciales al reservar una cita."
 * name 1.. MS
-//* telecom ^slicing.discriminator.type = #exists
-//* telecom ^slicing.discriminator.path = "extension(https://hl7chile.cl/fhir/ig/gravitycl/StructureDefinition/SDOHCC-ExtensionHealthcareServiceTelecomAppointmentCL)"
-//* telecom ^slicing.rules = #open
+* telecom ^slicing.discriminator.type = #exists
+* telecom ^slicing.discriminator.path = "extension('http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ExtensionHealthcareServiceTelecomAppointment')"
+* telecom ^slicing.rules = #open
 * telecom ^mustSupport = false
 * telecom contains AppointmentContact 1..* MS
 * telecom[AppointmentContact].extension contains SDOHCCExtensionHealthcareServiceTelecomAppointmentCL named ForAppointment 1..1 MS
