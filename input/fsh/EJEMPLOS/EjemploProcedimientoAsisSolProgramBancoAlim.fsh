@@ -9,7 +9,7 @@ Description: "Ejemplo de un procedimiento completado para asistencia en la solic
 
 * basedOn = Reference(Ejemplo-SolServAplicacionBancoAlim)
 * status = #completed
-* category.coding[0] = $sct#410606002 "Social service procedure"
+* category.coding[0] = CodigoMAIFONASSA#108609030040000500 "INTERVENCIÓN PSICOSOCIAL GRUPAL (4 A 8 PACIENTES, FAMILIARES O CUIDADORES)"
 * category.coding[+] = SDOHCCCodeSystemTemporaryCodesCL#food-insecurity "Inseguridad alimentaria"
 * code = $sct#467771000124109 "Assistance with application for food pantry program"
 * code.text = "Asistencia con la solicitud para el programa de banco de alimentos."
