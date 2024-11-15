@@ -3,7 +3,7 @@ Alias: $sct = http://snomed.info/sct
 Instance: Ejemplo-ProcedimientoSuministroAlim
 InstanceOf: SDOHCCProcedureCL
 Usage: #example
-Title: "Ejemplo SDOHCC-Procedimeitno para el suministro de alimentos"
+Title: "Ejemplo SDOHCC-Procedimiento para el suministro de alimentos"
 Description: "Ejemplo de un procedimiento completado para el suministro de alimentos"
 
 * status = #completed
