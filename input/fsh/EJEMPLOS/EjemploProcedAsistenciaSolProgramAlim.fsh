@@ -6,7 +6,7 @@ Description: "Ejemplo de un procedimiento completado para la asistencia en la so
 
 * basedOn = Reference(Ejemplo-SubderivProgramaHuertos)
 * status = #completed
-* intent = #orden
+* intent = #order
 * category.coding[0] = $sct#410606002 "Social service procedure"
 * category.coding[+] = SDOHCCCodeSystemTemporaryCodesCL#food-insecurity "Inseguridad alimentaria"
 * code = CodigoMAIFONASSA#309042000000000100 "III  CONTROL DE ALIMENTOS"
