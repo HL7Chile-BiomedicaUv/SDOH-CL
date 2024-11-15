@@ -8,9 +8,9 @@ Description: "Ejemplo de una solicitud de servicio activa para una asistencia en
 
 * status = #active
 * intent = #order
-* category[0] = CodigoMAIFONASSA#108609030040000500 "INTERVENCIÓN PSICOSOCIAL GRUPAL (4 A 8 PACIENTES, FAMILIARES O CUIDADORES)"
+* category[0] = $sct#410606002 "Social service procedure"
 * category[+] = SDOHCCCodeSystemTemporaryCodesCL#food-insecurity "Inseguridad alimentaria"
-* code = $sct#467771000124109 "Assistance with application for food pantry program"
+* code = CodigoMAIFONASSA#309042000000000100 "III  CONTROL DE ALIMENTOS"
 * code.text = "Asistencia con la solicitud para el programa de banco de alimentos."
 * subject = Reference(Ejemplo-Paciente) "María Díaz"
 * reasonReference = Reference(Ejemplo-CondicionInsAlimentaria)
