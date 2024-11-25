@@ -1,3 +1,5 @@
+Alias: $temp = http://hl7.org/fhir/uv/sdc/CodeSystem/temp
+
 Instance: Ejemplo-TareaCompletadaCuestionarioRiesgo
 InstanceOf: SDOHCCTaskForPatientCL
 Usage: #example
