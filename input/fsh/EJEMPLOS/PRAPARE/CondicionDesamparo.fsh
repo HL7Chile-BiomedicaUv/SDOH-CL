@@ -13,7 +13,7 @@ Description: "Ejemplo de una coondición de desamparo (una preocupación de salu
 * clinicalStatus = $condition-clinicalnew#active "Active"
 * verificationStatus = $condition-ver-statusnew#unconfirmed "Unconfirmed"
 * category[0] = $condition-categorynew#health-concern "Health Concern"
-* category[+] = SDOHCCCodeSystemTemporaryCodesCL#homelessness "Homelessness"
+* category[+] = SDOHCCCodeSystemTemporaryCodesCL#homelessness "Personas sin hogar"
 * code.coding[0] = $sct#32911000 "Homeless"
 * code.coding[+] = $icd-10-cm#Z59.0 "Homelessness"
 * subject = Reference(Ejemplo-Paciente) "María Díaz"

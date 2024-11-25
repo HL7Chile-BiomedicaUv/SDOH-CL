@@ -19,4 +19,4 @@ Description: "Ejemplo de una respuesta de observación de detección que represe
 * performer = Reference(Ejemplo-Paciente) "María Díaz"
 * valueCodeableConcept = $loinc#LA17956-6 "Unemployed"
 * valueCodeableConcept.text = "Desempleada"
-* derivedFrom = Reference(QuestionnaireResponse/Ejemplo-RespuestaCuestionarioPRAPARE)
+* derivedFrom = Reference(Ejemplo-RespuestaCuestionarioPRAPARE)

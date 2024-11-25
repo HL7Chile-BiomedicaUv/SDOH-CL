@@ -19,4 +19,4 @@ Description: "Ejemplo de una respuesta de observación de detección que represe
 * performer = Reference(Ejemplo-Paciente) "María Díaz"
 * valueCodeableConcept = $loinc#LA30190-5 "I do not have housing (staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, or in a park)"
 * valueCodeableConcept.text = "No tengo vivienda (estoy quedándome con otros, en un hotel, en un refugio, vivienda en la calle, en una playa, en un auto o en un parque)"
-* derivedFrom = Reference(QuestionnaireResponse/Ejemplo-RespuestaCuestionarioPRAPARE)
+* derivedFrom = Reference(Ejemplo-RespuestaCuestionarioPRAPARE)
