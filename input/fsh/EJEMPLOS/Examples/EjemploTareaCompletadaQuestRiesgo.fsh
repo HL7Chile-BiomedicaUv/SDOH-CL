@@ -15,7 +15,7 @@ Description: "Ejemplo de una tarea completada para el paciente donde la tarea on
 * requester = Reference(Ejemplo-Organizacionprestadora) "Centro de Salud Familiar Arauco"
 * owner = Reference(Ejemplo-Paciente) "María Díaz"
 * input[0].type = $temp#questionnaire "Questionnaire"
-* input[=].valueCanonical = "https://hl7chile.cl/fhir/ig/gravitycl/Questionnaire/Ejemplo-QuestionnaireHunger"
+* input[=].valueCanonical = "http://hl7.org/fhir/us/sdoh-clinicalcare/Questionnaire/SDOHCC-QuestionnaireHungerVitalSign"
 * input[+].type = SDOHCCCodeSystemTemporaryCodesCL#questionnaire-category "Categoría de cuestionario"
 * input[=].valueCodeableConcept = SDOHCCCodeSystemTemporaryCodesCL#risk-questionnaire "Cuestionario de riesgo"
 * output.type = $temp#questionnaire-response "Questionnaire Response"
