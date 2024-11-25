@@ -9,7 +9,7 @@ Description: "Ejemplo de una tarea completada para el paciente donde la tarea on
 * status = #completed
 * intent = #order
 * priority = #routine
-* code = $temp#complete-questionnaire "Cuestionario completo"
+* code = $temp#complete-questionnaire "Complete Questionnaire"
 * for = Reference(Ejemplo-Paciente) "María Díaz"
 * authoredOn = "2020-09-01T21:56:54.671Z"
 * requester = Reference(Ejemplo-Organizacionprestadora) "Centro de Salud Familiar Arauco"
