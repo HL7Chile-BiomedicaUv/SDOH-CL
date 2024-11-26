@@ -1,6 +1,8 @@
 Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias: $CorePacienteCl = https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CorePacienteCl
 Alias: $CoreOrganizacionCl = https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CoreOrganizacionCl
+Alias: $CorePrestadorCl = https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CorePrestadorCl
+Alias: $CoreRolClinicoCl = https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CoreRolClinicoCl
 
 Profile: SDOHCCConsentCL
 Parent: Consent
@@ -32,8 +34,8 @@ Description: "Perfil para el consentimiento relacionado con la divulgación de i
 * patient only Reference($CorePacienteCl)
 * dateTime 1.. MS
 * dateTime ^requirements = "Esto es Must Support para permitir que un receptor determine el  \"orden \" de múltiples consentimientos. "
-* performer only Reference(Organization or RelatedPerson or Practitioner or PractitionerRole or Patient)
-* performer ^requirements = "This element is not mandatory . There is not a use case that Performer be computable since it will normally be present in the consent \"form\"."
+* performer only Reference($CoreOrganizacionCl or RelatedPerson or $CorePrestadorCl or $CoreRolClinicoCl or $CorePacienteCl)
+* performer ^requirements = "Este elemento no es obligatorio. No existe un caso de uso en el que el \"Performer\" sea computable, ya que normalmente estará preente en el \"formulario\" de consentimiento."
 * organization 1..1 MS
 * organization only Reference($CoreOrganizacionCl)
 * source[x] 1.. MS
