@@ -14,9 +14,9 @@ Description: "Ejemplo de una tarea completada para el paciente donde la tarea on
 * authoredOn = "2020-09-01T21:56:54.671Z"
 * requester = Reference(Ejemplo-Organizacionprestadora) "Centro de Salud Familiar Arauco"
 * owner = Reference(Ejemplo-Paciente) "María Díaz"
-* input[0].type = $temp#questionnaire-url 
-* input[=].valueCanonical = "http://hl7.org/fhir/us/sdoh-clinicalcare/Questionnaire/SDOHCC-QuestionnaireHungerVitalSign"
-* input[+].type = SDOHCCCodeSystemTemporaryCodesCL#questionnaire-category "Categoría de cuestionario"
-* input[=].valueCodeableConcept = SDOHCCCodeSystemTemporaryCodesCL#risk-questionnaire "Cuestionario de riesgo"
+* input[Questionnaire][0].type = $temp#questionnaire "Questionnaire"
+* input[Questionnaire][=].valueCanonical = "http://hl7.org/fhir/us/sdoh-clinicalcare/Questionnaire/SDOHCC-QuestionnaireHungerVitalSign"
+* input[QuestionnaireCategory][+].type = SDOHCCCodeSystemTemporaryCodesCL#questionnaire-category "Categoría de cuestionario"
+* input[QuestionnaireCategory][=].valueCodeableConcept = SDOHCCCodeSystemTemporaryCodesCL#risk-questionnaire "Cuestionario de riesgo"
 * output.type = $temp#questionnaire-response "Questionnaire Response"
 * output.valueReference = Reference(Ejemplo-QuestionnaireRespHunger)
