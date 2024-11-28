@@ -148,13 +148,104 @@ menu:
 # is specified by id or name, SUSHI will replace it with the correct
 # URL when generating the IG JSON.
 #
-# groups:
-#   GroupA:
-#     name: Group A
-#     description: The Alpha Group
-#     resources:
-#     - StructureDefinition/animal-patient
-#     - StructureDefinition/arm-procedure
+groups:
+   GroupA:
+     name: Profiles
+     resources:
+     - SDOHCCConditionCL
+     - SDOHCCConsentCL
+     - SDOHCCGoalCL
+     - SDOHCCGroupCL
+     - SDOHCCHealthcareServiceCL
+     - SDOHCCLocationCL
+     - SDOHCCObservacionAssessmentCL
+     - SDOHCCObservationScreeninigResponseCL
+     - SDOHCCProcedureCL
+     - SDOHCCServiceRequestCL
+     - SDOHCCTaskForPatientCL
+     - SDOHCCTaskForReferralManagementCL
+
+   GroupB:
+     name: Value Sets
+     resources:
+     - SDOHCCValueSetLOINCSNOMEDCTCL
+     - SDOHCCValueSetObservationStatusCL
+     - SDOHCCValueSetSDOHCategoryCL
+     - SDOHCCValueSetSDOHQuestionnaireCategoryCL
+     - SDOHCCValueSetReferralTaskStatusCL
+     - SDOHCCValueSetTaskCodeCL
+     - SDOHCCValueSetTaskPriorityCL
+     - SDOHCCValueSetTaskStatusCL
+     - CLCoreProcedureCodes
+
+   GroupC:
+     name: Code Systems
+     resources:
+     - SDOHCCCodeSystemTemporaryCodesCL
+     - CodigoMAIFONASSA
+
+   GroupD:
+     name: Extensions
+     resources:
+     - SDOHCCExtensionHealthcareServiceTelecomAppointmentCL
+     - SDOHCCExtensionConditionAsserterCL
+
+   GroupE:
+     name: Examples
+     resources:
+     - Ejemplo-Paciente
+     - Ejemplo-CondicionDesempleo
+     - Ejemplo-ConsentimientoInformado
+     - Ejemplo-MetaSegAlimentaria
+     - Ejemplo-GrupoPacientes
+#     - HEALTHSERVICE
+     - Ejemplo-Ubicacion
+     - Ejemplo-EvObsIngestaAlimentos
+     - Ejemplo-EvObsTransporte
+     - Ejemplo-Organizacionprestadora
+     - Ejemplo-PlataformaCoordinacion
+     - Ejemplo-OrganizacionPagadora
+     - Ejemplo-Prestador
+     - Ejemplo-RolPrestador
+     - Ejemplo-ProcedAsistSolicitudProgramBancoAlim
+     - Ejemplo-ProcedimientoSuministroAlim
+     - Ejemplo-AsistenciaSolicitudProgramAlimentos
+     - Ejemplo-SolServAplicacionBancoAlim
+     - Ejemplo-SubderivProgramaHuertos
+     - Ejemplo-SubderivSolicitudServProgramaAlimentos
+     - Ejemplo-InformacionRevisionTarea
+     - Ejemplo-SolicitudInformacionTarea
+     - Ejemplo-CumplimientoAcepOrdenGestionRefTarea
+     - Ejemplo-CumplimientoOrdenTareasRef
+     - Ejemplo-AceptacionSubtareaCumpTareasRef
+     - Ejemplo-SubtareaCompletadaCumpOrGestTareaRef
+#     - EJEMPLO PATIENT MAKE
+     - Ejemplo-TareaCompletadaCuestionarioRiesgo
+     - Ejemplo-DocumentoReferencia
+
+   GroupF:
+     name: PRAPARE Examples
+     description: Para el instrumento de evaluació PRAPARE, estos son ejemplos de Cuestionario, Respuesta al Cuestionario, además de observaciones y una condición derivada de la respuesta al cuestionario utilizando StructureMap.
+     resources:
+     - Ejemplo-CuestionarioPRAPARE
+     - Ejemplo-RespuestaCuestionarioPRAPARE
+     - Ejemplo-RespuestaObsCuidadoInfantil
+     - Ejemplo-RespuestaObsNecesidaddeRopa
+     - Ejemplo-RespuestaObsEstadoLaboral
+     - Ejemplo-RespuestaObsEstadoVivienda
+     - Ejemplo-CondicionDeDesamparo
+
+   GroupG:
+     name: Hunger Vital Sign Examples
+     description: Para el instrumento de evaluación Hunger Vital Sign, estos son ejemplos de Cuestionario, Respuesta al Cuestionario, además de una observación y condición derivada de la respuesta al cuestionario utilizando StructureMap.
+     resources:
+     - Ejemplo-QuestionnaireHunger
+     - Ejemplo-QuestionnaireRespHunger
+     - Ejemplo-RespuestaObsPreg3Hunger
+     - Ejemplo-CondicionInsAlimentaria
+     - Ejemplo-DeviceSoftware
+     - Ejemplo-DispositivoConfirmacion
+
 #   GroupB:
 #     name: Group B
 #     description: The Beta Group
