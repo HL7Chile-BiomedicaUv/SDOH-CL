@@ -132,7 +132,7 @@ Description: "Perfil para las tareas relacionadas con SDOH que deben ser realiza
 * output[ChosenContact].type = SDOHCCCodeSystemTemporaryCodesCL#chosen-contact
 * output[ChosenContact].value[x] only markdown
 
-//REVISAR LOS LINK DE TODOS LOS ELEMENTOS QUE SIGUEN
+
 Invariant: SDOH-Task-1
 Description: "Si Task.code es “complete-questionnaire”, entonces se requiere exactamente un Taks.input de cualquiera de los siguientes: \"questionnaire\", \"questionnaire-pdf\", o \"questionnaire-url\", y también se requiere Task.input \"questionnaire-category\" ."
 * severity = #error
