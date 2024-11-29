@@ -18,6 +18,7 @@ El desarrollo de esta IG se basa en lo implementado por el proyecto “Gravity P
 | [CL Core](https://hl7chile.cl/fhir/ig/clcore/1.9.1/) | 1.9.1 | Cuando sea posible, todos los perfiles en esta IG están ya sea derivados de CL Core 1.9.1 o alineados con esa versión y con futuras versiones en la medida de lo posible. |
 | [Structured Document Capture (SDC)](http://hl7.org/fhir/uv/sdc/)| 3.0.0  | SDC es la base para mapear las respuestas de los cuestionarios a observaciones y condiciones. SDC también ofrece orientación sobre cómo se pueden crear cuestionarios con soporte para el cálculo de puntajes, comportamiento condicional, expectativas específicas de renderización, entre otros.   |
 | [SDOH Clinical Care](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/index.html)| 3.0.0  |  Los elementos de esta IG se basan en la estructura definida en la guía SDOH Clinical Care.  |
+{:.grid}
 
 ### Cómo leer esta IG
 
