@@ -134,27 +134,27 @@ Description: "Perfil para las tareas relacionadas con SDOH que deben ser realiza
 
 //REVISAR LOS LINK DE TODOS LOS ELEMENTOS QUE SIGUEN
 Invariant: SDOH-Task-1
-Description: "If Task.code is “complete-questionnaire”, then exactly one Task.input of either \"questionnaire\", \"questionnaire-pdf\", or \"questionnaire-url\" is required and Task.input \"questionnaire-category\" is required."
+Description: "Si Task.code es “complete-questionnaire”, entonces se requiere exactamente un Taks.input de cualquiera de los siguientes: \"questionnaire\", \"questionnaire-pdf\", o \"questionnaire-url\", y también se requiere Task.input \"questionnaire-category\" ."
 * severity = #error
-* expression = "code.coding.where(system='http://hl7.org/fhir/uv/sdc/CodeSystem/temp' and code='complete-questionnaire').exists() implies ((input.type.coding.where(system='http://hl7.org/fhir/uv/sdc/CodeSystem/temp' and code='questionnaire').exists() xor input.type.coding.where(system='http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' and code='questionnaire-pdf').exists() xor input.type.coding.where(system='http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' and code='questionnaire-url').exists()) and input.type.coding.where(system='http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' and code='questionnaire-category').exists())"
+* expression = "code.coding.where(system='http://hl7.org/fhir/uv/sdc/CodeSystem/temp' and code='complete-questionnaire').exists() implies ((input.type.coding.where(system='http://hl7.org/fhir/uv/sdc/CodeSystem/temp' and code='questionnaire').exists() xor input.type.coding.where(system='https://hl7chile.cl/fhir/ig/gravitycl/CodeSystem/SDOHCC-CodeSystemTemporaryCodesCL' and code='questionnaire-pdf').exists() xor input.type.coding.where(system='https://hl7chile.cl/fhir/ig/gravitycl/CodeSystem/SDOHCC-CodeSystemTemporaryCodesCL' and code='questionnaire-url').exists()) and input.type.coding.where(system='https://hl7chile.cl/fhir/ig/gravitycl/CodeSystem/SDOHCC-CodeSystemTemporaryCodesCL' and code='questionnaire-category').exists())"
 * xpath = "true()"
 
 Invariant: SDOH-Task-2
 Description: "If Task.code is “general-information”, then Task.description is required and Task.output, if present, must be “general-information-response”."
 * severity = #error
-* expression = "code.coding.where(system='http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' and code='general-information').exists() implies (description.exists() and (output.empty() or output.type.coding.all(system='http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' and code='general-information-response').exists()))"
+* expression = "code.coding.where(system='https://hl7chile.cl/fhir/ig/gravitycl/CodeSystem/SDOHCC-CodeSystemTemporaryCodesCL' and code='general-information').exists() implies (description.exists() and (output.empty() or output.type.coding.all(system='https://hl7chile.cl/fhir/ig/gravitycl/CodeSystem/SDOHCC-CodeSystemTemporaryCodesCL' and code='general-information-response').exists()))"
 * xpath = "true()"
 
 Invariant: SDOH-Task-3
 Description: "If Task.code is \"review-material\", then Task.focus of DocumentReference is required."
 * severity = #error
-* expression = "code.coding.where(system='http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' and code='review-material').exists() \n implies focus.resolve().all($this is DocumentReference)"
+* expression = "code.coding.where(system='https://hl7chile.cl/fhir/ig/gravitycl/CodeSystem/SDOHCC-CodeSystemTemporaryCodesCL' and code='review-material').exists() \n implies focus.resolve().all($this is DocumentReference)"
 * xpath = "true()"
 
 Invariant: SDOH-Task-4
 Description: "If Task.code is \"make-contact\", then Task.input of at least one \"contact-entity\" is required."
 * severity = #error
-* expression = "code.coding.where(system='http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' and code='make-contact').exists() implies input.type.coding.where(system='http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' and code='contact-entity').exists()"
+* expression = "code.coding.where(system='https://hl7chile.cl/fhir/ig/gravitycl/CodeSystem/SDOHCC-CodeSystemTemporaryCodesCL' and code='make-contact').exists() implies input.type.coding.where(system='https://hl7chile.cl/fhir/ig/gravitycl/CodeSystem/SDOHCC-CodeSystemTemporaryCodesCL' and code='contact-entity').exists()"
 * xpath = "true()"
 
 Invariant: SDOH-Task-5
@@ -172,5 +172,5 @@ Description: "If Task.input is \"questionnaire-pdf\", then Task.output, if prese
 Invariant: SDOH-Task-7
 Description: "If Task.code is \"make-contact\", then Task.description is required and Task.output, if present, must be \"chosen-contact\"."
 * severity = #error
-* expression = "code.coding.where(system='http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' and code='make-contact').exists() implies (description.exists() and (output.empty() or output.type.coding.all(system='http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes' and code='chosen-contact').exists()))"
+* expression = "code.coding.where(system='https://hl7chile.cl/fhir/ig/gravitycl/CodeSystem/SDOHCC-CodeSystemTemporaryCodesCL' and code='make-contact').exists() implies (description.exists() and (output.empty() or output.type.coding.all(system='https://hl7chile.cl/fhir/ig/gravitycl/CodeSystem/SDOHCC-CodeSystemTemporaryCodesCL' and code='chosen-contact').exists()))"
 * xpath = "true()"
