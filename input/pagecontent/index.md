@@ -5,6 +5,7 @@ Los determinantes sociales de la salud (SDOH por su sigla en inglés) se definen
 {% include img-med.html img="marcoconceptual.png" caption="Figura 1: Marco conceptual para la atención clínica de SDOH" %}
 
 La IG admite los siguientes casos de uso: 
+
 *  **Documentación de SDOH en la atención médica:** Integrar los determinantes sociales de la salud en los registros de los encuentros de los pacientes con proveedores de salud, pagadores y servicios comunitarios en Chile, utilizando plataformas como la Historia Clínica Electrónica y promoviendo la interoperabilidad entre los sistemas públicos y privados de salud. 
 * **Derivación electrónica para atender necesidades de SDOH:** Implementar un flujo de trabajo electrónico que facilite la derivación de pacientes para atender necesidades sociales, optimizando la coordinación entre atención médica y servicios sociales, con seguimiento adecuado y retroalimentación entre las partes involucradas, incluyendo la conexión con organizaciones intermediarias y el compromiso directo con pacientes y cuidadores.
 * **Identificación de cohortes de pacientes vinculados a una entidad común:** Crear cohortes de pacientes que comparten características comunes, como pertenecer al mismo pagador (FONASA o ISAPRE), para permitir intervenciones dirigidas a mejorar la salud de grupos vulnerables o expuestos a condiciones sociales similares, utilizando datos disponibles en los sistemas de salud pública y privada de Chile. 
@@ -24,7 +25,17 @@ El desarrollo de esta IG se basa en lo implementado por el proyecto “Gravity P
 
 ### Contenido técnico clave de esta IG
 
+### Perfiles
 
+{% include globals-table.xhtml %}
+
+### Analisis de versiones cruzadas
+
+{% include cross-version-analysis.xhtml %}
+
+### Declaracion de propiedad intelectual
+
+{% include ip-statements.xhtml %}
 
 
 
