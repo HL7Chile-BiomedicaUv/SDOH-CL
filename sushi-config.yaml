@@ -46,14 +46,17 @@ dependencies:
 # with supported extensions (e.g., .md/.xml) will be treated as
 # sub-pages.
 #
-# pages:
-#   index.md:
-#     title: Example Home
-#   implementation.xml:
+#pages:
+#  index.md:
+#    title: Inicio IG
+#  2-sdoh_challenges_gravity.md:
+#    title: SDOH
+#  4-technicalBackground.md:
+#    title: Antecedentes técnicos
+#  5-glossary.md:
+#    title: Glosario
 #   examples.xml:
 #     title: Examples Overview
-#     simpleExamples.xml:
-#     complexExamples.xml:
 #
 #
 # The parameters property represents IG.definition.parameter. Rather
@@ -150,7 +153,7 @@ menu:
 # URL when generating the IG JSON.
 #
 groups:
-   GroupA:
+   Profiles:
      name: Profiles
      resources:
      - SDOHCCConditionCL
@@ -166,7 +169,7 @@ groups:
      - SDOHCCTaskForPatientCL
      - SDOHCCTaskForReferralManagementCL
 
-   GroupB:
+   ValueSets:
      name: Value Sets
      resources:
      - SDOHCCValueSetLOINCSNOMEDCTCL
@@ -179,19 +182,19 @@ groups:
      - SDOHCCValueSetTaskStatusCL
      - CLCoreProcedureCodes
 
-   GroupC:
+   CodeSystems:
      name: Code Systems
      resources:
      - SDOHCCCodeSystemTemporaryCodesCL
      - CodigoMAIFONASSA
 
-   GroupD:
+   Extensions:
      name: Extensions
      resources:
      - SDOHCCExtensionHealthcareServiceTelecomAppointmentCL
      - SDOHCCExtensionConditionAsserterCL
 
-   GroupE:
+   Examples:
      name: Examples
      resources:
      - Ejemplo-Paciente
@@ -224,7 +227,7 @@ groups:
      - Ejemplo-TareaCompletadaCuestionarioRiesgo
      - Ejemplo-DocumentoReferencia
 
-   GroupF:
+   ExamplesPRAPARE:
      name: PRAPARE Examples
      description: Para el instrumento de evaluació PRAPARE, estos son ejemplos de Cuestionario, Respuesta al Cuestionario, además de observaciones y una condición derivada de la respuesta al cuestionario utilizando StructureMap.
      resources:
@@ -236,7 +239,7 @@ groups:
      - Ejemplo-RespuestaObsEstadoVivienda
      - Ejemplo-CondicionDeDesamparo
 
-   GroupG:
+   EXAMPLESHVS:
      name: Hunger Vital Sign Examples
      description: Para el instrumento de evaluación Hunger Vital Sign, estos son ejemplos de Cuestionario, Respuesta al Cuestionario, además de una observación y condición derivada de la respuesta al cuestionario utilizando StructureMap.
      resources:
