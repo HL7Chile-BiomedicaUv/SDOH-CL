@@ -21,17 +21,7 @@ El desarrollo de esta IG se basa en lo implementado por el proyecto “Gravity P
 | [SDOH Clinical Care](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/index.html)| 2.2.0  |  Los elementos de esta IG se basan en la estructura definida en la guía SDOH Clinical Care.  |
 {:.grid}
 
-### Perfiles
 
-{% include globals-table.xhtml %}
-
-### Analisis de versiones cruzadas
-
-{% include cross-version-analysis.xhtml %}
-
-### Declaracion de propiedad intelectual
-
-{% include ip-statements.xhtml %}
 
 
 
