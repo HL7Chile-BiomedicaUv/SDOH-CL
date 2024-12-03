@@ -8,3 +8,6 @@
 |  Proveedor                             | Incluye proveedores autorizados y profesionales calificados que interactúan con el paciente para evaluar los riesgos sociales, establecer objetivos y determinar/recomendar referencias.  |
 |  Dominio SDOH                          | Un área de actividad que describe una de las condiciones en las que las personas nacen, crecen, trabajan, viven y envejencen, y el conjunto más amplio de fuerzas y sistemas que configuran las condiciones de la vida diaria.  |
 {:.grid .center}
+
+
+{% include markdown-link-references.md %}
