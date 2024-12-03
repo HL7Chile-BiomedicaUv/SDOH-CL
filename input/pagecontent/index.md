@@ -13,7 +13,6 @@ La IG admite los siguientes casos de uso:
 El desarrollo de esta IG se basa en lo implementado por el proyecto “Gravity Project”. Por ende, la implementación de  la homologación de la IG “SDOH Clinical Care” en Chile tiene como objetivo obtener y analizar los determinantes sociales de la salud mediante la recolección de datos clínicos y sociales de los pacientes. Esto se logrará a través de la definición del proceso y el modelamiento de la integración de datos, con el propósito de mejorar la comprensión y el manejo de los factores que influyen en la salud. Esta iniciativa  permitirá identificar los riesgos sociales de los pacientes de manera oportuna y facilitar la interoperabilidad de la información entre sistemas. De este modo los proveedores de salud podrán personalizar los tratamientos y recomendaciones considerando no solo los síntomas clínicos, sino también el contexto social de cada paciente.
 
 ### Perfiles
-
 {% include globals-table.xhtml %}
 
 ### Dependencias
