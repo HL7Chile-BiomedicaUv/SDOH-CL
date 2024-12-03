@@ -43,8 +43,6 @@ El diagrama a continuación refleja las estructuras de datos principales y las r
 
 En el diagrama, las formas azules indican los perfiles definidos en esta IG y las formas amarillas indican los perfiles definidos en las IG que se tiene dependencia (Cl Core o SDC). Solo se muestran las referencias clave entre perfiles. La mayoría de los recursos de los participantes (paciente, profesional, organización, etc.) están excluidos porque se hace referencia a ellos desde la mayoría de los perfiles
 
-<object data="FHIRModelingV2.svg" type="image/svg+xml"></object>
-<br/>
-**Figura 3: Marco de modelado de datos**
+
 
 {% include markdown-link-references.md %}
