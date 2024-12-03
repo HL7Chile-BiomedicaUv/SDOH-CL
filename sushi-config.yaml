@@ -50,7 +50,9 @@ pages:
   index.md:
     title: Inicio IG
   2-sdoh_challenges_gravity.md:
-    title: SDOH
+    title: Importancia de los SDOH
+  3-sdoh_clinical_care_scope:
+    title: Antecedentes de atención clínica de SDOH
   4-technicalBackground.md:
     title: Antecedentes técnicos
   5-glossary.md:

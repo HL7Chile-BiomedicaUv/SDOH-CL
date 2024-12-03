@@ -6,7 +6,7 @@ Alias: $CoreOrganizacionCl = https://hl7chile.cl/fhir/ig/clcore/StructureDefinit
 Profile: SDOHCCTaskForReferralManagementCL
 Parent: Task
 Id: SDOHCC-TaskForReferralManagementCL
-Title: "Tarea de SDOHCC para la gestión de derivaciones."
+Title: "Tarea de SDOHCC para la gestión de derivaciones"
 Description: "Perfil para tareas que solicitan el cumplimiento de un ServiceRequest SDOHCC (es decir,una referencia para servicio) y posteriormente rastrean y gestionan el cumplimiento de esa referencia."
 * ^version = "0.1.0"
 * ^publisher = "HL7 Chile"
