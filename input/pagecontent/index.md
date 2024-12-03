@@ -12,6 +12,23 @@ La IG admite los siguientes casos de uso:
 
 El desarrollo de esta IG se basa en lo implementado por el proyecto “Gravity Project”. Por ende, la implementación de  la homologación de la IG “SDOH Clinical Care” en Chile tiene como objetivo obtener y analizar los determinantes sociales de la salud mediante la recolección de datos clínicos y sociales de los pacientes. Esto se logrará a través de la definición del proceso y el modelamiento de la integración de datos, con el propósito de mejorar la comprensión y el manejo de los factores que influyen en la salud. Esta iniciativa  permitirá identificar los riesgos sociales de los pacientes de manera oportuna y facilitar la interoperabilidad de la información entre sistemas. De este modo los proveedores de salud podrán personalizar los tratamientos y recomendaciones considerando no solo los síntomas clínicos, sino también el contexto social de cada paciente.
 
+### Perfiles
+
+{% include globals-table.xhtml %}
+
+### Dependencias
+
+{% include dependency-table.xhtml %}
+
+### Analisis de versiones cruzadas
+
+{% include cross-version-analysis.xhtml %}
+
+### Declaracion de propiedad intelectual
+
+{% include ip-statements.xhtml %}
+
+
 ### Dependencias de otras IG
 
 | Guía de Implementación | Versión | Dependencia |
@@ -20,11 +37,6 @@ El desarrollo de esta IG se basa en lo implementado por el proyecto “Gravity P
 | [Structured Document Capture (SDC)](http://hl7.org/fhir/uv/sdc/)| 3.0.0  | SDC es la base para mapear las respuestas de los cuestionarios a observaciones y condiciones. SDC también ofrece orientación sobre cómo se pueden crear cuestionarios con soporte para el cálculo de puntajes, comportamiento condicional, expectativas específicas de renderización, entre otros.   |
 | [SDOH Clinical Care](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/index.html)| 2.2.0  |  Los elementos de esta IG se basan en la estructura definida en la guía SDOH Clinical Care.  |
 {:.grid}
-
-
-
-
-
 
 -----------------------------------------------------------------------------------------------------
 [^1]: [Healthy People 2030](https://health.gov/healthypeople/priority-areas/social-determinants-health)
