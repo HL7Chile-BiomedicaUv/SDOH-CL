@@ -46,15 +46,15 @@ dependencies:
 # with supported extensions (e.g., .md/.xml) will be treated as
 # sub-pages.
 #
-#pages:
-#  index.md:
-#    title: Inicio IG
-#  2-sdoh_challenges_gravity.md:
-#    title: SDOH
-#  4-technicalBackground.md:
-#    title: Antecedentes técnicos
-#  5-glossary.md:
-#    title: Glosario
+pages:
+  index.md:
+    title: Inicio IG
+  2-sdoh_challenges_gravity.md:
+    title: SDOH
+  4-technicalBackground.md:
+    title: Antecedentes técnicos
+  5-glossary.md:
+    title: Glosario
 #   examples.xml:
 #     title: Examples Overview
 #
