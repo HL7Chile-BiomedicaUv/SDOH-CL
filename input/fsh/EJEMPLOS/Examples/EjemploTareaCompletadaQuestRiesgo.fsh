@@ -4,7 +4,7 @@ Instance: Ejemplo-TareaCompletadaCuestionarioRiesgo
 InstanceOf: SDOHCCTaskForPatientCL
 Usage: #example
 Title: "Ejemplo SDOHCC-Tarea completada de cuestionario de riesgo del paciente"
-Description: "Ejemplo de una tarea completada para el paciente donde la tarea onsistió en completar un cuestionario de Hunger Vital Sign (un cuestionario de la categoría \"cuestionario de riesgo\".)"
+Description: "Ejemplo de una tarea completada para el paciente donde la tarea consistió en completar un cuestionario de Hunger Vital Sign (un cuestionario de la categoría \"cuestionario de riesgo\".)"
 
 * status = #completed
 * intent = #order

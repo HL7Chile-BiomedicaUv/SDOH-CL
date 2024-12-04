@@ -5,7 +5,7 @@ Instance: Ejemplo-EvObsTransporte
 InstanceOf: SDOHCCObservacionAssessmentCL
 Usage: #example
 Title: "Ejemplo SDOHCC-Evaluación de observación del transporte demasiado costoso"
-Description: "Ejemplo de una observación sobre transporte que no necesariamente se deriva únicamente de una encuesta de detección. Esta observación implica una evaluación adicional (por ejemplo, por parte de un profesional, pagador,etc.). Este ejemplo también incluye un Observation.category (es decir, Inseguridad en el Transporte) que está incluida en el \"Value set SDOHCC para Categoría SDOH\". Además, se incluye una subcategoría de Inseguridad en el transporte (es decir, Inseguridad Financiera en el Transporte)."
+Description: "Ejemplo de una observación sobre transporte que no necesariamente se deriva únicamente de una encuesta de detección. Esta observación implica una evaluación adicional (por ejemplo, por parte de un profesional, pagador, etc.). Este ejemplo también incluye un Observation.category (es decir, Inseguridad en el Transporte) que está incluida en el \"Value set SDOHCC para Categoría SDOH\". Además, se incluye una subcategoría de Inseguridad en el transporte (es decir, Inseguridad Financiera en el Transporte)."
 
 * status = #final
 

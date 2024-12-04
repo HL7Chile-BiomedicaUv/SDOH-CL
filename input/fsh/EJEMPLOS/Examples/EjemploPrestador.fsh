@@ -8,7 +8,7 @@ Instance: Ejemplo-Prestador
 InstanceOf: PrestadorCL
 Usage: #definition
 Title: "Ejemplo SDOHCC-Prestador"
-Description: "Ejemplo de un profesional.Este ejemplo se utiliza como profesional de referencia en otros ejemplos de esta IG."
+Description: "Ejemplo de un profesional. Este ejemplo se utiliza como profesional de referencia en otros ejemplos de esta IG."
 
 * identifier.use = #official
 * identifier.type = $CSTipoIdentificador#01 "RUN"

@@ -2,7 +2,7 @@ Instance: Ejemplo-PlataformaCoordinacion
 InstanceOf: OrganizacionCL
 Usage: #definition
 Title: "Ejemplo Plataforma de coordinación"
-Description: "Ejemplo de una plataforma de coordinación.Este ejemplo se utiliza como referencia en otros ejemplos de esta IG."
+Description: "Ejemplo de una plataforma de coordinación. Este ejemplo se utiliza como referencia en otros ejemplos de esta IG."
 
 * active = true
 * name = "Plataforma de Coordinación ABC"
