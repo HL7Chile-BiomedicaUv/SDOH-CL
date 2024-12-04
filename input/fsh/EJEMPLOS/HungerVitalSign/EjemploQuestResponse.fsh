@@ -4,7 +4,7 @@ Instance: Ejemplo-QuestionnaireRespHunger
 InstanceOf: QuestionnaireResponse
 Usage: #example
 Title: "Ejemplo SDOHCC- Respuesta del cuestionario Signos de inseguridad alimentaria."
-Description: "Ejemplo de un QuestionnaireResponse de SDC que representa las preguntas y las respuestas seleccionadas del cuestionario de Hunger Vital Sign de LOIN."
+Description: "Ejemplo de un QuestionnaireResponse de SDC que representa las preguntas y las respuestas seleccionadas del cuestionario de Hunger Vital Sign de LOINC."
 
 * questionnaire = "https://hl7chile.cl/fhir/ig/gravitycl/Questionnaire/Ejemplo-QuestionnaireHunger"
 * questionnaire.extension.url = "http://hl7.org/fhir/StructureDefinition/display"
