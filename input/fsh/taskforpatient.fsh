@@ -12,15 +12,7 @@ Parent: Task
 Id: SDOHCC-TaskForPatientCL
 Title: "Tarea SDOHCC para el paciente"
 Description: "Perfil para las tareas relacionadas con SDOH que deben ser realizadas por el paciente o alguien que actúe en su nombre."
-* ^version = "0.1.0"
-* ^publisher = "HL7 Chile"
-* ^contact.name = "HL7 Chile"
-* ^contact.telecom[0].system = #url
-* ^contact.telecom[=].value = "http://hl7chile.cl"
-* ^contact.telecom[+].system = #email
-* ^contact.telecom[=].value = "chair@hl7chile.cl"
-* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
-* ^copyright = "Usado con el permiso de HL7 International, todos los derechos resevados en los Licencias de HL7 Internacional."
+
 * obeys SDOH-Task-1 and SDOH-Task-2 and SDOH-Task-3 and SDOH-Task-4 and SDOH-Task-5 and SDOH-Task-6 and SDOH-Task-7
 * . ^short = "Una solicitud para completar un cuestionario o solicitud de servicio relacionado con SDOH."
 * partOf ^slicing.discriminator.type = #profile
@@ -77,7 +69,7 @@ Description: "Perfil para las tareas relacionadas con SDOH que deben ser realiza
 * input[Questionnaire].type ^binding.strength = #example
 * input[Questionnaire].type ^binding.description = "Códigos para identificar tipos de parámetros de entrada.Estos suelen ser específicos de un flujo de trabajo particular.Los códigos representan tipos de cuestionarios que se le podría pedir al paciente que complete."
 * input[Questionnaire].value[x] only Canonical($sdc-questionnaire)
-* input[Questionnaire].value[x] ^comment = "Esto hace referencia al perfil de Cuestionario Base SDC para permitir el uso de cuestionarios (por ejemplo,un cuestionario de satisfacción del paciente) que no son cuestionarios de detección de SDOH.Sin embargo,para cuestionarios que estaán destinador a producir recursos FHIR (por ejemplo,Observaciones o Condiciones),se debe utilizar el Cuestionario Extraíble SDC-StructureMap."
+* input[Questionnaire].value[x] ^comment = "Esto hace referencia al perfil de Cuestionario Base SDC para permitir el uso de cuestionarios (por ejemplo, un cuestionario de satisfacción del paciente) que no son cuestionarios de detección de SDOH. Sin embargo, para cuestionarios que están destinados a producir recursos FHIR (por ejemplo, Observaciones o Condiciones), se debe utilizar el Cuestionario Extraíble SDC-StructureMap."
 * input[QuestionnairePDF] ^condition[0] = "SDOH-Task-1"
 * input[QuestionnairePDF].type = SDOHCCCodeSystemTemporaryCodesCL#questionnaire-pdf
 * input[QuestionnairePDF].value[x] only Reference(DocumentReference)

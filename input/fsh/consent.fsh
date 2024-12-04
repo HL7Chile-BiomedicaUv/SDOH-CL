@@ -9,15 +9,7 @@ Parent: Consent
 Id: SDOHCC-ConsentCL
 Title: "Consentimiento SDOHCC"
 Description: "Perfil para el consentimiento relacionado con la divulgación de información sobre Determinantes Sociales de la Salud (SDOH) a organizaciones no sujetas a la Ley de Protección de la Vida Privada (Ley N°19.628) o normativas específicas de salud."
-* ^version = "0.1.0"
-* ^publisher = "HL7 Chile"
-* ^contact.name = "HL7 Chile"
-* ^contact.telecom[0].system = #url
-* ^contact.telecom[=].value = "http://hl7chile.cl"
-* ^contact.telecom[+].system = #email
-* ^contact.telecom[=].value = "chair@hl7chile.cl"
-* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
-* ^copyright = "Usado con el permiso de HL7 International, todos los derechos resevados en los Licencias de HL7 Internacional."
+
 * . ^definition = "Un registro de las decisiones de un consumidor de atención médica relacionadas con la divulgación de información sobre Determinantes Sociales de la Salud (SDOH) a organizaciones no sujetas a la Ley de Protección de la Vida Privada (Ley N°19.628) o normativas específicas de salud."
 //* . ^comment = "Providers should consider including standard language to inform the patient that disclosure of their information to entities which are not HIPAA covered entities are no longer protected under the HIPAA Privacy Rule but may be protected by FTC Consumer Protection rules."
 * status MS
@@ -35,7 +27,7 @@ Description: "Perfil para el consentimiento relacionado con la divulgación de i
 * dateTime 1.. MS
 * dateTime ^requirements = "Esto es Must Support para permitir que un receptor determine el  \"orden \" de múltiples consentimientos. "
 * performer only Reference($CoreOrganizacionCl or RelatedPerson or $CorePrestadorCl or $CoreRolClinicoCl or $CorePacienteCl)
-* performer ^requirements = "Este elemento no es obligatorio. No existe un caso de uso en el que el \"Performer\" sea computable, ya que normalmente estará preente en el \"formulario\" de consentimiento."
+* performer ^requirements = "Este elemento no es obligatorio. No existe un caso de uso en el que el \"Performer\" sea computable, ya que normalmente estará presente en el \"formulario\" de consentimiento."
 * organization 1..1 MS
 * organization only Reference($CoreOrganizacionCl)
 * source[x] 1.. MS
