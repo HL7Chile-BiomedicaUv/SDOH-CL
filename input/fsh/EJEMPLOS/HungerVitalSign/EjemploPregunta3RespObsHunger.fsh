@@ -6,7 +6,7 @@ Instance: Ejemplo-RespuestaObsPreg3Hunger
 InstanceOf: $CoreObservacionCL
 Usage: #example
 Title: "Ejemplo SDOHCC-Respuesta de observación pregunta 3 del cuestionario Signo de inseguridad alimentaria"
-Description: "Ejemplo de una respuesta de evaluación que represenra el riesgo de inseguridad alimentaria del cuestionario Signo de inseguridad alimentaria. La respuesta sobre el riesgo de inseguridad alimentaria no se responde directamente. Más bien, se determina a partir de las respuestas a las 2 preguntas del cuestionario. Por esta razón, esta observación no tiene un Observation.performer. Además, esta observación demuestra el uso de Observation.interpretation:POS para indicar una posible necesidad social relacionada con la salud o un riesgo en el dominio de la inseguridad alimentaria."
+Description: "Ejemplo de una respuesta de evaluación que representa el riesgo de inseguridad alimentaria del cuestionario Signo de inseguridad alimentaria. La respuesta sobre el riesgo de inseguridad alimentaria no se responde directamente. Más bien, se determina a partir de las respuestas a las dos preguntas del cuestionario. Por esta razón, esta observación no tiene un Observation.performer. Además, esta observación demuestra el uso de Observation.interpretation:POS para indicar una posible necesidad social relacionada con la salud o un riesgo en el dominio de la inseguridad alimentaria."
 
 * status = #final
 * category[0] = $observation-category#social-history
