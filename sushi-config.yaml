@@ -57,6 +57,8 @@ pages:
     title: Antecedentes técnicos
   5-glossary.md:
     title: Glosario
+  7-referralWorkflow:
+    title: Flujo de trabajo de referencia
 #   examples.xml:
 #     title: Examples Overview
 #
