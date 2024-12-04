@@ -2,7 +2,7 @@ Instance: Ejemplo-InformacionRevisionTarea
 InstanceOf: SDOHCCTaskForPatientCL
 Usage: #example
 Title: "Ejemplo SDOHCC-Información de revisión del paciente en la tarea"
-Description: "Ejemplo de una tarea completada para el paciente,donde la tarea consistió en revisar material."
+Description: "Ejemplo de una tarea completada para el paciente, donde la tarea consistió en revisar material."
 
 * status = #completed
 * intent = #order

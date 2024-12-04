@@ -7,7 +7,7 @@ Instance: Ejemplo-Organizacionprestadora
 InstanceOf: OrganizacionCL
 Usage: #definition
 Title: "Ejemplo SDOHCC-Organización prestadora de salud"
-Description: "Ejemplo de una organización prestadora de salud.Este ejemplo se utiliza como organización de referencia en otros ejemplos de esta IG."
+Description: "Ejemplo de una organización prestadora de salud. Este ejemplo se utiliza como organización de referencia en otros ejemplos de esta IG."
 
 * identifier.system = "https://datos.gob.cl/dataset/establecimientos-de-salud-vigentes/resource/2c44d782-3365-44e3-aefb-2c8b8363a1bc"
 * identifier.value = "111372"
