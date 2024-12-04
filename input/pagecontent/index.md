@@ -30,6 +30,7 @@ El desarrollo de esta IG se basa en lo implementado por el proyecto “Gravity P
 
 
 
+
 -----------------------------------------------------------------------------------------------------
 [^1]: [Healthy People 2030](https://health.gov/healthypeople/priority-areas/social-determinants-health)
 
