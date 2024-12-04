@@ -33,13 +33,13 @@ El enfoque de esta IG son las interacciones entre un paciente, un proveedor y un
 
 El diagrama a continuación refleja las estructuras de datos principales y las relaciones asociadas con cada uno de los principales procesos cubiertos por esta guía de implementación: 
 
-* Evaluación: donde se recoíla información de un paciente, normalmente a través de una respuesta a un [QuestionnaireResponse] basado en un [Questionnaire] estandarizado que da como resultado una o más [SDOHCCObservationScreeninigResponseCL]. Estas pueden ir acompañadas de [SDOHCCObservacionAssessmentCL] adicionales. Si existen inquietudes sobre la situación de los determinantes sociales de un paciente, se definirá una [SDOHCCConditionCL] que permitirá realizar un seguimiento de la inquietud como parte de la lista de problemas del paciente. 
+* Evaluación: donde se recopíla información de un paciente, normalmente a través de una respuesta a un [QuestionnaireResponse] basado en un [Questionnaire] estandarizado que da como resultado una o más [SDOHCCObservationScreeninigResponseCL]. Estas pueden ir acompañadas de [SDOHCCObservacionAssessmentCL] adicionales. Si existen inquietudes sobre la situación de los determinantes sociales de un paciente, se definirá una [SDOHCCConditionCL] que permitirá realizar un seguimiento de la inquietud como parte de la lista de problemas del paciente. 
 
-* Gestión de objetivos/metas: se ha identificado un problema SDOH, se crearán las [Metas/Objetivos SDOHCC] acordados entre el paciente y el médico y, con el tiempo, se actualizarán. Estas metas/objetivos se pueden asociar con la [Respuesta de Detección de Observación de SDOHCC], la [Evaluación de Observación de SDOHCC] y/o las [Condición SDOHCC]s que buscan gestionar y mejorar. En algunos casos, un objetivo también puede indicar observaciones para reflejar el resultado del objetivo.
+* Gestión de objetivos/metas: se ha identificado un problema SDOH, se crearán las [SDOHCCGoalCL] acordados entre el paciente y el médico y, con el tiempo, se actualizarán. Estas metas/objetivos se pueden asociar con la [SDOHCCObservationScreeninigResponseCL], la [SDOHCCObservacionAssessmentCL] y/o la [CSDOHCCConditionCL] que busca gestionar y mejorar. En algunos casos, un objetivo también puede indicar observaciones para reflejar el resultado del objetivo.
 
-* Gestión de derivaciones: la orden formal se captura como una [Solicitud de servicio de SDOHCC] y se vincula con las [Metas/Objetivos SDOHCC], la [Respuesta de Detección de Observación de SDOHCC], la [Evaluación de Observación de SDOHCC] y las [Condición SDOHCC]s que justifican la acción. También puede vincularse con un [Consentimiento SDOHCC] que permita al destinatario de la derivación compartir información adicional. La [Tarea de SDOHCC para la gestión de derivaciones] coordina la solicitud y el proceso resultante, posiblemente vinculado a las acciones derivadas realizadas por el destinatario de la referencia. Finalmente, los [Procedimiento SDOHCC] documentan las acciones llevadas a cabo. 
+* Gestión de derivaciones: la orden formal se captura como una [SDOHCCServiceRequestCL] y se vincula con las [SDOHCCGoalCL], la [SDOHCCObservationScreeninigResponseCL], la [SDOHCCObservacionAssessmentCL] y la[SDOHCCConditionCL] que justifica la acción. También puede vincularse con un [SDOHCCConsentCL] que permita al destinatario de la derivación compartir información adicional. La [SDOHCCTaskForReferralManagementCL] coordina la solicitud y el proceso resultante, posiblemente vinculado a las acciones derivadas realizadas por el destinatario de la referencia. Finalmente, los [SDOHCCProcedureCL] documentan las acciones llevadas a cabo. 
 
-* Participación del paciente: permite que se realicen [] al paciente o a su(s) cuidador(es). Según la naturaleza de la tarea, esta puede estar vinculada a un [] (con un resultado en un []), a un [] que contenga un formulario en formato PDF y posteriormente otro [] con la respuesta en PDF, a un [] con información sobre a quién contactar, o no estar vinculada a ningún elemento en particular.
+* Participación del paciente: permite que se realicen [SDOHCCTaskForPatientCL] al paciente o a su(s) cuidador(es). Según la naturaleza de la tarea, esta puede estar vinculada a un [Questionnaire] (con un resultado en un [QuestionnaireResponse]), a un [DocumentReference] que contenga un formulario en formato PDF y posteriormente otro [DocumentReference] con la respuesta en PDF, a un [SDOHCCHealthcareServiceCL] con información sobre a quién contactar, o no estar vinculada a ningún elemento en particular.
 
 En el diagrama, las formas azules indican los perfiles definidos en esta IG y las formas amarillas indican los perfiles definidos en las IG que se tiene dependencia (Cl Core o SDC). Solo se muestran las referencias clave entre perfiles. La mayoría de los recursos de los participantes (paciente, profesional, organización, etc.) están excluidos porque se hace referencia a ellos desde la mayoría de los perfiles.
 
@@ -49,3 +49,7 @@ En el diagrama, las formas azules indican los perfiles definidos en esta IG y la
 
 
 {% include markdown-link-references.md %}
+
+
+
+
