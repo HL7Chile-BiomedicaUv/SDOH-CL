@@ -8,15 +8,7 @@ Parent: Task
 Id: SDOHCC-TaskForReferralManagementCL
 Title: "Tarea de SDOHCC para la gestión de derivaciones"
 Description: "Perfil para tareas que solicitan el cumplimiento de un ServiceRequest SDOHCC (es decir,una referencia para servicio) y posteriormente rastrean y gestionan el cumplimiento de esa referencia."
-* ^version = "0.1.0"
-* ^publisher = "HL7 Chile"
-* ^contact.name = "HL7 Chile"
-* ^contact.telecom[0].system = #url
-* ^contact.telecom[=].value = "http://hl7chile.cl"
-* ^contact.telecom[+].system = #email
-* ^contact.telecom[=].value = "chair@hl7chile.cl"
-* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
-* ^copyright = "Usado con el permiso de HL7 International, todos los derechos resevados en los Licencias de HL7 Internacional."
+
 * . ^short = "Una solicitud para cumplir con un pedido de servicio SDOH."
 * . ^comment = "Para tareas utilizadas en solicitar el cumplimiento de un ServiceRequest SDOHCC (es decir,una referencia para servicio) y posteriormente rastrear y gestionar el cumplimiento de esa referencia."
 * partOf ^slicing.discriminator[0].type = #profile
@@ -47,7 +39,7 @@ Description: "Perfil para tareas que solicitan el cumplimiento de un ServiceRequ
 * requester 1.. MS
 * requester only Reference($CoreRolClinicoCl or $CoreOrganizacionCl)
 * owner MS
-* owner ^requirements = "Este elemento es Must Support.Sin embargo,no es obligatorio para permitir que se cree una tarea sin un propietario,de modo que uno de un grupo potencial de ejecutores pueda optar por \"poseer\" la tarea (por ejemplo,se establece una solicitud de cumplimiento \"abierta\" y cualquier persona capaz de completar el pedido puede reclamarla)."
+* owner ^requirements = "Este elemento es Must Support. Sin embargo, no es obligatorio para permitir que se cree una tarea sin un propietario, de modo que uno de un grupo potencial de ejecutores pueda optar por \"poseer\" la tarea (por ejemplo, se establece una solicitud de cumplimiento \"abierta\" y cualquier persona capaz de completar el pedido puede reclamar)."
 * output ^slicing.discriminator[0].type = #pattern
 * output ^slicing.discriminator[=].path = "type"
 * output ^slicing.discriminator[+].type = #type

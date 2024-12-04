@@ -5,15 +5,7 @@ Parent: Group
 Id: SDOHCC-GroupCL
 Title: "Grupo SDOHCC"
 Description: "Perfil para identificar grupos de pacientes que tienen una condición de Determinantes Sociales de la Salud (SDOH) y son miembros de una organización pagadora específica."
-* ^version = "0.1.0"
-* ^publisher = "HL7 Chile"
-* ^contact.name = "HL7 Chile"
-* ^contact.telecom[0].system = #url
-* ^contact.telecom[=].value = "http://hl7chile.cl"
-* ^contact.telecom[+].system = #email
-* ^contact.telecom[=].value = "chair@hl7chile.cl"
-* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
-* ^copyright = "Usado con el permiso de HL7 International, todos los derechos resevados en los Licencias de HL7 Internacional."
+
 * . ^short = "Grupo de pacientes de SDOH para un pagador." //Pagador: ISAPRE-FONASA-CUALQUIER OTRO SISTEMA
 * . ^definition = "Para la consolidación de individuos que comparten un conjunto común de características (como el mismo pagador y cualquier condición en las categorías SDOH especificadas),con el fin de facilitar a las organizaciones, que cuenten con los permisos adecuados,la recuperación sencilla de información relacionada con la cohorte de personas por las que tienen una responsabilidad compartida."
 * active 1..

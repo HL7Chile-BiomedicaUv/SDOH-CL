@@ -15,7 +15,7 @@ Context: SDOHCCHealthcareServiceCL.telecom
 * ^contact.telecom[=].value = "chair@hl7chile.cl"
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 * . ..1
-* . ^short = "Las telcomunicaciones son para concretar citas."
+* . ^short = "Las telecomunicaciones son para concretar citas."
 * . ^definition = "Para marcar un HealthcareService.telecom como aquel que el paciente puede utilizar para hacer una cita."
 * value[x] 1..
 * value[x] only boolean

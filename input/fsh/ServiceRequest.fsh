@@ -9,24 +9,16 @@ Parent: ServiceRequest
 Id: SDOHCC-ServiceRequestCL
 Title: "Solicitud de servicio de SDOHCC"
 Description: "Perfil para solicitudes de servicio que abordan los Determinantes Sociales de la Salud."
-* ^version = "0.1.0"
-* ^publisher = "HL7 Chile"
-* ^contact.name = "HL7 Chile"
-* ^contact.telecom[0].system = #url
-* ^contact.telecom[=].value = "http://hl7chile.cl"
-* ^contact.telecom[+].system = #email
-* ^contact.telecom[=].value = "chair@hl7chile.cl"
-* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
-* ^copyright = "Usado con el permiso de HL7 International, todos los derechos resevados en los Licencias de HL7 Internacional."
-* . ^short = "Una solicitud de servicio para abordar una condición,observación o meta/objetivo de los SDOH."
-* . ^definition = "Para solicitudes de servicio que abordan condiciones,observaciones o metas/objetivos de los SDOH."
-* . ^comment = "Muchos de los perfiles de SDOHCC se hacen referencia entre sí.Un flujo respaldado por esta IG es que las respuestas a cuestionarios resultan en observaciones que pueden utilizarse como evidencia para condiciones que pueden llevar a metas/objetivos, solicitudes de servicio y procedimientos.Sin embargo,también son posibles caminos alternativos."
+
+* . ^short = "Una solicitud de servicio para abordar una condición, observación o meta/objetivo de los SDOH."
+* . ^definition = "Para solicitudes de servicio que abordan condiciones, observaciones o metas/objetivos de los SDOH."
+* . ^comment = "Muchos de los perfiles de SDOHCC se hacen referencia entre sí. Un flujo respaldado por esta IG es que las respuestas a cuestionarios resultan en observaciones que pueden utilizarse como evidencia para condiciones que pueden llevar a metas/objetivos, solicitudes de servicio y procedimientos. Sin embargo,también son posibles caminos alternativos."
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 * extension contains SRPertainsToGoal named pertainsToGoal 0..* MS
 * extension[pertainsToGoal] ^short = "Pertenece a la meta/objetivo de SDOH."
-* extension[pertainsToGoal] ^definition = "Indica que el recurso está relacionado con la medición,logro o progreso hacia la meta/objetivo mencionado.Por ejemplo,una solicitud de servicio para proporcionar vales de alimentos pertenece a la meta/objetivo de lograr seguridad alimentaria."
+* extension[pertainsToGoal] ^definition = "Indica que el recurso está relacionado con la medición, logro o progreso hacia la meta/objetivo mencionado. Por ejemplo, una solicitud de servicio para proporcionar vales de alimentos pertenece a la meta/objetivo de lograr seguridad alimentaria."
 * extension[pertainsToGoal] ^requirements = "Indica que la solicitud de servicio está relacionada con la meta/objetivo SDOHCC mencionado."
 * extension[pertainsToGoal].value[x] only Reference(SDOHCCGoalCL)
 * extension[pertainsToGoal].value[x] MS
@@ -44,25 +36,25 @@ Description: "Perfil para solicitudes de servicio que abordan los Determinantes 
 * category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
-* category ^definition = "Un cpodigo que clasifica el servicio para fines de búsqueda,ordenamiento y visualización (por ejemplo,Educación)."
+* category ^definition = "Un código que clasifica el servicio para fines de búsqueda, ordenamiento y visualización (por ejemplo, Educación)."
 * category contains SDOH 0..* MS
 * category[SDOH] from SDOHCCValueSetSDOHCategoryCL (required)
 * category[SDOH] ^short = "Por ejemplo, inseguridad alimentaria | inseguridad en el transporte."
 * category[SDOH] ^definition = "Una categoría de SDOH asignada al servicio solicitado."
-* category[SDOH] ^requirements = "Los códigos de este value set pueden usarse para asignar una o más categorías de SDOH (por ejemplo,inseguridad alimentaria,inseguridad en el transporte,etc.) a una solicitud de servicio.Se recomienda utilizar códigos de categoría de SDOH para facilitar la búsqueda de solicitudes de servicio que aborden condiciones,observaciones u metas/objetivos de SDOH."
+* category[SDOH] ^requirements = "Los códigos de este value set pueden usarse para asignar una o más categorías de SDOH (por ejemplo, inseguridad alimentaria, inseguridad en el transporte, etc.) a una solicitud de servicio. Se recomienda utilizar códigos de categoría de SDOH para facilitar la búsqueda de solicitudes de servicio que aborden condiciones, observaciones u metas/objetivos de SDOH."
 * category[SDOH] ^binding.description = "Códigos para categorías de SDOH de alto nivel."
 * priority MS
 * code 1.. MS
 * code from CLCoreProcedureCodes (required)
 * code ^short = "Lo que se está solicitando/ordenando."
-* code ^definition = "Un código que identifica un servicio particular (por ejemplo,un procedimiento) que ha sido solicitado."
-* code ^binding.description = "Códigos para pruebas o servicios que pueden ser realizados por un individuo,organización o servicio de salud designado."
+* code ^definition = "Un código que identifica un servicio particular (por ejemplo, un procedimiento) que ha sido solicitado."
+* code ^binding.description = "Códigos para pruebas o servicios que pueden ser realizados por un individuo, organización o servicio de salud designado."
 * orderDetail ^slicing.discriminator.type = #pattern
 * orderDetail ^slicing.discriminator.path = "coding"
 * orderDetail ^slicing.rules = #open
 * orderDetail contains SubjectContactDetail 0..1 MS
 * orderDetail[SubjectContactDetail] = SDOHCCCodeSystemTemporaryCodesCL#contacting-subject-prohibited
-* orderDetail[SubjectContactDetail] ^requirements = "Permite marcar una solicitud de servicio en la que el sujeto de la solicitud designa explícitamente que no desea ser contactado (por ejemplo,en casos de violencia doméstica donde el contacto puede poner en riesgo al sujeto.)"
+* orderDetail[SubjectContactDetail] ^requirements = "Permite marcar una solicitud de servicio en la que el sujeto de la solicitud designa explícitamente que no desea ser contactado (por ejemplo, en casos de violencia doméstica donde el contacto puede poner en riesgo al sujeto.)"
 * subject only Reference(Group or $CorePacienteCl or $CoreLocacionCl)
 * subject MS
 * occurrence[x] MS
@@ -72,11 +64,11 @@ Description: "Perfil para solicitudes de servicio que abordan los Determinantes 
 * requester MS
 * performer only Reference(HealthcareService or Device or RelatedPerson or $CorePacienteCl or $CorePrestadorCl or $CoreRolClinicoCl or $CoreOrganizacionCl or CareTeam)
 * performer MS
-* reasonCode ^comment = "Este elemento representa la razón por la cual se está realizando la referencia y puede usarse para decidir cómo se llevará a cabo el servicio,o incluso si se realizará en absoluto.Utilice el elemento CodeableConcept.text si los datos son texto libre (no codificado), como se muestra en [CT Scan example](servicerequest-example-di.html).\r\n\r\nLa información representada por ServiceRequest.reasonCode puede superponerse significativamente con la infromación representada por ServiceRequest.reasonReference.Múltiples enfoques para representar la misma información pueden afectar negativamente la interoperabilidad.Por lo tanto,donde se pueda porporcionar información similar mediante ServiceRequest.reasonCode o ServiceRequest.reasonReference, se recomienda utilizar ServiceRequest.reasinReference para proporcionar una razón de por qué se hizo la solicitud de servicio."
+* reasonCode ^comment = "Este elemento representa la razón por la cual se está realizando la referencia y puede usarse para decidir cómo se llevará a cabo el servicio,o incluso si se realizará en absoluto. Utilice el elemento CodeableConcept.text si los datos son texto libre (no codificado), como se muestra en [CT Scan example](servicerequest-example-di.html).\r\n\r\nLa información representada por ServiceRequest.reasonCode puede superponerse significativamente con la información representada por ServiceRequest.reasonReference. Múltiples enfoques para representar la misma información pueden afectar negativamente la interoperabilidad. Por lo tanto, donde se pueda porporcionar información similar mediante ServiceRequest.reasonCode o ServiceRequest.reasonReference, se recomienda utilizar ServiceRequest.reasinReference para proporcionar una razón de por qué se hizo la solicitud de servicio."
 * reasonReference ^slicing.discriminator.type = #profile
 * reasonReference ^slicing.discriminator.path = "resolve()"
 * reasonReference ^slicing.rules = #open
-* reasonReference ^comment = "Este elemento representa la razón por la cual se está realizando la referencia y puede usarse para decidir cómo se llevará a cabo el servicio,o incluso si se realizará en absoluto.Para ser lo más específico posible, se de utilizar una referencia a *Observation* o *Condition* si está disponible.De lo contrario, al referenciar *DiagnosticReport*, debe contener un hallazgo en DiagnosticReport.conclusion y/o DiagnosticReport.conclusionCode.Al usar una referencia a *DocumentReference*, el documento objetivo debe contener un lenguaje claro sobre los hallazgod que proporcione la razón relevante para esta solicitud de servicio.Utilice el elemento de texto CodeableConcept en ServiceRequest.reasonCode si los datos son texto libre (no codificado).\r\n\r\nAdemás,consulte el comentario sobre reasonCode."
+* reasonReference ^comment = "Este elemento representa la razón por la cual se está realizando la referencia y puede usarse para decidir cómo se llevará a cabo el servicio, o incluso si se realizará en absoluto. Para ser lo más específico posible, se de utilizar una referencia a *Observation* o *Condition* si está disponible. De lo contrario, al referenciar *DiagnosticReport*, debe contener un hallazgo en DiagnosticReport.conclusion y/o DiagnosticReport.conclusionCode. Al usar una referencia a *DocumentReference*, el documento objetivo debe contener un lenguaje claro sobre los hallazgos que proporcione la razón relevante para esta solicitud de servicio.Utilice el elemento de texto CodeableConcept en ServiceRequest.reasonCode si los datos son texto libre (no codificado).\r\n\r\nAdemás,consulte el comentario sobre reasonCode."
 * reasonReference contains SupportedReasonReference 0..* MS
 * reasonReference[SupportedReasonReference] only Reference(SDOHCCConditionCL or SDOHCCObservationScreeninigResponseCL or SDOHCCObservacionAssessmentCL)
 * reasonReference[SupportedReasonReference] ^comment = "Este elemento representa la razón por la cual se está realizando la referencia y puede usarse para decidir cómo se llevará a cabo el servicio,o incluso si se realizará en absoluto.Para ser lo más específico posible, se debe utilizar una referencia a *Observation* o *Condition* si está disponible. De lo contrario, al referenciar *DiagnosticReport*, debe contener un hallazgo en DiagnosticReport.conclusion y/o DiagnosticReport.conclusionCode. Al usar una referencia a *DocumentReference*, el documento objetivo debe contener un lenguaje claro sobre los hallazgos que proporcione la razón relevante para esta solicitud de servicio. Utilice el elemento de texto CodeableConcept en ServiceRequest.reasonCode si los datos son texto libre (no codificado)."

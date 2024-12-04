@@ -11,18 +11,10 @@ Parent: ObservacionCL
 Id: SDOHCC-ObservationAssessmentCL
 Title: "Evaluación de Observación de SDOHCC"
 Description: "Perfil para observaciones de Determinantes Sociales de la Salud (SDOH) que implican evaluación (por ejemplo, por parte de un proveedor, pagador, etc.) en lugar de ser derivadas únicamente de encuestas de detección (como ocurre con la Respuesta de Detección de Observación de SDOHCC)."
-* ^version = "0.1.0"
-* ^publisher = "HL7 Chile"
-* ^contact.name = "HL7 Chile"
-* ^contact.telecom[0].system = #url
-* ^contact.telecom[=].value = "http://hl7chile.cl"
-* ^contact.telecom[+].system = #email
-* ^contact.telecom[=].value = "chair@hl7chile.cl"
-* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
-* ^copyright = "Usado con el permiso de HL7 International, todos los derechos resevados en los Licencias de HL7 Internacional."
+
 * . ^short = "Observación de evaluación de SDOH."
 * . ^definition = "Para observaciones de SDOH derivadas de la evaluación del individuo."
-* . ^comment = "Para la representación de observaciones de SDOH que impplican evaluación (por ejemplo, por parte de un proveedor o pagador) en contraposición a ser derivadas únicamente de encuestas de detección (como es el caso de la Observación de Respuestas a la detección SDOHCC).\r\n\r\nMuchos de los perfiles de SDOHCC se hacen referencia entre sí.Un flujo respaldado por esta Guía de Implementación es que las respuestas a los cuestionarios resultan en observaciones que pueden utilizarse como evidencia para condiciones que pueden llevar a metas, solicitudes de servicio y procedimientos.Sin embargo, tambien son posibles rutas alternativas."
+* . ^comment = "Para la representación de observaciones de SDOH que implican evaluación (por ejemplo, por parte de un proveedor o pagador) en contraposición a ser derivadas únicamente de encuestas de detección (como es el caso de la Observación de Respuestas a la detección SDOHCC).\r\n\r\nMuchos de los perfiles de SDOHCC se hacen referencia entre sí. Un flujo respaldado por esta Guía de Implementación es que las respuestas a los cuestionarios resultan en observaciones que pueden utilizarse como evidencia para condiciones que pueden llevar a metas, solicitudes de servicio y procedimientos. Sin embargo, también son posibles rutas alternativas."
 * status MS
 * category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "$this"
