@@ -12,17 +12,21 @@ La IG admite los siguientes casos de uso:
 
 El desarrollo de esta IG se basa en lo implementado por el proyecto “Gravity Project”. Por ende, la implementación de  la homologación de la IG “SDOH Clinical Care” en Chile tiene como objetivo obtener y analizar los determinantes sociales de la salud mediante la recolección de datos clínicos y sociales de los pacientes. Esto se logrará a través de la definición del proceso y el modelamiento de la integración de datos, con el propósito de mejorar la comprensión y el manejo de los factores que influyen en la salud. Esta iniciativa  permitirá identificar los riesgos sociales de los pacientes de manera oportuna y facilitar la interoperabilidad de la información entre sistemas. De este modo los proveedores de salud podrán personalizar los tratamientos y recomendaciones considerando no solo los síntomas clínicos, sino también el contexto social de cada paciente.
 
-### Dependencias de otras IG
+### Perfiles
 
-| Guía de Implementación | Versión | Dependencia |
-| ---------------------- | ------- | ----------- |
-| [CL Core](https://hl7chile.cl/fhir/ig/clcore/1.9.1/) | 1.9.1 | Cuando sea posible, todos los perfiles en esta IG están ya sea derivados de CL Core 1.9.1 o alineados con esa versión y con futuras versiones en la medida de lo posible. |
-| [Structured Document Capture (SDC)](http://hl7.org/fhir/uv/sdc/)| 3.0.0  | SDC es la base para mapear las respuestas de los cuestionarios a observaciones y condiciones. SDC también ofrece orientación sobre cómo se pueden crear cuestionarios con soporte para el cálculo de puntajes, comportamiento condicional, expectativas específicas de renderización, entre otros.   |
-| [SDOH Clinical Care](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/index.html)| 2.2.0  |  Los elementos de esta IG se basan en la estructura definida en la guía SDOH Clinical Care.  |
-{:.grid}
+{% include globals-table.xhtml %}
 
+### Dependencias
 
+{% include dependency-table.xhtml %}
 
+### Analisis de versiones cruzadas
+
+{% include cross-version-analysis.xhtml %}
+
+### Declaracion de propiedad intelectual
+
+{% include ip-statements.xhtml %}
 
 
 
