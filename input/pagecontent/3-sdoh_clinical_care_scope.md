@@ -1,6 +1,6 @@
 ### Marco Conceptual
 
-El contenido codificado de los SDOH se captura en las actividades básicas de atención médica: detección y evaluación, establecimiento de problemas de salud, establecimiento de objetivos/metas, planificación de la atención, intervenciones, resultados e informes. El marco conceptual, ilustrado a continuación, muestra como estas actividades forman un ciclo de atención. Con el tiempo, se puede hacer un seguimiento y medir el progreso de un paciente hacia los objetivos de atención.
+El contenido codificado de los SDOH se captura en las actividades básicas de atención médica: detección y evaluación, establecimiento de problemas de salud, establecimiento de objetivos/metas, planificación de la atención, intervenciones, resultados e informes. El marco conceptual, ilustrado a continuación, muestra cómo estas actividades forman un ciclo de atención. Con el tiempo, se puede hacer un seguimiento y medir el progreso de un paciente hacia los objetivos de atención.
 {% include img-med.html img="marcoconceptual.png" caption="Figura 1: Marco conceptual para la atención clínica de SDOH" %}
 
 ### Alcance de esta IG
@@ -9,7 +9,7 @@ El objetivo de esta IG es estandarizar el intercambio de información SDOH relac
 
 * Evaluación del riesgo social
 * Establecer problemas/preocupaciones de salud codificados
-* Creanr objetivos impulsados por el paciente
+* Crear objetivos impulsados por el paciente
 * Definir un proceso de derivación de circuito cerrado RESTFUL para gestionar intervenciones
 
 ### Fuera del alcance
@@ -33,9 +33,9 @@ El enfoque de esta IG son las interacciones entre un paciente, un proveedor y un
 
 El diagrama a continuación refleja las estructuras de datos principales y las relaciones asociadas con cada uno de los principales procesos cubiertos por esta guía de implementación: 
 
-* Evaluación: donde se recopíla información de un paciente, normalmente a través de una respuesta a un [QuestionnaireResponse] basado en un [Questionnaire] estandarizado que da como resultado una o más [SDOHCCObservationScreeninigResponseCL]. Estas pueden ir acompañadas de [SDOHCCObservacionAssessmentCL] adicionales. Si existen inquietudes sobre la situación de los determinantes sociales de un paciente, se definirá una [SDOHCCConditionCL] que permitirá realizar un seguimiento de la inquietud como parte de la lista de problemas del paciente. 
+* Evaluación: donde se recopila información de un paciente, normalmente a través de una respuesta a un [QuestionnaireResponse] basado en un [Questionnaire] estandarizado que da como resultado una o más [SDOHCCObservationScreeninigResponseCL]. Estas pueden ir acompañadas de [SDOHCCObservacionAssessmentCL] adicionales. Si existen inquietudes sobre la situación de los determinantes sociales de un paciente, se definirá una [SDOHCCConditionCL] que permitirá realizar un seguimiento de la inquietud como parte de la lista de problemas del paciente. 
 
-* Gestión de objetivos/metas: se ha identificado un problema SDOH, se crearán las [SDOHCCGoalCL] acordados entre el paciente y el médico y, con el tiempo, se actualizarán. Estas metas/objetivos se pueden asociar con la [SDOHCCObservationScreeninigResponseCL], la [SDOHCCObservacionAssessmentCL] y/o la [CSDOHCCConditionCL] que busca gestionar y mejorar. En algunos casos, un objetivo también puede indicar observaciones para reflejar el resultado del objetivo.
+* Gestión de objetivos/metas: se ha identificado un problema SDOH, se crearán las [SDOHCCGoalCL] acordados entre el paciente y el médico y, con el tiempo, se actualizarán. Estas metas/objetivos se pueden asociar con la [SDOHCCObservationScreeninigResponseCL], la [SDOHCCObservacionAssessmentCL] y/o la [SDOHCCConditionCL] que busca gestionar y mejorar. En algunos casos, un objetivo también puede indicar observaciones para reflejar el resultado del objetivo.
 
 * Gestión de derivaciones: la orden formal se captura como una [SDOHCCServiceRequestCL] y se vincula con las [SDOHCCGoalCL], la [SDOHCCObservationScreeninigResponseCL], la [SDOHCCObservacionAssessmentCL] y la[SDOHCCConditionCL] que justifica la acción. También puede vincularse con un [SDOHCCConsentCL] que permita al destinatario de la derivación compartir información adicional. La [SDOHCCTaskForReferralManagementCL] coordina la solicitud y el proceso resultante, posiblemente vinculado a las acciones derivadas realizadas por el destinatario de la referencia. Finalmente, los [SDOHCCProcedureCL] documentan las acciones llevadas a cabo. 
 
