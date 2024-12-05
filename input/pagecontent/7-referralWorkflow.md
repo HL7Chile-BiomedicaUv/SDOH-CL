@@ -34,6 +34,7 @@ Los actores de los flujos de trabajo se describen en la siguinte tabla. Los íco
 <thead>
 <tr>
 <th>Actor</th>
+<th>Descripción</th>
 </tr>
 </thead>
 <tbody>
@@ -43,6 +44,73 @@ Los actores de los flujos de trabajo se describen en la siguinte tabla. Los íco
 <td></td>
 </tr>
 <tr>
-<td>Patient
-<img src="Patient.png" height="35px" width="35px" class="figure-img img-responsive img-rounded center-block" alt="Patient}">
+<td>Proveedor
+<img src="Provider.png" height="35px" width="35px" class="figure-img img-responsive img-rounded center-block" alt="Proveedor}">
 </td>
+<td><ul><li>Incluye proveedores autorizados y otras personas que interactuán con el paciente para evaluar el riesgo social, establecer objetivos y determinar/recomendar derivaciones.</li></ul></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Organización comunitaria (CBO)
+<img src="CBO.png" height="35px" width="35px" class="figure-img img-responsive img-rounded center-block" alt="CBO}"></td>
+<td><ul><li>Una organización que proporciona servicios específicos a la comunidad o a una población objetivo dentro de la comunidad.</li></ul></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Plataforma de coordinación (CP)
+<img src="CC.png" height="35px" width="35px" class="figure-img img-responsive img-rounded center-block" alt="CC}">
+<td><ul><li>Un intermediario entre un proveedor y una CBO que desempeña un papel en facilitar el proceso de derivación y encontrar recursos para personas en riesgo.</li></ul></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Paciente
+<img src="Patient.png" height="35px" width="35px" class="figure-img img-responsive img-rounded center-block" alt="Patient}">
+<td><ul><li>Un consumidor o cliente que es objeto de la evaluación, los objetivos, las derivaciones y los servicios prestados. El uso del término en esta IG no implica necesariamente un contexto clínico.</li></ul></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Servidor FHIR
+<img src="FHIRServer.png" height="35px" width="35px" class="figure-img img-responsive img-rounded center-block" alt="FHIRServer}">
+<td><ul><li>Un servidor que admita una API FHIR y pueda realizar llamadas a la API FHIR a otros servidores.</li></ul></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Aplicación habilitada para FHIR
+<img src="FHIRApplication.png" height="35px" width="35px" class="figure-img img-responsive img-rounded center-block" alt="FHIRApplication}">
+<td><ul><li>Aplicación que puede realizar llamadas a la API FHIR a un servidor FHIR, pero que no admite una API FHIR por sí misma.</li></ul></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Aplicación para pacientes habilitada para FHIR
+<img src="PatientApp.png" height="35px" width="35px" class="figure-img img-responsive img-rounded center-block" alt="PatientApp}">
+<td><ul><li>Una aplicación para pacientes que puede conectarse a servidores FHIR.</li></ul></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<br>
