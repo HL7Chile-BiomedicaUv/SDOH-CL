@@ -19,92 +19,84 @@ La figura a continuación muestra este flujo de trabajo, los actores involucrado
 
 Los actores de los flujos de trabajo se describen en la siguinte tabla. Los íconos gráficos se utilizan en todo la IG.
 
-| Actor    |  Description |
-| ----------  | ------------------ |
-| ![providericon] Provider  | Includes licensed providers and others that interact with the patient to assess social risk, set goals, and determine/recommend referrals.   |
-| ![cboicon] Community Based Organization (CBO)  | An organization that provides specific services to the community or to a targeted population within the community.   |
-| ![cpicon]  Coordination Platform (CP) | An intermediary between a provider and a CBO that plays a role in facilitating the referral process and finding resources for at-risk individuals.   |
-| ![patienticon] Patient   | A consumer, or client, who is the subject of the assessment, goals, referrals and services delivered. Use of the term in this IG does not necessarily imply a clinical context.   |
-| ![FHIRServer] FHIR Server | A server that supports a FHIR API and can make FHIR API calls to other servers |
-| ![FHIRApplication] FHIR-enabled Application | An application that can make FHIR API calls to a FHIR server, but does not itself support a FHIR API |
-| ![PatientApp] FHIR-enabled Patient Application | A patient application that can connect to FHIR servers |
-{:.grid}
-
 <table align="left" border="1" cellpadding="1" cellspacing="1" style="width:100%;">
-<thead>
-<tr>
-<th>Actor</th>
-<th>Descripción</th>
-</tr>
-</thead>
-<tr>
-<td>Proveedor
-<img src="Provider.png" height="35px" width="35px" class="figure-img img-responsive img-rounded center-block" alt="Proveedor}">
-</td>
-<td><ul><li>Incluye proveedores autorizados y otras personas que interactuán con el paciente para evaluar el riesgo social, establecer objetivos y determinar/recomendar derivaciones.</li></ul></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Organización comunitaria (CBO)
-<img src="CBO.png" height="35px" width="35px" class="figure-img img-responsive img-rounded center-block" alt="CBO}"></td>
-<td><ul><li>Una organización que proporciona servicios específicos a la comunidad o a una población objetivo dentro de la comunidad.</li></ul></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Plataforma de coordinación (CP)
-<img src="CC.png" height="35px" width="35px" class="figure-img img-responsive img-rounded center-block" alt="CC}">
-<td><ul><li>Un intermediario entre un proveedor y una CBO que desempeña un papel en facilitar el proceso de derivación y encontrar recursos para personas en riesgo.</li></ul></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Paciente
-<img src="Patient.png" height="35px" width="35px" class="figure-img img-responsive img-rounded center-block" alt="Patient}">
-<td><ul><li>Un consumidor o cliente que es objeto de la evaluación, los objetivos, las derivaciones y los servicios prestados. El uso del término en esta IG no implica necesariamente un contexto clínico.</li></ul></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Servidor FHIR
-<img src="FHIRServer.png" height="35px" width="35px" class="figure-img img-responsive img-rounded center-block" alt="FHIRServer}">
-<td><ul><li>Un servidor que admita una API FHIR y pueda realizar llamadas a la API FHIR a otros servidores.</li></ul></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Aplicación habilitada para FHIR
-<img src="FHIRApplication.png" height="35px" width="35px" class="figure-img img-responsive img-rounded center-block" alt="FHIRApplication}">
-<td><ul><li>Aplicación que puede realizar llamadas a la API FHIR a un servidor FHIR, pero que no admite una API FHIR por sí misma.</li></ul></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Aplicación para pacientes habilitada para FHIR
-<img src="PatientApp.png" height="35px" width="35px" class="figure-img img-responsive img-rounded center-block" alt="PatientApp}">
-<td><ul><li>Una aplicación para pacientes que puede conectarse a servidores FHIR.</li></ul></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th style="width:150px; height:50px;">Actor</th>
+      <th style="width:350px; height:50px;">Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="width:150px; height:50px;">
+        <img src="Provider.png" height="35px" width="35px" class="figure-img img-responsive img-rounded center-block" alt="Proveedor"> Proveedor
+      </td>
+      <td style="width:350px; height:50px;">
+        <ul>
+          <li>Incluye proveedores autorizados y otras personas que interactúan con el paciente para evaluar el riesgo social, establecer objetivos y determinar/recomendar derivaciones.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="width:150px; height:50px;">
+        <img src="CBO.png" height="35px" width="35px" class="figure-img img-responsive img-rounded center-block" alt="CBO"> Organización comunitaria (CBO)
+      </td>
+      <td style="width:350px; height:50px;">
+        <ul>
+          <li>Una organización que proporciona servicios específicos a la comunidad o a una población objetivo dentro de la comunidad.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="width:150px; height:50px;">
+        <img src="CC.png" height="35px" width="35px" class="figure-img img-responsive img-rounded center-block" alt="CC"> Plataforma de coordinación (CP)
+      </td>
+      <td style="width:350px; height:50px;">
+        <ul>
+          <li>Un intermediario entre un proveedor y una CBO que desempeña un papel en facilitar el proceso de derivación y encontrar recursos para personas en riesgo.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="width:150px; height:50px;">
+        <img src="Patient.png" height="35px" width="35px" class="figure-img img-responsive img-rounded center-block" alt="Patient"> Paciente
+      </td>
+      <td style="width:350px; height:50px;">
+        <ul>
+          <li>Un consumidor o cliente que es objeto de la evaluación, los objetivos, las derivaciones y los servicios prestados. El uso del término en esta IG no implica necesariamente un contexto clínico.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="width:150px; height:50px;">
+        <img src="FHIRServer.png" height="35px" width="35px" class="figure-img img-responsive img-rounded center-block" alt="FHIRServer"> Servidor FHIR
+      </td>
+      <td style="width:350px; height:50px;">
+        <ul>
+          <li>Un servidor que admita una API FHIR y pueda realizar llamadas a la API FHIR a otros servidores.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="width:150px; height:50px;">
+        <img src="FHIRApplication.png" height="35px" width="35px" class="figure-img img-responsive img-rounded center-block" alt="FHIRApplication"> Aplicación habilitada para FHIR
+      </td>
+      <td style="width:350px; height:50px;">
+        <ul>
+          <li>Aplicación que puede realizar llamadas a la API FHIR a un servidor FHIR, pero que no admite una API FHIR por sí misma.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="width:150px; height:50px;">
+        <img src="PatientApp.png" height="35px" width="35px" class="figure-img img-responsive img-rounded center-block" alt="PatientApp"> Aplicación para pacientes habilitada para FHIR
+      </td>
+      <td style="width:350px; height:50px;">
+        <ul>
+          <li>Una aplicación para pacientes que puede conectarse a servidores FHIR.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
 </table>
-
 <br>
