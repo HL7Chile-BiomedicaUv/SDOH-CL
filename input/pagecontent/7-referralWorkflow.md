@@ -19,17 +19,6 @@ La figura a continuación muestra este flujo de trabajo, los actores involucrado
 
 Los actores de los flujos de trabajo se describen en la siguinte tabla. Los íconos gráficos se utilizan en todo la IG.
 
-| Actor       | Descripción  |
-| ----------  | ------------------ |
-| ![providericon] Proveedor | Incluye proveedores autorizados y otras personas que interactuán con el paciente para evaluar el riesgo social, establecer objetivos y determinar/recomendar derivaciones. |
-| ![cboicon] Organización comunitaria (CBO) | Una organización que proporciona servicios específicos a la comunidad o a una población objetivo dentro de la comunidad. |
-| ![cpicon] Plataforma de coordinación (CP) | Un intermediario entre un proveedor y una CBO que desempeña un papel en facilitar el proceso de derivación y encontrar recursos para personas en riesgo. |
-| ![patienticon] Paciente | Un consumidor o cliente que es objeto de la evaluación, los objetivos, las derivaciones y los servicios prestados. El uso del término en esta IG no implica necesariamente un contexto clínico. |
-| ![fhirserver] Servidor FHIR | Un servidor que admita una API FHIR y pueda realizar llamadas a la API FHIR a otros servidores. |
-| ![fhirapplication] Aplicación habilitada para FHIR | Aplicación que puede realizar llamadas a la API FHIR a un servidor FHIR, pero que no admite una API FHIR por sí misma. |
-| ![patientapp] Aplicación para pacientes habilitada para FHIR | Una aplicación para pacientes que puede conectarse a servidores FHIR. | 
-{:.grid} 
-
 <table align="left" border="1" cellpadding="1" cellspacing="1" style="width:100%;">
 <thead>
 <tr>
@@ -37,12 +26,6 @@ Los actores de los flujos de trabajo se describen en la siguinte tabla. Los íco
 <th>Descripción</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
 <tr>
 <td>Proveedor
 <img src="Provider.png" height="35px" width="35px" class="figure-img img-responsive img-rounded center-block" alt="Proveedor}">
