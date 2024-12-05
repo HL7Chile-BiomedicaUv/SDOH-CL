@@ -19,6 +19,17 @@ La figura a continuación muestra este flujo de trabajo, los actores involucrado
 
 Los actores de los flujos de trabajo se describen en la siguinte tabla. Los íconos gráficos se utilizan en todo la IG.
 
+| Actor    |  Description |
+| ----------  | ------------------ |
+| ![providericon] Provider  | Includes licensed providers and others that interact with the patient to assess social risk, set goals, and determine/recommend referrals.   |
+| ![cboicon] Community Based Organization (CBO)  | An organization that provides specific services to the community or to a targeted population within the community.   |
+| ![cpicon]  Coordination Platform (CP) | An intermediary between a provider and a CBO that plays a role in facilitating the referral process and finding resources for at-risk individuals.   |
+| ![patienticon] Patient   | A consumer, or client, who is the subject of the assessment, goals, referrals and services delivered. Use of the term in this IG does not necessarily imply a clinical context.   |
+| ![FHIRServer] FHIR Server | A server that supports a FHIR API and can make FHIR API calls to other servers |
+| ![FHIRApplication] FHIR-enabled Application | An application that can make FHIR API calls to a FHIR server, but does not itself support a FHIR API |
+| ![PatientApp] FHIR-enabled Patient Application | A patient application that can connect to FHIR servers |
+{:.grid}
+
 <table align="left" border="1" cellpadding="1" cellspacing="1" style="width:100%;">
 <thead>
 <tr>
