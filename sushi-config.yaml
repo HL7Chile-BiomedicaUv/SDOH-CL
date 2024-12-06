@@ -57,6 +57,8 @@ pages:
     title: Antecedentes técnicos
   5-glossary.md:
     title: Glosario
+  6-assessment_instrument_support.md:
+    title: Soportes de instrumentos de evaluación
   7-referralWorkflow.md:
     title: Flujo de trabajo de referencia
 #   examples.xml:
