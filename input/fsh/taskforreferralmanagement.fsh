@@ -9,37 +9,54 @@ Id: SDOHCC-TaskForReferralManagementCL
 Title: "Tarea de SDOHCC para la gestión de derivaciones"
 Description: "Perfil para tareas que solicitan el cumplimiento de un ServiceRequest SDOHCC (es decir,una referencia para servicio) y posteriormente rastrean y gestionan el cumplimiento de esa referencia."
 
+* ^version = "0.1.1"
+* ^status = #draft
+* ^experimental = false
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
 * . ^short = "Una solicitud para cumplir con un pedido de servicio SDOH."
 * . ^comment = "Para tareas utilizadas en solicitar el cumplimiento de un ServiceRequest SDOHCC (es decir,una referencia para servicio) y posteriormente rastrear y gestionar el cumplimiento de esa referencia."
+
 * partOf ^slicing.discriminator[0].type = #profile
 * partOf ^slicing.discriminator[=].path = "resolve()"
 * partOf ^slicing.rules = #open
 * partOf contains SupportedPartOf 0..* MS
 * partOf[SupportedPartOf] only Reference(SDOHCCTaskForReferralManagementCL)
 * partOf[SupportedPartOf] ^requirements = "Permite a una organización (por ejemplo, una plataforma de coordinación) crear una tarea,basada en una tarea SDOHCC de una fuente de referencia,para pasarla a otra organización (por ejemplo,una organización comunitaria)."
+
 * status MS
 * status from SDOHCCValueSetReferralTaskStatusCL (required)
 * status ^comment = "Tenga en cuenta que las cadenas FHIR NO DEBEN exceder 1 MB de tamaño.Para más detalles sobre Task.status,consulte [Checking Task Status](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/checking_task_status.html)."
+
 * statusReason MS
 * statusReason ^comment = "Esto se aplica el estado actual.Consulte el historial de la tarea para ver las razones de los estados anteriores.Si el Task.status es rechazado,cancelado,en espera o fallido,entonces se debe incluir Task.statusReason.text."
 * statusReason.text 1.. MS
+
 * intent = #order (exactly)
 * intent ^short = "order"
 * intent ^definition = "Indica el \"nivel\" de capacidad de acción asociado con la tarea."
 * intent ^comment = "Una solicitud para cumplir con la tarea es siempre una orden."
+
 * priority MS
 * priority ^comment = "Task.priority debe utilizarse para distinguir las tareas urgentes (por ejemplo,necesita refugio de inmediato) de las tareas rutinarias."
+
 * code 1..
 * code = $task-code#fulfill
+
 * focus 1.. MS
 * focus only Reference(SDOHCCServiceRequestCL)
+
 * for 1.. MS
 * for only Reference(RelatedPerson or Group or $CorePacienteCl )
+
 * authoredOn 1.. MS
+
 * requester 1.. MS
 * requester only Reference($CoreRolClinicoCl or $CoreOrganizacionCl)
+
 * owner MS
 * owner ^requirements = "Este elemento es Must Support. Sin embargo, no es obligatorio para permitir que se cree una tarea sin un propietario, de modo que uno de un grupo potencial de ejecutores pueda optar por \"poseer\" la tarea (por ejemplo, se establece una solicitud de cumplimiento \"abierta\" y cualquier persona capaz de completar el pedido puede reclamar)."
+
 * output ^slicing.discriminator[0].type = #pattern
 * output ^slicing.discriminator[=].path = "type"
 * output ^slicing.discriminator[+].type = #type
