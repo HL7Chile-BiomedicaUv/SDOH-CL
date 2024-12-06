@@ -6,16 +6,25 @@ Id: SDOHCC-GroupCL
 Title: "Grupo SDOHCC"
 Description: "Perfil para identificar grupos de pacientes que tienen una condición de Determinantes Sociales de la Salud (SDOH) y son miembros de una organización pagadora específica."
 
+* ^version = "0.1.1"
+* ^status = #draft
+* ^experimental = false
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
 * . ^short = "Grupo de pacientes de SDOH para un pagador." //Pagador: ISAPRE-FONASA-CUALQUIER OTRO SISTEMA
 * . ^definition = "Para la consolidación de individuos que comparten un conjunto común de características (como el mismo pagador y cualquier condición en las categorías SDOH especificadas),con el fin de facilitar a las organizaciones, que cuenten con los permisos adecuados,la recuperación sencilla de información relacionada con la cohorte de personas por las que tienen una responsabilidad compartida."
+
 * active 1..
 * active = true (exactly)
+
 * type = #person (exactly)
 * type ^short = "person"
 * type ^definition = "Identifica que se trata de un grupo de personas."
 * type ^requirements = "Para este caso de uso de IG, esto solo se utilizará para un grupo de personas."
+
 * actual = true (exactly)
 * actual ^requirements = "Se refiere únicamente a un grupo específico de individuos reales."
+
 * characteristic ^slicing.discriminator.type = #pattern
 * characteristic ^slicing.discriminator.path = "code"
 * characteristic ^slicing.rules = #open
@@ -40,5 +49,6 @@ Description: "Perfil para identificar grupos de pacientes que tienen una condici
 * characteristic[HasPayer].exclude = false (exactly)
 * characteristic[HasPayer].exclude MS
 * characteristic[HasPayer].period ..0
+
 * member MS
 * member.entity MS

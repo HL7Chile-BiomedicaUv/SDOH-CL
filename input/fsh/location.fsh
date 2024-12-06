@@ -7,6 +7,11 @@ Id: SDOHCC-LocationCL
 Title: "Ubicación de SDOH."
 Description: "Perfil que describe la información de la dirección para un servicio de salud."
 
+* ^version = "0.1.1"
+* ^status = #draft
+* ^experimental = false
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
 * name 1..1 MS
 * address 1..1 MS
 

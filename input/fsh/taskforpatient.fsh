@@ -13,46 +13,64 @@ Id: SDOHCC-TaskForPatientCL
 Title: "Tarea SDOHCC para el paciente"
 Description: "Perfil para las tareas relacionadas con SDOH que deben ser realizadas por el paciente o alguien que actúe en su nombre."
 
+* ^version = "0.1.1"
+* ^status = #draft
+* ^experimental = false
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
 * obeys SDOH-Task-1 and SDOH-Task-2 and SDOH-Task-3 and SDOH-Task-4 and SDOH-Task-5 and SDOH-Task-6 and SDOH-Task-7
 * . ^short = "Una solicitud para completar un cuestionario o solicitud de servicio relacionado con SDOH."
+
 * partOf ^slicing.discriminator.type = #profile
 * partOf ^slicing.discriminator.path = "resolve()"
 * partOf ^slicing.rules = #open
 * partOf contains SupportedPartOf 0..* MS
 * partOf[SupportedPartOf] only Reference(SDOHCCTaskForReferralManagementCL or SDOHCCTaskForPatientCL) 
+
 * status MS
 * status from SDOHCCValueSetTaskStatusCL (required)
 * status ^comment = "Para obtener más detalles sobre Task.status, consulte [Checking Task Status](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/checking_task_status.html)"
 * status ^requirements = "Estos estados permiten la coordinación del estado de la tarea con soluciones de flujo de trabajo listas para usar que respaldan la automatización de tareas."
+
 * statusReason MS
 * statusReason ^definition = "Si la tarea es cancelada por el paciente, se debe proporcionar una explicación de por qué."
 * statusReason ^comment = "Esto se aplica al estado actual.Consulte el historial de la tarea para ver las razones de los estados anteriores.Si el estado de la tarea está cancelado,entonces se debe incluir Task.statusReason.text."
 * statusReason.text 1.. MS
+
 * intent = #order (exactly)
 * intent ^short = "order"
 * intent ^definition = "Indica el \"nivel\" de ejecutabilidad asociado con la tarea."
 * intent ^comment = "Las tareas del paciente siempre serán órdenes."
+
 * priority 1.. MS
 * priority from SDOHCCValueSetTaskPriorityCL (required)
 * priority ^short = "rutinaria | urgente."
 * priority ^definition = "Indica cuán rápido debe ser abordada la tarea por el paciente."
 * priority ^requirements = "Se utiliza para identificar el nivel de prioridad asignado a esta tarea.Para las tareas identificadas como urgentes,la capacidad de entregar un servicio relacionado puede depender de la finalización de la tarea."
+
 * code 1.. MS
 * code from SDOHCCValueSetTaskCodeCL (extensible)
 * code.text MS
+
 * description MS
 * description ^comment = "Si Task.code es \"información general\", Task.description debe ser mostrada al usuario sin ninguna otra expectativa computable,excepto permitir que el paciente actualice Task.status y,opcionalmente,capture una respuesta en texto libre para Task.output."
 * description ^condition[0] = "SDOH-Task-2"
 * description ^condition[+] = "SDOH-Task-7"
+
 * focus MS
 * focus ^condition[0] = "SDOH-Task-3"
+
 * for 1.. MS
 * for only Reference($CorePacienteCl)
+
 * authoredOn 1.. MS
+
 * requester 1.. MS
 * requester only Reference($CoreRolClinicoCl or $CoreOrganizacionCl)
+
 * owner 1.. MS
 * owner only Reference($CorePacienteCl or RelatedPerson)
+
 * input ^slicing.discriminator.type = #pattern
 * input ^slicing.discriminator.path = "type"
 * input ^slicing.rules = #open
@@ -86,6 +104,7 @@ Description: "Perfil para las tareas relacionadas con SDOH que deben ser realiza
 * input[Contact].type = SDOHCCCodeSystemTemporaryCodesCL#contact-entity
 * input[Contact].type ^comment = "Cuando Task.code es \"hacer-contacto\", \"contacto-entidad\" se utiliza para Task.input.type para indicar que el propietario de la tarea debe contactar a uno de los servicios de salud representados en Task.input.value."
 * input[Contact].value[x] only Reference(SDOHCCHealthcareServiceCL or  $CoreRolClinicoCl or $CorePrestadorCl or $CoreOrganizacionCl)
+
 * output ^slicing.discriminator.type = #pattern
 * output ^slicing.discriminator.path = "type"
 * output ^slicing.rules = #open
