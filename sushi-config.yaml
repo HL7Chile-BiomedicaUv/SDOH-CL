@@ -208,7 +208,7 @@ groups:
      - Ejemplo-ConsentimientoInformado
      - Ejemplo-MetaSegAlimentaria
      - Ejemplo-GrupoPacientes
-#     - HEALTHSERVICE
+     - Ejemplo-CitadeAtencion
      - Ejemplo-Ubicacion
      - Ejemplo-EvObsIngestaAlimentos
      - Ejemplo-EvObsTransporte
@@ -229,7 +229,7 @@ groups:
      - Ejemplo-CumplimientoOrdenTareasRef
      - Ejemplo-AceptacionSubtareaCumpTareasRef
      - Ejemplo-SubtareaCompletadaCumpOrGestTareaRef
-#     - EJEMPLO PATIENT MAKE
+     - Ejemplo-TareaparaProgramarCitaconPaciente
      - Ejemplo-TareaCompletadaCuestionarioRiesgo
      - Ejemplo-DocumentoReferencia
 
