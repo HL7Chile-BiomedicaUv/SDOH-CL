@@ -2,7 +2,7 @@ El flujo de trabajo general describe cómo las referencias relacionadas con SDOH
 
 ### Flujo de trabajo general
 
-Está IG resplada el siguiente [flujo](3-sdoh_clinical_care_scope.html):
+Está IG resplada el siguiente [flujo de trabajo](3-sdoh_clinical_care_scope.html):
 
 1. **Evaluar al paciente para identificar riesgos sociales:** Esto puede hacerse mediante el uso de un instrumento de evaluación, a través de una conversación con el paciente o ambos métodos. Como parte de la evaluación, el paciente y el proveedor acuerdan los riesgos sociales específicos que serán clasificados como preocupaciones o problemas de salud verificados.
 
