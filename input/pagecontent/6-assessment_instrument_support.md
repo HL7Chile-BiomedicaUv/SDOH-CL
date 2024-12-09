@@ -174,12 +174,12 @@ Esta sección proporciona orientación sobre Observation.category y Observation.
 
 Observation.category tiene dos códigos de categoría fijos (survey y social-history) para indicar que un par de pregunta-respuesta capturado como una observación representa una evaluación (encuesta) relacionada con la historia social.
 
-Además, Observtaion.category tiene un enlace con [ValueSet SDOHCC para Categoría SDOH](SDOHCC-ValueSetSDOHCategoryCL.html), que tiene valores para categorizar una observación por dominio(s) SDOH (por ejemplo, inseguridad alimentaria, insetabilidad de la vivienda, etc.).
+Además, Observtaion.category tiene un enlace con [ValueSet SDOHCC para Categoría SDOH](ValueSet-SDOHCC-ValueSetSDOHCategoryCL.html), que tiene valores para categorizar una observación por dominio(s) SDOH (por ejemplo, inseguridad alimentaria, insetabilidad de la vivienda, etc.).
 
 Como orientación adicional relacionada a la categoría Observation para [Respuesta de Detección de Observación de SDOHCC](StructureDefinition-SDOHCC-ObservationScreeningResponseCL.html): 
 * "Observation.category: dominio SDOH" (por ejemplo, inseguridad alimentaria) significa que la observación aborda una necesidad social relacionada con la salud (HRSN) en el dominio SDOH especificado. 
 *Observation.category: dominio SDOH" no significa que la observación confirma un HRSN en el dominio SDOH especificado. 
-* A algunas observaciones se les puede asignar un solo valor para Observation.category (de [ValueSet SDOHCC para Categoría SDOH](SDOHCC-ValueSetSDOHCategoryCL.html) mientras que a otras se les puede asignar más de un valor. 
+* A algunas observaciones se les puede asignar un solo valor para Observation.category (de [ValueSet SDOHCC para Categoría SDOH](ValueSet-SDOHCC-ValueSetSDOHCategoryCL.html) mientras que a otras se les puede asignar más de un valor. 
 * Al categorizar una observación que representa un par de pregunta-respuesta, Gravity recomienda que los dominios SDOH se asignen en función de la pregunta <u>y su conjunto completo de respuestas permitidas</u> en un instrumento de evaluación.
 
 ##### Marcar observaciones para una posible necesidad de HRSN mediante Observation.interpretation
