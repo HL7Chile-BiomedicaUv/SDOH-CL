@@ -100,3 +100,77 @@ Los actores de los flujos de trabajo se describen en la siguinte tabla. Los íco
   </tbody>
 </table>
 <br>
+
+### Flujo de trabajo de coordinación de pacientes
+
+Esta guía de implementación admite interacciones adicionales con una aplicación de paciente/cliente (en un teléfono inteligente o portal), que incluyen: 
+
+| Functional Use Case       |  Task.code            |  Description                         | Actors           |
+| ------------------------- | ----------------------- | ------------------------------------ | ---------------- |
+| [Solicitud de cuestionario completo](7-referralWorkflow.html#complete-questionnaire-request)|  `complete-questionnaire` | Requesting party (e.g., provider, CBO, or CP) asks a patient to complete a questionnaire. This functionality can be used to assess social risks, inform service qualification or application, indicate reasons for cancellation, or determine the patient’s view of their interaction with the CBO and whether the service provided met their needs. | ![providericon], ![patienticon], ![cboicon], ![cpicon]  |
+| [General Information Request](referral_workflow.html#general-information-request)|  `general-information-request` | Requesting party sends a patient a free text question and receives a free text response.  | ![providericon], ![patienticon], ![cboicon], ![cpicon]  |
+| [Make Contact Request](referral_workflow.html#make-contact-request)|   `make-contact-directions` | Requesting party provides contact information for the CBO (in cases where the patient does not want the CBO to initiate contact). | ![providericon], ![patienticon], ![cboicon], ![cpicon]  |
+| [Review Material Request](referral_workflow.html#review-material-request)|   `review-material` | Requesting party requests that the patient review a document (usually a PDF), video, etc. | ![providericon], ![patienticon], ![cboicon], ![cpicon]  |
+{:.grid}
+
+En los ejemplos siguientes, se supone que el paciente ha sido equipado con la aplicación para pacientes y que ya se ha establecido una comunicación autenticada entre la aplicación para pacientes y el solicitante. Consulte [Conexión de aplicaciones con fuentes de datos de API](9-connecting_applications_with_api_data_sources.html) para obtener más detalles. Las instancias de datos a las que se hace referencia están todas en su estado completado. En la práctica, pasarían por las transiciones de estado indicadas, con el solicitante inicializando sus campos de entrada y el paciente completando los campos de salida y actualizando el estado.
+
+#### Solicitud de cuestionario completo
+Aquí ofrecemos una vista detallada de un ejemplo de interacción entre una aplicación de paciente y un solicitante (proveedor, CBO o CP) para completar un cuestionario. El ejemplo muestra una de las cuatro formas en que se puede transmitir el cuestionario y recibir la respuesta del paciente.
+
+<object data="PatientQuestionnaire.svg" type="image/svg+xml"></object>
+<br>
+
+| #    | De |  Descripción | Instancias implicadas |
+| ---  | -- | ------------ | --------------------- |
+| 1 | Paciente | Obtener tarea | [Tarea del paciente](Task-Ejemplo-TareaCompletadaCuestionarioRiesgo.html) |
+| 2 | Paciente  | Obtener cuestionario, cuestionario PDF o URL del cuestionario | [Cuestionario](Questionnaire-Ejemplo-QuestionnaireHunger.html)|
+| 3 | Paciente | Tarea de actualización (en curso) | [Tarea del paciente](Task-Ejemplo-TareaCompletadaCuestionarioRiesgo.html) con estado cambiado |
+| 4 | Paciente | Responder al cuestinario o documento de referencia con el PDF completo | [QuestionnaireResponse](QuestionnaireResponse-Ejemplo-QuestionnaireRespHunger.html) |
+| 5 | Paciente | Tarea de actualización (completada y referencias de salida QuestionnaireResponse) | [Tarea del paciente](Task-Ejemplo-TareaCompletadaCuestionarioRiesgo.html) con estado cambiado |
+{:.grid}
+
+#### Solicitud de información general
+Aquí proporcionamos una vista detallada de una interacción entre una aplicación de paciente y un solicitante (proveedor, CBO o CP) para una solicitud de información general. El ejemplo muestra al paciente devolviendo una respuesta opcional.
+
+<object data="PatientInformation.svg" type="image/svg+xml"></object>
+<br>
+
+| #    | De |  Descripción | Instancias implicadas |
+| ---  | -- | ------------ | --------------------- |
+| 1 |  Paciente | Obtener tarea | [Tarea del paciente](Task-Ejemplo-TareaCompletadaCuestionarioRiesgo.html) |
+| 2 |  Paciente | Tarea de actualización (en curso) | [Tarea del paciente](Task-Ejemplo-TareaCompletadaCuestionarioRiesgo.html) con estado cambiado |
+| 3 |  Paciente | Tarea de actualización (completada y Output.value incluye el texto de la respuesta) | [Tarea del paciente](Task-Ejemplo-TareaCompletadaCuestionarioRiesgo.html) con estado cambiado |
+{:.grid}
+
+#### Realizar solicitud de contacto
+Aquí proporcionamos una vista detallada de una interacción entre una aplicación de paciente y un solicitante (proveedor, CBO o CP) para proporcionar una o más opciones entre las cuales seleccionar para hacer contacto con un servicio, proveedor u organización. El ejemplo muestra al paciente devolviendo una respuesta opcional.
+
+<object data="PatientContact.svg" type="image/svg+xml"></object>
+<br>
+
+| #    | De |  Descripción | Instancias implicadas |
+| ---  | -- | ------------ | --------------------- |
+| 1 |  Paciente  | Obtener tarea [Tarea del paciente](Task-Ejemplo-TareaCompletadaCuestionarioRiesgo.html) |
+| 2 |  Paciente   | Obtener contacto | [Servicio de atención médica](HealthcareServiceEjemplo-CitadeAtencion.html) |
+| 3 |  Paciente  | Tarea de actualización (en curso) | [Tarea del paciente](Task-Ejemplo-TareaCompletadaCuestionarioRiesgo.html) con estado cambiado |
+| 4 |  Paciente  | Tarea de actualización (completada y .Output incluye el contacto seleccionado) | [Tarea del paciente](Task-Ejemplo-TareaCompletadaCuestionarioRiesgo.html) con estado cambiado |
+{:.grid}
+
+#### Solicitud de material de revisión
+Aquí proporcionamos una vista detallada de una interacción entre una solicitud de paciente y un solicitante (proveedor, CBO o CP) para proporcionar material de revisión.
+
+<object data="PatientReview.svg" type="image/svg+xml"></object>
+<br>
+
+| #    | De |  Descripción | Instancias implicadas |
+| ---  | -- | ------------ | ---------------------
+| 1 |  Paciente | Obtener tarea | [Tarea del paciente](Task-Ejemplo-TareaCompletadaCuestionarioRiesgo.html) |
+| 2 |  Paciente  | Obtener referencia del documento | [Documento de referencia](DocumentReference-Ejemplo-DocumentoReferencia.html) |
+| 3 |  Paciente | Tarea de actualización (en curso) | [Tarea del paciente](Task-Ejemplo-TareaCompletadaCuestionarioRiesgo.html) con estdo cambiado |
+| 4 |  Paciente | Tarea de actualización (completada) | [Tarea del paciente](Task-Ejemplo-TareaCompletadaCuestionarioRiesgo.html) con estado cambiado |
+{:.grid}
+
+
+
+{% include markdown-link-references.md %}
