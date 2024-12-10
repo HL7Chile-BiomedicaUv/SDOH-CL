@@ -106,11 +106,11 @@ Los actores de los flujos de trabajo se describen en la siguinte tabla. Los íco
 Esta guía de implementación admite interacciones adicionales con una aplicación de paciente/cliente (en un teléfono inteligente o portal), que incluyen: 
 
 | Functional Use Case       |  Task.code            |  Description                         | Actors           |
-| ------------------------- | ----------------------- | ------------------------------------ | ---------------- |
-| [Solicitud de cuestionario completo](7-referralWorkflow.html#complete-questionnaire-request)|  `complete-questionnaire` | Requesting party (e.g., provider, CBO, or CP) asks a patient to complete a questionnaire. This functionality can be used to assess social risks, inform service qualification or application, indicate reasons for cancellation, or determine the patient’s view of their interaction with the CBO and whether the service provided met their needs. | ![providericon], ![patienticon], ![cboicon], ![cpicon]  |
-| [General Information Request](referral_workflow.html#general-information-request)|  `general-information-request` | Requesting party sends a patient a free text question and receives a free text response.  | ![providericon], ![patienticon], ![cboicon], ![cpicon]  |
-| [Make Contact Request](referral_workflow.html#make-contact-request)|   `make-contact-directions` | Requesting party provides contact information for the CBO (in cases where the patient does not want the CBO to initiate contact). | ![providericon], ![patienticon], ![cboicon], ![cpicon]  |
-| [Review Material Request](referral_workflow.html#review-material-request)|   `review-material` | Requesting party requests that the patient review a document (usually a PDF), video, etc. | ![providericon], ![patienticon], ![cboicon], ![cpicon]  |
+| ------------------------- | --------------------- | ------------------------------------ | ---------------- |
+| [Solicitud de cuestionario completo](7-referralWorkflow.html#solicitud-de-cuestionario-completo)|  `complete-questionnaire` | La parte solicitante (por ejemplo, proveedor, CBO o CP) solicita a un paciente que complete un cuestionario. Esta funcionalidad puede utilizarse para evaluar riesgos sociales, infromar sobre la calificación o solicitud de un servicio, indicar razones para la cancelación o determinar la opinión del paciente sobre su interacción con la CBO y si el servicio proporcionado cubrió sus necesidades. | Proveedor, Paciente, CBO, CP  |
+| [Solicitud de información general](7-referralWorkflow.html#solicitud-de-información-general)|  `general-information-request` | La parte solicitante envía al paciente una pregunta en texto libre y recibe una respuesta en texto libre.  | Proveedor, Paciente, CBO, CP   |
+| [Realizar solicitud de contacto](7-referralWorkflow.html#realizar-solicitud-de-contacto)|   `make-contact-directions` | La parte solicitante proporciona información de contacto de la CBO (en casos donde el paciente no desea que la CBO inicie el contacto). | Proveedor, Paciente, CBO, CP   |
+| [Solicitud de material de revisión](7-referralWorkflow.html#solicitud-de-material-de-revisión)|   `review-material` | La parte solicitante solicita que el paciente revise un documento (generalmente un PDF), un video, etc. | Proveedor, Paciente, CBO, CP   |
 {:.grid}
 
 En los ejemplos siguientes, se supone que el paciente ha sido equipado con la aplicación para pacientes y que ya se ha establecido una comunicación autenticada entre la aplicación para pacientes y el solicitante. Consulte [Conexión de aplicaciones con fuentes de datos de API](9-connecting_applications_with_api_data_sources.html) para obtener más detalles. Las instancias de datos a las que se hace referencia están todas en su estado completado. En la práctica, pasarían por las transiciones de estado indicadas, con el solicitante inicializando sus campos de entrada y el paciente completando los campos de salida y actualizando el estado.
@@ -152,7 +152,7 @@ Aquí proporcionamos una vista detallada de una interacción entre una aplicaci�
 | #    | De |  Descripción | Instancias implicadas |
 | ---  | -- | ------------ | --------------------- |
 | 1 |  Paciente  | Obtener tarea [Tarea del paciente](Task-Ejemplo-TareaCompletadaCuestionarioRiesgo.html) |
-| 2 |  Paciente   | Obtener contacto | [Servicio de atención médica](HealthcareServiceEjemplo-CitadeAtencion.html) |
+| 2 |  Paciente   | Obtener contacto | [Servicio de atención médica](HealthcareService-Ejemplo-CitadeAtencion.html) |
 | 3 |  Paciente  | Tarea de actualización (en curso) | [Tarea del paciente](Task-Ejemplo-TareaCompletadaCuestionarioRiesgo.html) con estado cambiado |
 | 4 |  Paciente  | Tarea de actualización (completada y .Output incluye el contacto seleccionado) | [Tarea del paciente](Task-Ejemplo-TareaCompletadaCuestionarioRiesgo.html) con estado cambiado |
 {:.grid}
