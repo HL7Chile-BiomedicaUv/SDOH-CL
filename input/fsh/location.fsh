@@ -4,7 +4,7 @@ Alias: $CoreOrganizacionCl = https://hl7chile.cl/fhir/ig/clcore/StructureDefinit
 Profile: SDOHCCLocationCL
 Parent: LocalizacionCL 
 Id: SDOHCC-LocationCL
-Title: "Ubicación de SDOH."
+Title: "Ubicación de SDOHCC"
 Description: "Perfil que describe la información de la dirección para un servicio de salud."
 
 * ^version = "0.1.1"
