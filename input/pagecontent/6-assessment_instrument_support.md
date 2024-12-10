@@ -265,7 +265,7 @@ La agrupación de observaciones es más útil cuando no se ha creado una respues
    </tbody>
 </table>
 
-### Uso de StructureMap para geenrar observaciones o condiciones a partir de QuestionnaireResponse
+### Uso de StructureMap para generar observaciones o condiciones a partir de QuestionnaireResponse
 
 Esta IG ha adoptado el enfoque basado en mapas utilizando el recurso FHIR [StructureMap](https://hl7.org/fhir/R4/structuremap.html) para definir y compartir reglas para generar condiciones de observación (problemas de salud no confirmados) a partir de QuestionnaireResponse.
 
@@ -283,7 +283,7 @@ Antes de usar SDC StructureMap para generar condiciones a partir de Questionnair
 
 **Nota:** Independientemente de si las condiciones (preocupaciones de salud no confirmadas) se generan según las pautas proporcionadas por los autores del isntrumento de evaluación, los recursos de codificación o StructureMaps "verificados", la documentación de HRSNs basada en instrumentos de evalaución debe ser verificada por un miembro del equipo de atención a través de interacción personal con la persona que etsá siendo evaluada. 
 
-#### Orientacióntécnica detallada adicional para StructureMap
+#### Orientación técnica detallada adicional para StructureMap
 
 Los ejemplos de recursos de StructureMap en esta IG se generan utilizando [FHIR Mapping Language]({{site.data.fhir.path}}mapping-language.html). Este lenguaje se utiliza luego para generar las instancias de StructureMap. La creación de los mapas en un lenguaje textual es mucho más sencilla que intentar elaborar las instancias de StructureMap directamente en XML o JSON. El lenguaje de mapeo también funciona independientemente de la sintaxis utilizada para el QuestionnaireResponse, es decir, funciona igual para instancias en JSON,XML y RDF.
 
