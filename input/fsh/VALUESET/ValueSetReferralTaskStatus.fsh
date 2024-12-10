@@ -1,4 +1,4 @@
-ValueSet: z
+ValueSet: SDOHCCValueSetReferralTaskStatusCL
 Id: SDOHCC-ValueSetReferralTaskStatus-CL
 Title: "ValueSet SDOHCC para el Estado de la Tarea de Derivación."
 Description: "Códigos para el estado de una tarea de derivación."
