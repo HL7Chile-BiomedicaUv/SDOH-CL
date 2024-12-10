@@ -61,6 +61,12 @@ pages:
     title: Soportes de instrumentos de evaluación
   7-referralWorkflow.md:
     title: Flujo de trabajo de referencia
+  8-checking_taks_status.md:
+    title: Comprobación del estado de la tarea
+  9-connecting_applications_with_api_data_sources.md:
+    title: Conexión de aplicaciones con fuentes de datos API
+
+    
 #   examples.xml:
 #     title: Examples Overview
 #
