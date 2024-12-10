@@ -8,6 +8,7 @@ Si la tarea se publica en el sistema de prestación de servicio y la *Solicitud 
 
 #### Comprobación del estado de la tarea
 
+Consulte [Comprobación del estado de la tarea](8-checking_taks_status.html)
 
 #### Gestión de estado
 

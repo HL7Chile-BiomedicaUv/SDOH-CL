@@ -8,8 +8,8 @@ Este perfil se utiliza para transferir **tarea** creada por un profesional de la
 La tabla muestra los tipos de tarea que se pueden asignar al paciente y las restricciones impuestas por cada uso que se refuerzan a través de invariantes:
 
 
-|    Tipo de tarea    | Código (Task.code)             | Descripción (Task.description) | Task.input                  |  Task.output                                    |   Task.focus |
-| ------------------ | --------------------- | ---------------- | --------------------------- |------------------------------------------------ | ------ |
+|  Tipo de tarea    | Código (Task.code) | Descripción (Task.description) | Task.input |  Task.output | Task.focus |
+| ----------------- | ------------------ | ------------------------------ | ---------- |------------- | -------- |
 | Questionnaire (FHIR)| `complete-questionnaire` |  | Es requerido questionnaire, questionnaire-category | Si está presente, questionnaire-response   | |
 | Questionnaire (PDF)| `complete-questionnaire`  | | Se requiere questionnaire-pdf y questionnaire-category | If present, questionnaire-pdf-completed   | |
 | Questionnaire (URL)| `complete-questionnaire` | | Se requiere del questionnaire-url y questionnaire-category  |     | |
@@ -19,6 +19,8 @@ La tabla muestra los tipos de tarea que se pueden asignar al paciente y las rest
 {:.grid}
 
 #### Comprobación del estado de la tarea
+
+Consulte [Comprobación del estado de la tarea](8-checking_taks_status.html)
 
 #### Gestión de estado
 
