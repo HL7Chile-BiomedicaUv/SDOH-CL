@@ -2,7 +2,7 @@ El flujo de trabajo general describe cómo las referencias relacionadas con SDOH
 
 ### Flujo de trabajo general
 
-Está IG resplada el siguiente [flujo de trabajo](3-sdoh_clinical_care_scope.html):
+Está IG respalda el siguiente [flujo de trabajo](3-sdoh_clinical_care_scope.html):
 
 1. **Evaluar al paciente para identificar riesgos sociales:** Esto puede hacerse mediante el uso de un instrumento de evaluación, a través de una conversación con el paciente o ambos métodos. Como parte de la evaluación, el paciente y el proveedor acuerdan los riesgos sociales específicos que serán clasificados como preocupaciones o problemas de salud verificados.
 
@@ -17,7 +17,7 @@ La figura a continuación muestra este flujo de trabajo, los actores involucrado
 
 ### Actores, sistemas e íconos
 
-Los actores de los flujos de trabajo se describen en la siguinte tabla. Los íconos gráficos se utilizan en todo la IG.
+Los actores de los flujos de trabajo se describen en la siguiente tabla. Los íconos gráficos se utilizan en todo la IG.
 
 <table align="left" border="1" cellpadding="1" cellspacing="1" style="width:100%;">
   <thead>
@@ -107,7 +107,7 @@ Esta guía de implementación admite interacciones adicionales con una aplicaci�
 
 | Functional Use Case       |  Task.code            |  Description                         | Actors           |
 | ------------------------- | --------------------- | ------------------------------------ | ---------------- |
-| [Solicitud de cuestionario completo](7-referralWorkflow.html#solicitud-de-cuestionario-completo)|  `complete-questionnaire` | La parte solicitante (por ejemplo, proveedor, CBO o CP) solicita a un paciente que complete un cuestionario. Esta funcionalidad puede utilizarse para evaluar riesgos sociales, infromar sobre la calificación o solicitud de un servicio, indicar razones para la cancelación o determinar la opinión del paciente sobre su interacción con la CBO y si el servicio proporcionado cubrió sus necesidades. | Proveedor, Paciente, CBO, CP  |
+| [Solicitud de cuestionario completo](7-referralWorkflow.html#solicitud-de-cuestionario-completo)|  `complete-questionnaire` | La parte solicitante (por ejemplo, proveedor, CBO o CP) solicita a un paciente que complete un cuestionario. Esta funcionalidad puede utilizarse para evaluar riesgos sociales, informar sobre la calificación o solicitud de un servicio, indicar razones para la cancelación o determinar la opinión del paciente sobre su interacción con la CBO y si el servicio proporcionado cubrió sus necesidades. | Proveedor, Paciente, CBO, CP  |
 | [Solicitud de información general](7-referralWorkflow.html#solicitud-de-información-general)|  `general-information-request` | La parte solicitante envía al paciente una pregunta en texto libre y recibe una respuesta en texto libre.  | Proveedor, Paciente, CBO, CP   |
 | [Realizar solicitud de contacto](7-referralWorkflow.html#realizar-solicitud-de-contacto)|   `make-contact-directions` | La parte solicitante proporciona información de contacto de la CBO (en casos donde el paciente no desea que la CBO inicie el contacto). | Proveedor, Paciente, CBO, CP   |
 | [Solicitud de material de revisión](7-referralWorkflow.html#solicitud-de-material-de-revisión)|   `review-material` | La parte solicitante solicita que el paciente revise un documento (generalmente un PDF), un video, etc. | Proveedor, Paciente, CBO, CP   |

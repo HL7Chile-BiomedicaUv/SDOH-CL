@@ -10,15 +10,15 @@ El objetivo de esta sección es estandarizar aún más las interacciones entre l
 
 Las interacciones entre las aplicaciones de pacientes/clientes habilitadas para FHIR y los proveedores o las CBO se describen en el [Flujo de trabajo de coordinación de pacientes](7-referralWorkflow.html#flujo-de-trabajo-de-coordinación-de-pacientes) . Esta sección describe la conexión inicial de la aplicación de pacientes/clientes con el sistema de origen de derivación (proveedor) o destino de derivación (CBO).
 
-1. Las solicitudes se registran en la splataformas de referencia correspondientes.
+1. Las solicitudes se registran en las plataformas de referencia correspondientes.
 2. En el primer uso de la aplicación:
-    * Se proporciona al paciente/cliente una URL o un código QR. El paciente utiliza esta información para encontrar la aplicación e instalarla en su dispositivo móvil o para iniciar una apñicación en línea. Opcionalmente, se le puede proporcionar al paciente/cliente una URL o un código para identificar la plataforma de derivación a la aplicación. Alternativamente, el paciente puede seleccionar la clínica/instalación de una lista dentro de la aplicación. 
+    * Se proporciona al paciente/cliente una URL o un código QR. El paciente utiliza esta información para encontrar la aplicación e instalarla en su dispositivo móvil o para iniciar una aplicación en línea. Opcionalmente, se le puede proporcionar al paciente/cliente una URL o un código para identificar la plataforma de derivación a la aplicación. Alternativamente, el paciente puede seleccionar la clínica/instalación de una lista dentro de la aplicación. 
     *  Una vez que el usuario haya proporcionado la información necesaria para conectarse a la plataforma de referencia, o haya seleccionado la plataforma, la aplicación intentará acceder a la API FHIR de la plataforma de referencia y será redirigida según el [proceso de autenticación de la aplicación SMART](https://www.hl7.org/fhir/smart-app-launch/app-launch.html#launch-app-standalone-launch) de la plataforma.
     * En esta autenticación inicial, el usuario aún no tendrá credenciales de autorización y deberá crear una nueva "cuenta". El servidor de autorización verificará la identidad del usuario utilizando credenciales conocidas por el proveedor de atención médica o proporcionadas por él (por ejemplo, dirección de correo electrónico, fecha de nacimiento, código de registro, etc.).
     * El paciente/cliente establece credenciales (nombre de usuario/contraseña) que se utilizarán en el futuro para autenticar al usuario en la aplicación.
 3. La URL de la API (y posiblemente el nombre de usuario y la contraseña) se almacenan en la aplicación.
 4. Cuando el paciente/cliente se autentica en la aplicación, según un cronograma o bajo demanda
-    * La aplicación autentica o permite que el usuario se autentique en la plataforma de referencia y recibe un token de acceso. 
+    * La aplicación auténtica o permite que el usuario se autentique en la plataforma de referencia y recibe un token de acceso. 
     * La aplicación utiliza el token de acceso y,si es necesario, el token de actualización para mantener una conexión autenticada.
 5. La aplicación consulta tareas, solicitudes de servicio y otros datos referenciados y/o actualiza tareas y envía recursos como respuestas a cuestionarios.
 
