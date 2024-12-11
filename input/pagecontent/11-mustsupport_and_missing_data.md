@@ -21,5 +21,5 @@ Los sistemas receptores se definen como 1) sistemas pagadores, 2) sistemas prove
 
 **Conformidad con el perfil básico de Chile**
 
-Cuando esta IG no restrinja adicionalmente un perfil de CL COre, los actores deberán seguir la definición de CL Core de [Must Support]({{site.data.fhir.ver.uscore}}/general-guidance.html#must-support) y [Missing Data]({{site.data.fhir.ver.uscore}}/general-guidance.html#missing-data).
+Cuando esta IG no restrinja adicionalmente un perfil de CL COre, los actores deberán seguir la definición de CL Core de Must Support y Missing Data.
 
