@@ -43,22 +43,22 @@ Los implementadores deben tener un plan para presentar los datos de los instrume
 Los beneficios de utilizar [QuestionnaireResponse](https://hl7.org/fhir/R4B/questionnaireresponse.html) para representar datos de instrumentos de evaluación incluyen: 
 
 * Es más adecuado para respaldar casos de uso que requieren acceso al formato del instrumento de evaluación original.
-* Siempre se basa en un [Questionnaire](https://hl7.org/fhir/R4B/questionnaire.html) FHIR y conserva la estructura y la complejidad del cuestionario para proporcionar una vista totalmente contextualizada de un cuestionario completado. Por ejemplo, QuestionnaireResponse permite capturar con precisión la versión del instrmento de evaluación, el texto exacto de las preguntas y respuestas, el orden de presentación, las opciones de respuesta de opción múltiple y si se omitieron preguntas. 
+* Siempre se basa en un [Questionnaire](https://hl7.org/fhir/R4B/questionnaire.html) FHIR y conserva la estructura y la complejidad del cuestionario para proporcionar una vista totalmente contextualizada de un cuestionario completado. Por ejemplo, QuestionnaireResponse permite capturar con precisión la versión del instrumento de evaluación, el texto exacto de las preguntas y respuestas, el orden de presentación, las opciones de respuesta de opción múltiple y si se omitieron preguntas. 
 * Los pares de preguntas y respuestas en QuestionnaireResponse se pueden transformar automáticamente en observaciones FHIR utilizando [StructureMap](https://hl7.org/fhir/R4/structuremap.html) y [SDC Implementation Guide](https://build.fhir.org/ig/HL7/sdc/). 
 
 
 ##### Beneficios de utilizar Observation para representar datos de instrumentos de evaluación
 
-Los beneficios de utilizar [Observation](https://build.fhir.org/observation.html) para representar pares de pregunta-respuesta individuales de un instrumento de evalaución incluyen: 
+Los beneficios de utilizar [Observation](https://build.fhir.org/observation.html) para representar pares de pregunta-respuesta individuales de un instrumento de evaluación incluyen: 
 
 * Observation es compatible con la mayoría de los sistemas de registros médicos electrónicos y es uno de los recursos FHIR más maduros. 
-* Observation es más adecuadas que QuestionnaireResponse para respaldar casos de uso que requieren consultar los datos del instrumento de evaluación. 
+* Observation es más adecuado que QuestionnaireResponse para respaldar casos de uso que requieren consultar los datos del instrumento de evaluación. 
 * Un par de pregunta-respuesta representado como una observación puede ser recuperado e intercambiado de manera independiente. 
 * Observation tiene elementos de datos para representar información que no está explícitamente representada en QuestionnaireResponse. Por ejemplo: 
     * **Observation.category** puede usarse para etiquetar las observaciones por dominio SDOH (por ejemplo, Inseguridad alimentaria, Inestabilidad habitacional).
     * **Observation.interpretation** puede usarse para señalar observaciones que podrían representar una necesidad social relacionada con la salud (HRSN por sus siglas en inglés).
 * Observation también puede indicar relaciones (por ejemplo, **Observation.derivedFrom**) con otros artefactos. Por ejemplo, una observación puede ser calculada o determinada en función de otras observaciones. 
-* Si se necesita el contexto del instrumento de evaluación, las observaciones generadas a partir de un QuestionnaireResponse pueden usar **Observation.derivedFrom** para hacer referenia a QuestionnaireResponse.
+* Si se necesita el contexto del instrumento de evaluación, las observaciones generadas a partir de un QuestionnaireResponse pueden usar **Observation.derivedFrom** para hacer referencia a QuestionnaireResponse.
 
 **Tabla 1**: Orientación sobre QuestionnaireResponse (QR) y Respuesta de detección de observación (RDO).
 
@@ -135,7 +135,7 @@ Los beneficios de utilizar [Observation](https://build.fhir.org/observation.html
 
 QuestionnaireResponse incluye las respuestas de una persona y siempre hace referencia a un [StructureMap](https://hl7.org/fhir/R4/structuremap.html) a través de QuestionnaireResponse.questionnaire. Esta IG utiliza el perfil [SDC QuestionnaireResponse] que hace referencia al [SDC Base Questionnaire](https://build.fhir.org/ig/HL7/sdc/StructureDefinition-sdc-questionnaire.html#root).
 
-En la Tabla 2 a continuación se proporciona orientación sobre Questionnaire.code y Questionnaire.item para varios escenarios de formas en que los implementadores pueden componer instrumentos de evalaución. 
+En la Tabla 2 a continuación se proporciona orientación sobre Questionnaire.code y Questionnaire.item para varios escenarios de formas en que los implementadores pueden componer instrumentos de evaluación. 
 
 **Tabla 2**: Orientación sobre los elementos del cuestionario según composición del instrumento de evaluación.
 
@@ -149,17 +149,17 @@ En la Tabla 2 a continuación se proporciona orientación sobre Questionnaire.co
 </thead>
 <tbody>
    <tr>
-      <td><b>Instrumento de evalaución estandarizado</b>: Instrumento de evaluación único (codificado en LOINC) en su totalidad. Este instrumento de evalaución está codificado en LOINC y todas las preguntas y respuestas están codificadas en LOINC.</td>
-      <td>Herramienta de evalaución de HRSN de AHC (Preguntas básicas)</td>
-      <td>Questionnaire.code es el código LOINC para el instrumento de evaluación estandarizado. Questionnaire.item(s) son códigos LOINC para todas las preguntas del instrumento de evaluación etsandarizado.</td>
+      <td><b>Instrumento de evaluación estandarizado</b>: Instrumento de evaluación único (codificado en LOINC) en su totalidad. Este instrumento de evaluación está codificado en LOINC y todas las preguntas y respuestas están codificadas en LOINC.</td>
+      <td>Herramienta de evaluación de HRSN de AHC (Preguntas básicas)</td>
+      <td>Questionnaire.code es el código LOINC para el instrumento de evaluación estandarizado. Questionnaire.item(s) son códigos LOINC para todas las preguntas del instrumento de evaluación estandarizado.</td>
    </tr>
    <tr>
-      <td><b>Instrumento de evaluación no estandarizado con preguntas estandarizadas</b>: Este instrumento de evaluación combina preguntas de uno o más instrumentos de evalaución estandarizados.<u>Este instrumento de evaluación no esta codificado en LOINC</u>,pero todas sus preguntas y respuestas están codificadas en LOINC.</td>
+      <td><b>Instrumento de evaluación no estandarizado con preguntas estandarizadas</b>: Este instrumento de evaluación combina preguntas de uno o más instrumentos de evaluación estandarizados.<u>Este instrumento de evaluación no esta codificado en LOINC</u>,pero todas sus preguntas y respuestas están codificadas en LOINC.</td>
       <td>Herramienta de evaluación de HRSN de AHC (Preguntas principales) + preguntas seleccionadas de las preguntas complementarias de HRSN de AHC</td>
       <td>Questionnaire.code es un código no LOINC (por ejemplo, local) ya que el instrumento de evaluación no está codificado en LOINC. Questionnaire.item(s) son los códigos LOINC para las preguntas (de los instrumentos de evaluación estandarizados) que se han combinado en un instrumento no estandarizado.</td>
    </tr>
    <tr>
-      <td><b>Instrumento de evaluación no estandarizado con preguntas estandarizadas y no estandarizadas</b>: Este instrumento de evaluación combina preguntas de un instrumento de evaluación estandarizado con algunas preguntas no codificadas en LOINC <u>Este instrumento de evalaución no está codificado en LOINC.</u> Algunas preguntas y respuestas están codificadas en LOINC.<u>SAlgunas preguntas y respuestas no están codificadas en LOINC.</u></td>
+      <td><b>Instrumento de evaluación no estandarizado con preguntas estandarizadas y no estandarizadas</b>: Este instrumento de evaluación combina preguntas de un instrumento de evaluación estandarizado con algunas preguntas no codificadas en LOINC <u>Este instrumento de evaluación no está codificado en LOINC.</u> Algunas preguntas y respuestas están codificadas en LOINC.<u>Algunas preguntas y respuestas no están codificadas en LOINC.</u></td>
       <td>Herramienta de detección de HRSN de AHC (Preguntas básicas) + preguntas seleccionadas no codificadas en LOINC (por ejemplo, locales)</td>
       <td>Questionnaire.code es un código no LOINC (por ejemplo, local) ya que el instrumento de evaluación no está codificado en LOINC. Questionnaire.item(s) son los códigos LOINC (para las preguntas del instrumento de evaluación estandarizado) y los códigos no LOINC (por ejemplo, local) para las preguntas que no provienen de un instrumento estandarizado codificado en LOINC.</td>
    </tr>
@@ -174,7 +174,7 @@ Esta sección proporciona orientación sobre Observation.category y Observation.
 
 Observation.category tiene dos códigos de categoría fijos (survey y social-history) para indicar que un par de pregunta-respuesta capturado como una observación representa una evaluación (encuesta) relacionada con la historia social.
 
-Además, Observtaion.category tiene un enlace con [ValueSet SDOHCC para Categoría SDOH](ValueSet-SDOHCC-ValueSetSDOHCategoryCL.html), que tiene valores para categorizar una observación por dominio(s) SDOH (por ejemplo, inseguridad alimentaria, insetabilidad de la vivienda, etc.).
+Además, Observtaion.category tiene un enlace con [ValueSet SDOHCC para Categoría SDOH](ValueSet-SDOHCC-ValueSetSDOHCategoryCL.html), que tiene valores para categorizar una observación por dominio(s) SDOH (por ejemplo, inseguridad alimentaria, inestabilidad de la vivienda, etc.).
 
 Como orientación adicional relacionada a la categoría Observation para [Respuesta de Detección de Observación de SDOHCC](StructureDefinition-SDOHCC-ObservationScreeningResponseCL.html): 
 * "Observation.category: dominio SDOH" (por ejemplo, inseguridad alimentaria) significa que la observación aborda una necesidad social relacionada con la salud (HRSN) en el dominio SDOH especificado. 
@@ -200,9 +200,9 @@ Además de representar instancias de observación, la [Respuesta de Detección d
 
 Si se ha creado un QuestionnaireResponse para el instrumento de evaluación, la agrupación de observaciones, si bien no está prohibida, generalmente es redundante, ya que Observation.member puede hacer referencia directamente a QuestionnaireResponse (a través de derivedFrom) para el contexto del instrumento de evaluación. 
 
-La agrupación de observaciones es más útil cuando no se ha creado una respuesta al cuestionario. Para varias de las formas comunes en que los implementadores pueden componer instrumetnos de evalaución, la Tabla 3 proporciona orientación para Observation.code y Observation.member para una agrupación de observaciones. 
+La agrupación de observaciones es más útil cuando no se ha creado una respuesta al cuestionario. Para varias de las formas comunes en que los implementadores pueden componer instrumentos de evaluación, la Tabla 3 proporciona orientación para Observation.code y Observation.member para una agrupación de observaciones. 
 
-**Tabla 3**: Orientación sobre la agrupación de observaciones en función de la composición del instrumento de evalaución
+**Tabla 3**: Orientación sobre la agrupación de observaciones en función de la composición del instrumento de evaluación
 
 <table align="left" border="1" cellpadding="1" cellspacing="1" style="width:100%;">
    <tbody>
@@ -219,11 +219,11 @@ La agrupación de observaciones es más útil cuando no se ha creado una respues
       </tr>
       <tr>
          <td>
-            <p><strong>Instrumento de evaluación estandarizado:</strong> Se trata de un instrumento de evalaución único (codificado en LOINC) en su totalidad.</p>
-            <p>Este instrumento de evalaución está codificado en LOINC, y todas las preguntas y respuestas están codificadas en LOINC.</p>
+            <p><strong>Instrumento de evaluación estandarizado:</strong> Se trata de un instrumento de evaluación único (codificado en LOINC) en su totalidad.</p>
+            <p>Este instrumento de evaluación está codificado en LOINC, y todas las preguntas y respuestas están codificadas en LOINC.</p>
          </td>
          <td>
-            Herramienta de evalaución de HRSN de AHC (Preguntas básicas)
+            Herramienta de evaluación de HRSN de AHC (Preguntas básicas)
          </td>
          <td>
             <ol>
@@ -235,8 +235,8 @@ La agrupación de observaciones es más útil cuando no se ha creado una respues
       </tr>
       <tr>
          <td>
-            <p><strong>Instrumento de evalaución no estandarizado con preguntas estandarizadas:</strong>Este instrumento de evaluación combina preguntas de uno o más instrumentos de evalaución estandarizados.</p>
-            <p>Este isntrumento de evalaución no está codificado con códigos LOINC, pero todas sus preguntas y respuestas están codificadas con códigos LOINC.</p>
+            <p><strong>Instrumento de evaluación no estandarizado con preguntas estandarizadas:</strong>Este instrumento de evaluación combina preguntas de uno o más instrumentos de evaluación estandarizados.</p>
+            <p>Este isntrumento de evaluación no está codificado con códigos LOINC, pero todas sus preguntas y respuestas están codificadas con códigos LOINC.</p>
          </td>
          <td>
             Herramienta de evaluación de HRSN de AHC (Preguntas principales) + preguntas seleccionadas de las preguntas complementarias de HRSN de AHC
@@ -250,11 +250,11 @@ La agrupación de observaciones es más útil cuando no se ha creado una respues
       </tr>
       <tr>
          <td>
-            <p><strong>Instrumento de evaluación no estandarizado con preguntas estandarizadas y no estandarizadas</strong>: este instrumento de evalaución combina preguntas de un instrumento de evaluación estandarizado con algunas preguntas no codificadas por LOINC.</p>
-            <p>Este instrumento de evaluación no está codificado en LOINC, Algunas preguntas y respuestas están codificadas en LOINC. Algunas preguntas y respuestas no están codificadas en LOINC.</p>
+            <p><strong>Instrumento de evaluación no estandarizado con preguntas estandarizadas y no estandarizadas</strong>: este instrumento de evaluación combina preguntas de un instrumento de evaluación estandarizado con algunas preguntas no codificadas por LOINC.</p>
+            <p>Este instrumento de evaluación no está codificado en LOINC, algunas preguntas y respuestas están codificadas en LOINC. Algunas preguntas y respuestas no están codificadas en LOINC.</p>
          </td>
          <td>
-            AHerramienta de evaluación de HRSN de AHC (Preguntas básicas) + preguntas seleccionadas no codificadas en LOINC (por ejemplo, locales)         </td>
+            Herramienta de evaluación de HRSN de AHC (Preguntas básicas) + preguntas seleccionadas no codificadas en LOINC (por ejemplo, locales)         </td>
          <td>
             <ol>
                <li>Observation.code es un código que no es LOINC (por ejemplo, local) ya que el instrumento de evaluación no está representado en LOINC.</li>
@@ -269,19 +269,19 @@ La agrupación de observaciones es más útil cuando no se ha creado una respues
 
 Esta IG ha adoptado el enfoque basado en mapas utilizando el recurso FHIR [StructureMap](https://hl7.org/fhir/R4/structuremap.html) para definir y compartir reglas para generar condiciones de observación (problemas de salud no confirmados) a partir de QuestionnaireResponse.
 
-Lo ideal sería que en el futuro el administrador de cuestionarios pudiera proporcionar una instancia de StructureMap para un instrumento de evaluación estandarizado a fin de garantizar la coherencia de las observaciones y condiciones (es decir, problemas de salud no confirmados) generados a partir de ese instrumento de evalaución. Un repositorio de StructureMaps revisados y mantenidos de forma centralizada podría ayudar significativamente a promover la interoperabilidad semántica y estructural de los instrumentos de evalaución estandarizados, así como a reducir la carga para los proveedores y los implementadores.
+Lo ideal sería que en el futuro el administrador de cuestionarios pudiera proporcionar una instancia de StructureMap para un instrumento de evaluación estandarizado a fin de garantizar la coherencia de las observaciones y condiciones (es decir, problemas de salud no confirmados) generados a partir de ese instrumento de evaluación. Un repositorio de StructureMaps revisados y mantenidos de forma centralizada podría ayudar significativamente a promover la interoperabilidad semántica y estructural de los instrumentos de evaluación estandarizados, así como a reducir la carga para los proveedores y los implementadores.
 
 #### Uso de StructureMap para generar observaciones
 
-Esta IG admite el uso de StructureMap de SDC para generar instancias de [Respuesta de Detección de Observación de SDOHCC](StructureDefinition-SDOHCC-ObservationScreeningResponseCL.html) a partir de QuestionnaireResponse. Al usar StructureMap para generar observaciones a partir de QuestionnaireResponse, las reglas para alinear los pares de preguntas y respuestas de un QuestionnaireResponse con Observation.code y Observation.value generalmente son sencillas. Las reglas adicionales, como las reglas para asignar Observation.category o Observation.interpretation a un par pregunta-respuesta, pueden ser más complejas y, lo ideal, es que se determinen con la participación de los autores del instrumento de evalaución. 
+Esta IG admite el uso de StructureMap de SDC para generar instancias de [Respuesta de Detección de Observación de SDOHCC](StructureDefinition-SDOHCC-ObservationScreeningResponseCL.html) a partir de QuestionnaireResponse. Al usar StructureMap para generar observaciones a partir de QuestionnaireResponse, las reglas para alinear los pares de preguntas y respuestas de un QuestionnaireResponse con Observation.code y Observation.value generalmente son sencillas. Las reglas adicionales, como las reglas para asignar Observation.category o Observation.interpretation a un par pregunta-respuesta, pueden ser más complejas y, lo ideal, es que se determinen con la participación de los autores del instrumento de evaluación. 
 
 #### Uso de StructureMap para generar condiciones
 
-Esta IG también admite el uso de StructureMap para generar condiciones (preocupaciones de salud no confirmadas) para algunos pares de preguntas y respuestas a partir de QuestionnaireResponse. Aplicar reglas a los pares de preguntas y respuestas, o comnbinaciones de pares de preguntas y respuestas, para generar condiciones puede ser complejo. 
+Esta IG también admite el uso de StructureMap para generar condiciones (preocupaciones de salud no confirmadas) para algunos pares de preguntas y respuestas a partir de QuestionnaireResponse. Aplicar reglas a los pares de preguntas y respuestas, o combinaciones de pares de preguntas y respuestas, para generar condiciones puede ser complejo. 
 
 Antes de usar SDC StructureMap para generar condiciones a partir de QuestionnaireResponse, los implementadores deben definir un proceso claro para 1) si esto se llevará a cabo, 2) las reglas para generar una condición a partir de un par de preguntas y respuestas (o pares) y 3) la verificación por parte de un proveedor o profesional de la salud calificado. 
 
-**Nota:** Independientemente de si las condiciones (preocupaciones de salud no confirmadas) se generan según las pautas proporcionadas por los autores del isntrumento de evaluación, los recursos de codificación o StructureMaps "verificados", la documentación de HRSNs basada en instrumentos de evalaución debe ser verificada por un miembro del equipo de atención a través de interacción personal con la persona que etsá siendo evaluada. 
+**Nota:** Independientemente de si las condiciones (preocupaciones de salud no confirmadas) se generan según las pautas proporcionadas por los autores del instrumento de evaluación, los recursos de codificación o StructureMaps "verificados", la documentación de HRSNs basada en instrumentos de evaluación debe ser verificada por un miembro del equipo de atención a través de interacción personal con la persona que está siendo evaluada. 
 
 #### Orientación técnica detallada adicional para StructureMap
 
@@ -293,7 +293,7 @@ Por lo tanto, el proceso general para admitir este proceso de transformación es
 
 1. Identificar el Questionnaire que se utilizará para recopilar información relacionada con SDOH.
 2. Determinar qué recursos de Observación y Condición deben crearse para que se puedan buscar dentro del registro.
-3. Utilizando los ejemplos proporcionados en esta guía como base, crear un archivo de lenguaje de mapeo que realice l atransformación necesaria. 
+3. Utilizando los ejemplos proporcionados en esta guía como base, crear un archivo de lenguaje de mapeo que realice la transformación necesaria. 
 4. Compilar el archivo de mapeo en una instancia de StructureMap (por ejemplo, utilizando la herramienta de validación FHIR Java).
 5. Ejecutar el mapa contra un QuestionnaireResponse.
 6. Ejecutar el Bundle de transacción resultante para crear las Observaciones y Condiciones relevantes en el servidor deseado. 
@@ -303,19 +303,19 @@ Tenga en cuenta que la creación del archivo de mapeo y la compilación de Struc
 
 ### Proceso de Implementación de Instrumentos de Evaluación
 
-En resumen, a continuación se resume el proceso seguido por esta IG para la implementación de los instrumentos de evaluación. El proceso también se puede aplicar a otros instrumentos de evalaución. 
+En resumen, a continuación se resume el proceso seguido por esta IG para la implementación de los instrumentos de evaluación. El proceso también se puede aplicar a otros instrumentos de evaluación. 
 
-* **Utilice un instrumento de evalaución codificado en LOINC:** los [Componentes LOINC](https://loinc.org/kb/faq/structure/) y las listas de [Respuestas LOINC](https://loinc.org/forums/topic/answer-lists/) estandarizan la codificación y facilitan el aprovechamiento del widget de código abierto NLM [LHC-Forms Widget](https://lhcforms.nlm.nih.gov/lhcforms). 
-* **Convertir el instrumento de evalaución codificado en LOINC a un Cuestionario SDC:**  El widget de código abierto NLM [LHC-Forms Widget](https://lhcforms.nlm.nih.gov/lhcforms) admite este paso al mostrar formularios de entrada basados en el cuestionario FHIR para aplicaciones basadas en la web y puede utilizarse para crear y editar cuestionarios FHIR. Para algunos instrumentos de evaluación, este paso puede incluir el establecimiento de lógica de cálculo para definir el resultado de algunas preguntas en función de las respuestas a otras preguntas (por ejemplo, cuando una o más preguntas determinan la respuesta a otra "pregunta" (no directamente respondida por el paciente), como en la pregunta 3 del cuestionario HSV).
+* **Utilice un instrumento de evaluación codificado en LOINC:** los [Componentes LOINC](https://loinc.org/kb/faq/structure/) y las listas de [Respuestas LOINC](https://loinc.org/forums/topic/answer-lists/) estandarizan la codificación y facilitan el aprovechamiento del widget de código abierto NLM [LHC-Forms Widget](https://lhcforms.nlm.nih.gov/lhcforms). 
+* **Convertir el instrumento de evaluación codificado en LOINC a un Cuestionario SDC:**  El widget de código abierto NLM [LHC-Forms Widget](https://lhcforms.nlm.nih.gov/lhcforms) admite este paso al mostrar formularios de entrada basados en el cuestionario FHIR para aplicaciones basadas en la web y puede utilizarse para crear y editar cuestionarios FHIR. Para algunos instrumentos de evaluación, este paso puede incluir el establecimiento de lógica de cálculo para definir el resultado de algunas preguntas en función de las respuestas a otras preguntas (por ejemplo, cuando una o más preguntas determinan la respuesta a otra "pregunta" (no directamente respondida por el paciente), como en la pregunta 3 del cuestionario HSV).
 * **Instancia de [SDC Questionnaire]:** Usando una aplicación apropiada (por ejemplo, la aplicación SMART de código abierto NLM [FHIR SDC SMART App](https://lhcforms.nlm.nih.gov/sdc), crear un [SDC QuestionnaireResponse].
 
 * **Desarrollar la lógica de traducción para usar [StructureMap](https://hl7.org/fhir/R4/structuremap.html)** (esta lógica generalmente debe ser proporcionada por el responsable del instrumento de evaluación) y una herramienta de validación para generar las siguientes instancias de recursos a partir del QuestionnaireResponse SDC: 
-    * [Respuesta de Detección de Observación de SDOHCC](StructureDefinition-SDOHCC-ObservationScreeningResponseCL.html)- Para representar un par de preguntas y respuestas del instrumento de evaluación. Cualquier observación que se produzca DEBERÁ incluir un enlace de derivación (derivedFrom) al QuestionnaireResponse. Algunos sistemas pueden optar por representar todos los pares depreguntas y respuestas como observaciones, mientras que otros pueden no encontrar esto útil y considerar que crea "ruido" en la historia clínica electrónica.
+    * [Respuesta de Detección de Observación de SDOHCC](StructureDefinition-SDOHCC-ObservationScreeningResponseCL.html)- Para representar un par de preguntas y respuestas del instrumento de evaluación. Cualquier observación que se produzca DEBERÁ incluir un enlace de derivación (derivedFrom) al QuestionnaireResponse. Algunos sistemas pueden optar por representar todos los pares de preguntas y respuestas como observaciones, mientras que otros pueden no encontrar esto útil y considerar que crea "ruido" en la historia clínica electrónica.
         * ¿Es un puntaje u otra medida clave que pueda determinar si se registra un problema en el registro del paciente?
         * ¿Es algo que un proveedor probablemente buscaría o para lo que podría querer seguir tendencias?
         * ¿Es necesario como parte del cálculo de una medida?
-    * [Condición SDOHCC](StructureDefinition-SDOHCC-ConditionCL.html)- Para representar cualquier preocupación de salud identificada por el instrumento de evalaución. Estas son condiciones (preocupaciones de salud no confirmadas) que deben ser verificadas por un miembro del equipo de atención mediante interacción personal con la persona que está siendo evaluada. 
-    * [Respuesta de Detección de Observación de SDOHCC](StructureDefinition-SDOHCC-ObservationScreeningResponseCL.html) Grupo - Para agrupar cualquier observación asociada con el instrumento de evalaución. Cabe señalar que, para las observaciones que pueden hacer referencia a un QuestionnaireResponse (como en este proceso), esto generalmente es redundante pero no está prohibido. 
+    * [Condición SDOHCC](StructureDefinition-SDOHCC-ConditionCL.html)- Para representar cualquier preocupación de salud identificada por el instrumento de evaluación. Estas son condiciones (preocupaciones de salud no confirmadas) que deben ser verificadas por un miembro del equipo de atención mediante interacción personal con la persona que está siendo evaluada. 
+    * [Respuesta de Detección de Observación de SDOHCC](StructureDefinition-SDOHCC-ObservationScreeningResponseCL.html) Grupo - Para agrupar cualquier observación asociada con el instrumento de evaluación. Cabe señalar que, para las observaciones que pueden hacer referencia a un QuestionnaireResponse (como en este proceso), esto generalmente es redundante pero no está prohibido. 
 
 
 

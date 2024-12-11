@@ -65,6 +65,14 @@ pages:
     title: Comprobación del estado de la tarea
   9-connecting_applications_with_api_data_sources.md:
     title: Conexión de aplicaciones con fuentes de datos API
+  10-gravity_terminology.md:
+    title: Value sets
+  11-mustsupport_and_missing_data.md:
+    title: Must Support y Missing Data
+  12-privacy_and_security.md:
+    title: Privacidad y seguridad
+
+
 
     
 #   examples.xml:
@@ -95,6 +103,28 @@ pages:
 menu:
   Inicio: index.html
   Artefactos: artifacts.html
+  Fondo:
+    Interoperabilidad de datos SDOH: 2-sdoh_challenges_gravity.html
+    Antecedentes de la atención clínica de SDOH: 3-sdoh_clinical_care_scope.html
+    Antecedentes técnicos: 4-technicalBackground.html
+    Glosario: 5-glossary.html
+  Guía de implementación:
+    Apoyo a los instrumentos de evalaución: 6-assessment_instrument_support.html
+    Flujo de trabajo de referencia: 7-referralWorkflow.html
+    Comprobación del estado de la tarea: 8-checking_taks_status.html
+    Conexión de aplicaciones con fuentes de datos de API: 9-connecting_applications_with_api_data_sources.html
+    Value sets del proyecto: 10-gravity_terminology.html
+  Artefactos y ejemplos FHIR: 
+    Perfiles: artifacts.html#profiles
+    Value Sets: artifacts.html#value-sets
+    Code Systems: artifacts.html#code-systems
+    Ejemplos: artifacts.html#examples
+    Listado completo: artifacts.html
+  Especificaciones:
+    Privacidad y seguridad: 12-privacy_and_security.html
+    Must Support y Missing data: 11-mustsupport_and_missing_data.html
+
+
 
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
