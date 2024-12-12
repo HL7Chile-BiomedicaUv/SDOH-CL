@@ -8,7 +8,7 @@ En Estados Unidos, [Gravity Project](https://confluence.hl7.org/display/GRAV/Pro
 
 A partir de la información presentada en la página del proyecto mencionada anteriormente, se identificó y desarrolló en Bizagi el diagrama del proceso, basado en la información disponible. 
 
-{% include img-med.html img="Proceso.png" caption="Figura 1: Diagrama de procesos" %}
+<img src="input/images/Proceso.png" title="Diagrama de procesos" width="400" />
 
 El presente proceso describe una metodología estructurada para integrar los SDOH en la atención clínica, asegurando una atención personalizada y efectiva.
   * **Screening**: el flujo inicia con la evaluación del paciente, en la que se identifican factores relevantes relacionados con los determinantes sociales de la salud. Esta información se recolecta a través de un formulario, cuyos datos son almacenados en sistemas electrónicos como el EHR o FHIR, permitiendo su análisis porsterior.
