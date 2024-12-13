@@ -2,9 +2,9 @@
 
 La OMS define los **Determinantes sociales de la salud (SDOH)** como las condiciones de los entornos donde las personas nacen, viven, aprenden, trabajan, juegan, practican su religión y envejecen, que afectan una amplia gama de resultados y riesgos en materia de salud, funcionamiento y calidad de vida, por ende, la salud no solo está determinada por la atención clínica, sino también por las condiciones sociales en las que viven las personas. 
 
-En Chile actualmente no existe una integración de estos factores con el sistema sanitario, aunque se manejan estadísticas aisladas proporcionadas por encuestas como la [CASEN (Encuesta de caracterización socioeconómica nacional)](https://observatorio.ministeriodesarrollosocial.gob.cl/encuesta-casen-2022) y la [ENS (Encuesta nacional de salud)](https://epi.minsal.cl/resultados-encuestas/). Estas encuestas recopilan datos sobre diversos aspectos, como demografía, trabajo, ingresos, educación, así como enfermedades y tratamientos que atravies la población.
+En Chile actualmente no existe una integración de estos factores con el sistema sanitario, aunque se manejan estadísticas aisladas proporcionadas por encuestas como la [CASEN](https://observatorio.ministeriodesarrollosocial.gob.cl/encuesta-casen-2022) (Encuesta de caracterización socioeconómica nacional) y la [ENS](https://epi.minsal.cl/resultados-encuestas/) (Encuesta nacional de salud). Estas encuestas recopilan datos sobre diversos aspectos, como demografía, trabajo, ingresos, educación, así como enfermedades y tratamientos que atravies la población.
 
-En Estados Unidos, [Gravity Project](https://confluence.hl7.org/display/GRAV/Project+Information) busca desarrollar y promover estándares de datos abiertos utilizando HL7 FHIR y terminologías asociadas que forman la base de la interoperabilidad en la atención social moderna. Este proyecto introduce terminologías basadas en dominios o categorías de riesgo social y desarroll una Guía de Implementación completa de derivaciones de circuito cerrado. 
+En Estados Unidos, [Gravity Project](https://confluence.hl7.org/display/GRAV/Project+Information) busca desarrollar y promover estándares de datos abiertos utilizando HL7 FHIR y terminologías asociadas que forman la base de la interoperabilidad en la atención social moderna. Este proyecto introduce terminologías basadas en dominios o categorías de riesgo social y desarrolló una [Guía de Implementación completa](https://hl7.org/fhir/uv/subscriptions-backport/STU1.1/index.html) de derivaciones de circuito cerrado. 
 
 A partir de la información presentada en la página del proyecto mencionada anteriormente, se identificó y desarrolló en Bizagi el diagrama del proceso, basado en la información disponible. 
 
@@ -27,10 +27,81 @@ El presente proceso describe una metodología estructurada para integrar los SDO
       * Si son exitosas, se procede a la revisión de resultados y la generación de informes que consolidan el impacto de las acciones.
 El flujo culmina con la emisión de los informes finales, que documentan los resultados obtenidos.Este ciclo permite un monitoreo constante y ajustes iterativos asegurando una atención de calidad centrada en las necesidades del paciente.
 
+Al tratarse de una guía de implementación CORE, no fue necesario desarrollar el modelado ni flujo de datos correspondiente, ya que estos elementos no forman parte del alcance establecido. Del mismo modo, tampoco se consideró necesario el desarrollo de casos de uso, dado que la guía se enfoca en proporcionar lineamientos generales. 
 
-## Instalación de softwares 
+## Construcción Guía de Implementación
+En este apartado se describen los programas y metodología empleada para el desarrollo de la guía de implementación. El propósito es proporcionar una visión clara y estructurada sobre los enfoques adoptados, las herramientas utilizadas y los procesos seguidos para garantizar la coherencia, eficacia y aplicabilidad de la guía, facilitando la replicabilidad y la adptación del contenido, asegurando su utilidad práctica para los usuarios. 
+
+**IMPORTANTE:** Toda la intalación descrita debe ser en modo administrador.
+
+### 1. **Instalación Visual Studio Code**: 
+
+Este es un editor de código fuente ligero y multiplataforma. Su proceso de instalación comprende los siguientes pasos:
+  a) Accede al sitio oficial de [Visual Studio Code](https://code.visualstudio.com/)
+  b) Hacer clic en el botón **Download** según el sistema operativo.
+
+   *Para Windows*:
+     * Una vez descargado el instalador (VSCodeSetup.exe), ábralo.
+     * Acepte términos de licencia y seleccione las siguientes opciones:
+         * Crear un acceso directo en el escritorio.
+         * Añadir VS Code al menú contextual o al PATH (opción recomendada para usar la terminal)
+         * Haz clic en **Instalar** y espere que el proceso finalice.
+         * Una vez completada la instalación, haga clic en **finalizar** para abrir el panel.
+         * Al abrir Visual Studio Code, se debe instlar la extensión de Git.
+Con esto, Visual Studio Code está listo para comenzar.
+
+### 2. Instalación "Java jdk": 
+**Java Development Kit (JDK)** es un conjunto de herramientas escenciales para desarrollar, compilar, depurar y ejecutar aplicaciones en el lenguaje de programación Java. 
+Para descargar: 
+ a) Visita el sitio de descarga de [Oracle](https://www.oracle.com/cl/java/technologies/downloads/).
+ b) Selecciona la versión de JDK adecuada para el sistema operativo. 
+ c) Acepta los términos de la licencia y descarga el instalador. 
+ d) Sigue las instrucciones de instalación para configurarlo en tu sistema.
+
+### 3. SUSHI :
+SUSHI es una implementación de referencia y un estándar de *facto* para un compilador FSH que traduce FSH en artefactos FHIR como perfiles, extensiones y vale sets.
+
+ - **Paso 1:** SUSHI requiere *Node.js*, para instalar diríjase a [Node JS](https://nodejs.org/en) y seleccione la descarga "LTS". Una vez descargado el instalador, ejecútelo utilizando las opciones predeterminadas.
+Para asegurar una instalación correcta, abra una ventana de comandos y escriba los siguientes comandos, cada uno debe devolver un número de versión.
+
+ ```
+ node --version
+ npm --version
+ ```
+
+ - **Paso 2:** Para instalar SUSHI, abra un símbolo del sistema y escriba el siguiente comando:
+
+ ```
+ npm install -g fsh-sushi
+ ```
+ Para verificar la instalación utilice: 
+
+ ```
+ sushi help
+ ```
+ Si el comando genera instrucciones sobre el uso de la interfaz de línea de comandos de SUSHI, está listo para ejecutar SUSHI. 
+  Se utiliza *sushi -v* para mostrar la versión instalada de SUSHI y la versión de la especificación FSH que admite.
+
+ - **Paso 3:** como herramientas de publicación se debe instalar Ruby Jekyll, la información se encuentra disponible en  [Jekyll](https://jekyllrb.com/docs/installation/windows/), y para realizar la descarga e instalación ingrese a [RubyInstaller](https://rubyinstaller.org/).
+ **Nota:** Se recomienda instalar con las 3 opciones, una tras otra.
+ Finalmente en una ventana de comandos escriba:
+   ```
+   gem install jekyll bundler
+   ```
 
 
+
+
+
+
+6) se recomienda agregar  java en las variables de entorno
+  a) busque variables de entorno en el buscador de windows y ábralas
+  b) seleccione en el último botón "variables de entorno"
+  c) en la segunda ventanita "variables del sistema"  pinchas "path" y luego el botón "editar"
+  d) se abrirá una ventana y seleccione el botón "examinar"
+  e) busque la ruta donde se instala java ./java/bin y seleccione
+  f) en "variables de usuario" (primera ventana grande) pinche el botón "nuevo)
+  g) cree una variable JAVA_HOME y busque la carpeta correspondiente (en mi caso es C:\Program Files\Java\jdk-17)
 
 
 COMANDOS
