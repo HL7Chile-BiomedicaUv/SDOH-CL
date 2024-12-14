@@ -8,7 +8,7 @@ En Estados Unidos, [Gravity Project](https://confluence.hl7.org/display/GRAV/Pro
 
 A partir de la información presentada en la página del proyecto mencionada anteriormente, se identificó y desarrolló en Bizagi el diagrama del proceso, basado en la información disponible. 
 
-<img src="input/images/Proceso.png" title="Diagrama de procesos" width="600" />
+<img src="input/imagesReadme/Proceso.png" title="Diagrama de procesos" width="600" />
 
 El presente proceso describe una metodología estructurada para integrar los SDOH en la atención clínica, asegurando una atención personalizada y efectiva.
   * **Screening**: el flujo inicia con la evaluación del paciente, en la que se identifican factores relevantes relacionados con los determinantes sociales de la salud. Esta información se recolecta a través de un formulario, cuyos datos son almacenados en sistemas electrónicos como el EHR o FHIR, permitiendo su análisis porsterior.
@@ -104,7 +104,28 @@ Agregar "java" en las variables de entorno siguiendo los siguientes puntos:
 Para crear la estructura de directorios necesaria para el desarrollo de esta guía de implementación, se utilizó el comando *sushi init* tras haber instalado los programas previamente mencionados. Este comando generó la estructura base del proyecto. La organización inicial se basó en la guía de implementación [SDOH Clinical Care](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/), estableciendo ademaás una dependencia con la guía [CL Core](https://hl7chile.cl/fhir/ig/clcore/1.9.1/index.html). Ambas guías proporcionaron una estructura que fue analizada y comparada para diseñar perfiles necesarios de manera adecuada. 
 
 #### Creación de Perfiles:
-En esta etapa 
+Garvity propone un total de 12 perfiles, los cuales se muestran en la siguiente imagen. 
+
+<img src="input/imagesReadme/Perfiles.png" title="Perfiles propuestos por Gravity" width="400" style="display: block; margin: auto;" />
+
+De estos 12 perfiles, cuatro se desarrollaron en base a perfiles desarrollados en la guía de implementación  [CL Core](https://hl7chile.cl/fhir/ig/clcore/1.9.1/index.html) y ocho se desarrollaron en base al estándar FHIR R4, tal como se muestra en la siguiente tabla.
+
+| Perfil | Base |
+| ------ | ---- |
+| Condition | [Diagnostico CL](https://hl7chile.cl/fhir/ig/clcore/1.9.1/StructureDefinition-CoreDiagnosticoCl.html) |
+| Consent | [Consent](https://hl7.org/fhir/R4/consent.html) |
+| Goal | [Goal](http://hl7.org/fhir/R4/goal.html) |
+| Group | [Group](https://hl7.org/fhir/R4/group.html) |
+| Healthcare Service | [Healthcare Service](https://hl7.org/fhir/R4/healthcareservice.html) |
+| Location | [localización CL](https://hl7chile.cl/fhir/ig/clcore/1.9.1/StructureDefinition-CoreLocalizacionCl.html)
+| Observation Assessment| [Observación CL](https://hl7chile.cl/fhir/ig/clcore/1.9.1/StructureDefinition-CoreObservacionCL.html) |
+| Observation Screening Response | [Observación CL](https://hl7chile.cl/fhir/ig/clcore/1.9.1/StructureDefinition-CoreObservacionCL.html) |
+| Procedure | [Procedure](https://hl7.org/fhir/R4/procedure.html) |
+| ServiceRequest | [ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html) |
+| Task for patient | [Task](https://hl7.org/fhir/R4/task.html) |
+| Task for referral management | [Task](https://hl7.org/fhir/R4/task.html) |
+
+
 
 
 
