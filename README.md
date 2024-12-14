@@ -103,6 +103,37 @@ Agregar "java" en las variables de entorno siguiendo los siguientes puntos:
 ### CREACIÓN DE LA GUÍA
 Para crear la estructura de directorios necesaria para el desarrollo de esta guía de implementación, se utilizó el comando *sushi init* tras haber instalado los programas previamente mencionados. Este comando generó la estructura base del proyecto. La organización inicial se basó en la guía de implementación [SDOH Clinical Care](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/), estableciendo ademaás una dependencia con la guía [CL Core](https://hl7chile.cl/fhir/ig/clcore/1.9.1/index.html). Ambas guías proporcionaron una estructura que fue analizada y comparada para diseñar perfiles necesarios de manera adecuada. 
 
+Para desarrollar los perfiles presentados en la guía de implementación *SDOH Clinical Care* en una primera instancia se desarrolló: 
+
+**1. Value Sets**
+Los value sets se emplean para definir terminologías relacionadas con los determinantes sociales de la salud, incluyendo conceptos clínicos como necesidades, intervenciones, resultados y otros datos relevantes. Estos value sets garantizan la estandarización en la captura y el intercambio de infromación, permitiendo la interoperabilidad entre diferentes sistemas de salud. 
+
+| Value Sest Gravity | Value Sets GI nacional |
+| ------------------ | ---------------------- |
+| SDOHCC ValueSet LOINC SNOMEDCT | ValueSet SDOHCC LOINC-SNOMEDCT |
+| SDOHCC ValueSet Observation Status | Valueset SDOHCC Estado de observación |
+| SDOHCC ValueSet SDOH Category | ValueSet SDOHCC para Categoría SDOH |
+| SDOHCC ValueSet SDOH Questionnaire Category | ValueSet SDOHCC para Categoría Cuestionario SDOH |
+| SDOHCC ValueSet Referral Task Status | ValueSet SDOHCC para el Estado de la Tarea de Derivación |
+| SDOHCC ValueSet Task Code | ValueSet SDOHCC para el Código de Tarea |
+| SDOHCC ValueSet Task Priority | ValueSet SDOHCC para Prioridad de Tarea |
+| SDOHCC ValueSet Task Status | ValueSet SDOHCC para Estado de la Tarea |
+| --------------------------- | Códigos de procedimientos CL |
+
+**Inclusión de Value sets nacionales:** En el desarrollo de la guía de implementación nacional se añadió un nuevo value set denominado *"Códigos de procedimientos Cl"*. Este está diseñado para trabajar con los procedimientos definidos por FONASA, asegurando que los códigos sean compatibles con el contexto y las normativas específicas de nuestro país. 
+
+**2. Code Systems:** 
+Los code systems contienen todos los términos disponibles dentro de un dominio específico; en este caso, están relacionados con los determinantes sociales de la salud. Estos sitemas permiten estandarizar la terminología utilizada en los recursos FHIR, asegurando interoperabilidad y consistencia en la captura e intercambio de datos.
+
+| Code System Gravity | Code System GI nacional |
+| ------------------ | ------------------------ |
+| SDOHCC CodeSystem Temporary Codes | SDOHCC Código del Sistema de Códigos Temporales |
+|------------------- | Código MAI de FONASA |
+
+**Inclusión de Code System nacional:** en el desarrollo de esta GI se añadió un code system denominado *Código MAI de Fonasa*, el cual contiene códigos personalizados relacionados con los procedimientos realizados en chile. Este sistema se basa en la clasificación establecida por FONASA, adaptando la terminología internacional a las necesidades del contexto nacional. 
+
+
+
 #### Creación de Perfiles:
 Garvity propone un total de 12 perfiles, los cuales se muestran en la siguiente imagen. 
 
@@ -126,6 +157,8 @@ De estos 12 perfiles, cuatro se desarrollaron en base a perfiles desarrollados e
 | ServiceRequest | [ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html) |
 | Task for patient | [Task](https://hl7.org/fhir/R4/task.html) |
 | Task for referral management | [Task](https://hl7.org/fhir/R4/task.html) |
+
+Al momento de realizar la programación de los perfiles 
 
 
 
