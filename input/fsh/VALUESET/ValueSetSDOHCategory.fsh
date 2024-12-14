@@ -7,7 +7,7 @@ Description: "Códigos que representan los dominios/ámbitos de los Determinante
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #draft
 * ^extension[=].valueCode.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
-* ^extension[=].valueCode.extension.valueCanonical = "http://example.org/ImplementationGuide/GravityCL" //CAMBIAR
+
 * ^experimental = false
 * ^contact.name = "HL7 Chile"
 * ^contact.telecom[0].system = #url

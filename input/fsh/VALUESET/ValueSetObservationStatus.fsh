@@ -7,7 +7,7 @@ Description: "Códigos para el estado de una observación de respuesta a una det
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #draft
 * ^extension[=].valueCode.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
-* ^extension[=].valueCode.extension.valueCanonical = "http://example.org/ImplementationGuide/GravityCL" //CAMBIAR
+
 * ^experimental = false
 * ^contact.name = "HL7 Chile"
 * ^contact.telecom[0].system = #url
@@ -19,3 +19,4 @@ Description: "Códigos para el estado de una observación de respuesta a una det
 * ObservationStatus#corrected "Corregido"
 * ObservationStatus#entered-in-error "Ingresado por error"
 * ObservationStatus#unknown "Desconocido"
+

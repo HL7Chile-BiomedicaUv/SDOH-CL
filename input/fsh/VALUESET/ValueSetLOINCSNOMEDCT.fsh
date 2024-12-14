@@ -7,8 +7,7 @@ Description: "Este value set contiene todo LOINC y SNOMED CT."
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #trial-use
 * ^extension[=].valueCode.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
-* ^extension[=].valueCode.extension.valueCanonical = "http://hl7.org/fhir/us/sdoh-clinicalcare/ImplementationGuide/hl7.fhir.us.sdoh-clinicalcare"
-* ^version = "2.2.0"
+
 * ^status = #active
 * ^experimental = false
 * ^publisher = "HL7 International / Patient Care"
