@@ -7,7 +7,7 @@ Description: "Conceptos de sistema de códigos alfanuméricos MAI que se pueden 
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #draft
 * ^extension[=].valueCode.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
-
+* ^extension[=].valueCode.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/gravitycl/ImplementationGuide/hl7.fhir.cl.gravitycl" 
 * ^experimental = false
 * ^contact.name = "HL7 Chile"
 * ^contact.telecom[0].system = #url
