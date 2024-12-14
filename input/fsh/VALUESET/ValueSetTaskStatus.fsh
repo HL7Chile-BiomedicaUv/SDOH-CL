@@ -1,6 +1,6 @@
 ValueSet: SDOHCCValueSetTaskStatusCL
 Id: SDOHCC-ValueSetTaskStatus-CL
-Title: "ValueSet SDOHCC para Estado de la Tarea."
+Title: "ValueSet SDOHCC para Estado de la Tarea"
 Description: "Códigos para el estado de una tarea para un paciente."
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension[=].valueCode = #pc

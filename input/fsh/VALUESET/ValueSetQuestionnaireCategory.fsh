@@ -1,6 +1,6 @@
 ValueSet: SDOHCCValueSetSDOHQuestionnaireCategoryCL
 Id: SDOHCC-ValueSetSDOHQuestionnaireCategory-CL
-Title: "ValueSet SDOHCC para Categoría Cuestionario SDOH."
+Title: "ValueSet SDOHCC para Categoría Cuestionario SDOH"
 Description: "Códigos que representan categorías de cuestionarios sobre Determinantes Sociales de la Salud (SDOH)."
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension[=].valueCode = #pc

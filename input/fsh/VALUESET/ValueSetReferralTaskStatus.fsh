@@ -1,6 +1,6 @@
 ValueSet: SDOHCCValueSetReferralTaskStatusCL
 Id: SDOHCC-ValueSetReferralTaskStatus-CL
-Title: "ValueSet SDOHCC para el Estado de la Tarea de Derivación."
+Title: "ValueSet SDOHCC para el Estado de la Tarea de Derivación"
 Description: "Códigos para el estado de una tarea de derivación."
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension[=].valueCode = #pc

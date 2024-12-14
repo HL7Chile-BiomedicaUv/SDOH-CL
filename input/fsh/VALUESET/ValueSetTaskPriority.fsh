@@ -1,6 +1,6 @@
 ValueSet: SDOHCCValueSetTaskPriorityCL
 Id: SDOHCC-ValueSetTaskPriority-CL
-Title: "ValueSet SDOHCC para Prioridad de Tarea."
+Title: "ValueSet SDOHCC para Prioridad de Tarea"
 Description: "Códigos para la prioridad de una tarea para un paciente."
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension[=].valueCode = #pc
