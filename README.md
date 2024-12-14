@@ -122,6 +122,8 @@ Los value sets se emplean para definir terminologías relacionadas con los deter
 
 **Inclusión de Value sets nacionales:** En el desarrollo de la guía de implementación nacional se añadió un nuevo value set denominado *"Códigos de procedimientos Cl"*. Este está diseñado para trabajar con los procedimientos definidos por FONASA, asegurando que los códigos sean compatibles con el contexto y las normativas específicas de nuestro país. 
 
+**AGREGAR IMAGEN**
+
 **2. Code Systems:** 
 Los code systems contienen todos los términos disponibles dentro de un dominio específico; en este caso, están relacionados con los determinantes sociales de la salud. Estos sitemas permiten estandarizar la terminología utilizada en los recursos FHIR, asegurando interoperabilidad y consistencia en la captura e intercambio de datos.
 
@@ -132,7 +134,7 @@ Los code systems contienen todos los términos disponibles dentro de un dominio 
 
 **Inclusión de Code System nacional:** en el desarrollo de esta GI se añadió un code system denominado *Código MAI de Fonasa*, el cual contiene códigos personalizados relacionados con los procedimientos realizados en chile. Este sistema se basa en la clasificación establecida por FONASA, adaptando la terminología internacional a las necesidades del contexto nacional. 
 
-
+** AGREGAR IMAGEN**
 
 #### Creación de Perfiles:
 Garvity propone un total de 12 perfiles, los cuales se muestran en la siguiente imagen. 
