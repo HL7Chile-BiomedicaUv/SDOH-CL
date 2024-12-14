@@ -32,13 +32,14 @@ Al tratarse de una guía de implementación CORE, no fue necesario desarrollar e
 ## Construcción Guía de Implementación
 En este apartado se describen los programas y metodología empleada para el desarrollo de la guía de implementación. El propósito es proporcionar una visión clara y estructurada sobre los enfoques adoptados, las herramientas utilizadas y los procesos seguidos para garantizar la coherencia, eficacia y aplicabilidad de la guía, facilitando la replicabilidad y la adptación del contenido, asegurando su utilidad práctica para los usuarios. 
 
+### INSTALACIÓN DE SOFTWARES 
 **IMPORTANTE:** Toda la intalación descrita debe ser en modo administrador.
 
-### 1. **Instalación Visual Studio Code**: 
+#### 1. **Instalación Visual Studio Code**: 
 
 Este es un editor de código fuente ligero y multiplataforma. Su proceso de instalación comprende los siguientes pasos:
-  a) Accede al sitio oficial de [Visual Studio Code](https://code.visualstudio.com/)
-  b) Hacer clic en el botón **Download** según el sistema operativo.
+  * Accede al sitio oficial de [Visual Studio Code](https://code.visualstudio.com/)
+  *  Hacer clic en el botón **Download** según el sistema operativo.
 
    *Para Windows*:
      * Una vez descargado el instalador (VSCodeSetup.exe), ábralo.
@@ -50,15 +51,15 @@ Este es un editor de código fuente ligero y multiplataforma. Su proceso de inst
          * Al abrir Visual Studio Code, se debe instlar la extensión de Git.
 Con esto, Visual Studio Code está listo para comenzar.
 
-### 2. Instalación "Java jdk": 
+#### 2. Instalación "Java jdk": 
 **Java Development Kit (JDK)** es un conjunto de herramientas escenciales para desarrollar, compilar, depurar y ejecutar aplicaciones en el lenguaje de programación Java. 
 Para descargar: 
- a) Visita el sitio de descarga de [Oracle](https://www.oracle.com/cl/java/technologies/downloads/).
- b) Selecciona la versión de JDK adecuada para el sistema operativo. 
- c) Acepta los términos de la licencia y descarga el instalador. 
- d) Sigue las instrucciones de instalación para configurarlo en tu sistema.
+ * Visita el sitio de descarga de [Oracle](https://www.oracle.com/cl/java/technologies/downloads/).
+ * Selecciona la versión de JDK adecuada para el sistema operativo. 
+ * Acepta los términos de la licencia y descarga el instalador. 
+ * Sigue las instrucciones de instalación para configurarlo en tu sistema.
 
-### 3. SUSHI :
+#### 3. SUSHI :
 SUSHI es una implementación de referencia y un estándar de *facto* para un compilador FSH que traduce FSH en artefactos FHIR como perfiles, extensiones y vale sets.
 
  - **Paso 1:** SUSHI requiere *Node.js*, para instalar diríjase a [Node JS](https://nodejs.org/en) y seleccione la descarga "LTS". Una vez descargado el instalador, ejecútelo utilizando las opciones predeterminadas.
@@ -89,27 +90,22 @@ Para asegurar una instalación correcta, abra una ventana de comandos y escriba 
    gem install jekyll bundler
    ```
 
+**RECOMENDACIÓN:**
+Agregar "java" en las variables de entorno siguiendo los siguientes puntos:
+ * Busque y ábra variables de entorno en su buscador de Windows.
+ * Seleccione "variables de entorno".
+ * En la ventana que se abrirá "Variables del sistema" seleccione "PATH" Y luego presione el botón "EDITAR".
+ * En una nueva ventana emergente, seleccione el botón "EXAMINAR".
+ * Busque la ruta donde se instala java (./java/bin) y seleccione "Variables de usuario" y seleccione el botón "Nuevo".
+ * Finalmente cree una variable JAVA_HOME y busque la carpera correspondiente. 
+
+
+### CREACIÓN DE LA GUÍA
+Para crear la estructura de directorios necesaria para el desarrollo de esta guía de implementación, se utilizó el comando *sushi init* tras haber instalado los programas previamente mencionados. Este comando generó la estructura base del proyecto. La organización inicial se basó en la guía de implementación [SDOH Clinical Care](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/), estableciendo ademaás una dependencia con la guía [CL Core](https://hl7chile.cl/fhir/ig/clcore/1.9.1/index.html). Ambas guías proporcionaron una estructura que fue analizada y comparada para diseñar perfiles necesarios de manera adecuada. 
+
+#### Creación de Perfiles:
+En esta etapa 
 
 
 
 
-
-6) se recomienda agregar  java en las variables de entorno
-  a) busque variables de entorno en el buscador de windows y ábralas
-  b) seleccione en el último botón "variables de entorno"
-  c) en la segunda ventanita "variables del sistema"  pinchas "path" y luego el botón "editar"
-  d) se abrirá una ventana y seleccione el botón "examinar"
-  e) busque la ruta donde se instala java ./java/bin y seleccione
-  f) en "variables de usuario" (primera ventana grande) pinche el botón "nuevo)
-  g) cree una variable JAVA_HOME y busque la carpeta correspondiente (en mi caso es C:\Program Files\Java\jdk-17)
-
-
-COMANDOS
-1.- Instalar Zip y Unzip.
-```
-sudo apt install zip
-```
-1.- Instalar Git.
-```
-apt-get install git
-```
