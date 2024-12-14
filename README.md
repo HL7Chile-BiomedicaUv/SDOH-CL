@@ -106,7 +106,9 @@ Para crear la estructura de directorios necesaria para el desarrollo de esta gu�
 #### Creación de Perfiles:
 Garvity propone un total de 12 perfiles, los cuales se muestran en la siguiente imagen. 
 
-<img src="input/imagesReadme/Perfiles.png" title="Perfiles propuestos por Gravity" width="400" style="display: block; margin: auto;" />
+<div style="text-align: center;">
+  <img src="input/imagesReadme/Perfiles.png" title="Perfiles propuestos por Gravity" width="600">
+</div>
 
 De estos 12 perfiles, cuatro se desarrollaron en base a perfiles desarrollados en la guía de implementación  [CL Core](https://hl7chile.cl/fhir/ig/clcore/1.9.1/index.html) y ocho se desarrollaron en base al estándar FHIR R4, tal como se muestra en la siguiente tabla.
 
