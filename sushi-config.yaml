@@ -102,7 +102,6 @@ pages:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Inicio: index.html
-  Artefactos: artifacts.html
   Fondo:
     Interoperabilidad de datos SDOH: 2-sdoh_challenges_gravity.html
     Antecedentes de la atención clínica de SDOH: 3-sdoh_clinical_care_scope.html
