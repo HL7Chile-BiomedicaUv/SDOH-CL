@@ -226,17 +226,21 @@ El código anterior muestra la estructura general de los perfiles desarrollados.
 
 Para realizar la programación de los elementos mencionados anteriormente, se utilizó [FSH Online](https://fshonline.fshschool.org/), una herramienta basada en la web que facilita el trabajo con FHIR Shorthand (FSH). Este lenguaje especializado está diseñado para crear perfiles, extensiones, conjuntos de valores (Value Sets) y otros artefactos en el ecosistema FHIR de manera eficiente, legible y estructurada. FSH Online permitió convertir los códigos en formato JSON provenientes de las guías base en estructuras FSH, lo que simplificó su edición, personalización y programación. Además, esta herramienta optimizó el proceso de desarrollo al proporcionar un entorno interactivo, validación inmediata y generación de artefactos FHIR compatibles con los estándares internacionales. A continuación, se muestra cómo se utiliza FSH Online en la programación de estos elementos.
 
+<style>
+    figure {
+        margin-bottom: 20px; /* Espacio entre cada figura */
+    }
+</style>
+
 <figure>
-    <img src="input/imagesReadme/FSHCondition.png" title="Ejemplo utilización FSH Perfil Condition" width="600" />
+    <img src="input/imagesReadme/FSHCondition.png" title="Ejemplo utilización FSH Perfil Condition" width="700" />
     <figcaption>Ejemplo de utilización de FSH para el perfil Condition.</figcaption>
 </figure>
 
-
 <figure>
-    <img src="input/imagesReadme/FSHConditionCL.png" title="Ejemplo utilización FSH Perfil Diagnóstico CL" width="600" />
+    <img src="input/imagesReadme/FSHConditionCL.png" title="Ejemplo utilización FSH Perfil Diagnóstico CL" width="700" />
     <figcaption>Ejemplo utilización FSH Perfil Diagnóstico CL.</figcaption>
 </figure>
-
 
 
 
