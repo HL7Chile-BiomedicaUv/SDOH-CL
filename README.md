@@ -122,7 +122,7 @@ Los value sets se emplean para definir terminologías relacionadas con los deter
 
 **Inclusión de Value sets nacionales:** En el desarrollo de la guía de implementación nacional se añadió un nuevo value set denominado *"Códigos de procedimientos Cl"*. Este está diseñado para trabajar con los procedimientos definidos por FONASA, asegurando que los códigos sean compatibles con el contexto y las normativas específicas de nuestro país. 
 
-<img src="input/imagesReadme/Valuesetejemplo.png" title="Diagrama de procesos" width="600" />
+<img src="input/imagesReadme/Valuesetejemplo.png" title="Ejemplo programación value set" width="600" />
 
 **2. Code Systems:** 
 Los code systems contienen todos los términos disponibles dentro de un dominio específico; en este caso, están relacionados con los determinantes sociales de la salud. Estos sitemas permiten estandarizar la terminología utilizada en los recursos FHIR, asegurando interoperabilidad y consistencia en la captura e intercambio de datos.
@@ -134,7 +134,7 @@ Los code systems contienen todos los términos disponibles dentro de un dominio 
 
 **Inclusión de Code System nacional:** en el desarrollo de esta GI se añadió un code system denominado *Código MAI de Fonasa*, el cual contiene códigos personalizados relacionados con los procedimientos realizados en chile. Este sistema se basa en la clasificación establecida por FONASA, adaptando la terminología internacional a las necesidades del contexto nacional. 
 
-<img src="input/imagesReadme/Codesystemejemplo.png" title="Diagrama de procesos" width="600" />
+<img src="input/imagesReadme/Codesystemejemplo.png" title="Ejemplo programación Code system" width="600" />
 
 #### Creación de Perfiles:
 Garvity propone un total de 12 perfiles, los cuales se muestran en la siguiente imagen. 
@@ -222,8 +222,13 @@ Description: "Perfil de las condiciones de los Determinantes Sociales de la Salu
 * onset[x] ^definition = "Fecha y hora o período estimado o real en que comenzó la condición."
 * onset[x] ^comment = "Para las condiciones de SDOH que tienen su inicio en un período prolongado (o difuso)(por ejemplo, el mes pasado), el inicio de la condición puede utilizar una representación de menor precisión (por ejemplo, mes/año o año) en lugar de una representación de mayor precisión (por ejemplo, año/mes/fecha/hora/minuto)."
 ```
+El código anterior muestra la estructura general de los perfiles desarrollados. En una primera etapa, se presentan los *alias*, que facilitan la referencia a URLs largas empleadas para definir perfiles, value sets y extensiones, mejorando la legibilidad y simplificando su uso en la configuración. Posteriormente, se identifica el perfil a través de elementos clave como Profile, Parent, Id, Title, Description, los cuales permiten definir la herencia, el próposito y las carácteristicas principales del perfil. Finalmente, se detalla el desarrollo de la estructura de datos clave, donde se especifican restricciones, extenciones, valores obligatorios y elementos relevantes para garantizar la interoperabilidad, la precisión semántica y la adecuación a los requerimientos técnicos y clínicos. 
 
+Para realizar la programación de los elementos mencionados anteriormente, se utilizó [FSH Online](https://fshonline.fshschool.org/), una herramienta basada en la web que facilita el trabajo con FHIR Shorthand (FSH). Este lenguaje especializado está diseñado para crear perfiles, extensiones, conjuntos de valores (Value Sets) y otros artefactos en el ecosistema FHIR de manera eficiente, legible y estructurada. FSH Online permitió convertir los códigos en formato JSON provenientes de las guías base en estructuras FSH, lo que simplificó su edición, personalización y programación. Además, esta herramienta optimizó el proceso de desarrollo al proporcionar un entorno interactivo, validación inmediata y generación de artefactos FHIR compatibles con los estándares internacionales. A continuación, se muestra cómo se utiliza FSH Online en la programación de estos elementos.
 
+<img src="input/imagesReadme/FSHCondition.png" title="Ejemplo utilización FSH Perfil Condition" width="600" />
+
+<img src="input/imagesReadme/FSHConditionCL.png" title="Ejemplo utilización FSH Perfil Diagnóstico CL" width="600" />
 
 
 
