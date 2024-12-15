@@ -231,9 +231,10 @@ Para realizar la programación de los elementos mencionados anteriormente, se ut
     <figcaption>Ejemplo de utilización de FSH para el perfil Condition.</figcaption>
 </figure>
 
+
 <figure>
     <img src="input/imagesReadme/FSHConditionCL.png" title="Ejemplo utilización FSH Perfil Diagnóstico CL" width="600" />
-    <figcaption>Ejemplo de utilización de FSH para el perfil Condition.</figcaption>
+    <figcaption>Ejemplo utilización FSH Perfil Diagnóstico CL.</figcaption>
 </figure>
 
 
