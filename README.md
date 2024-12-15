@@ -250,6 +250,8 @@ En la siguiente imagen, se presenta un ejemplo de código desarrollado para "Con
     <img src="input/imagesReadme/VSCEjemploCondicion.png"  width="700" />
     <figcaption>Ejemplo programación ejemplo condición.</figcaption>
 
+
+
 Para darle una estructura a la guía de implementación se modificó el archivo **sushi-config.yaml**, el cual es una configuración utilizada por SUSHI. Este archivo especifica las directrices y parámetros necesarios para la compilación y validación de los artefactos definidos mediante FSH. Los elementos modificados dentro de este archivo fueron: 
  * Dependencias:
    
