@@ -250,8 +250,170 @@ En la siguiente imagen, se presenta un ejemplo de código desarrollado para "Con
     <img src="input/imagesReadme/VSCEjemploCondicion.png"  width="700" />
     <figcaption>Ejemplo programación ejemplo condición.</figcaption>
 
+Para darle una estructura a la guía de implementación se modificó el archivo **sushi-config.yaml**, el cual es una configuración utilizada por SUSHI. Este archivo especifica las directrices y parámetros necesarios para la compilación y validación de los artefactos definidos mediante FSH. Los elementos modificados dentro de este archivo fueron: 
+ * Dependencias:
+   
+   ```
+   dependencies:
+     hl7.fhir.cl.clcore: 1.9.1
+     hl7.fhir.us.sdoh-clinicalcare: 2.2.0
+     hl7.fhir.uv.sdc: 3.0.0 
+   ```   
+   * Pages: para darle nombre y título a las paginas que contiene la guía de implementación.
+    ```
+    pages:
+      index.md:
+        title: Inicio IG
+      2-sdoh_challenges_gravity.md:
+        title: Importancia de los SDOH
+      3-sdoh_clinical_care_scope.md:
+        title: Antecedentes de atención clínica de SDOH
+      4-technicalBackground.md:
+        title: Antecedentes técnicos
+      5-glossary.md:
+        title: Glosario
+      6-assessment_instrument_support.md:
+        title: Soportes de instrumentos de evaluación
+      7-referralWorkflow.md:
+        title: Flujo de trabajo de referencia
+      8-checking_taks_status.md:
+        title: Comprobación del estado de la tarea
+      9-connecting_applications_with_api_data_sources.md:
+        title: Conexión de aplicaciones con fuentes de datos API
+      10-gravity_terminology.md:
+        title: Value sets
+      11-mustsupport_and_missing_data.md:
+        title: Must Support y Missing Data
+      12-privacy_and_security.md:
+        title: Privacidad y seguridad
+    ```
+   * Menu: permite modificar los elementos dentro de la barra de información presente en la página de inicio de la guía de implementación.
+    ```
+    menu:
+      Inicio: index.html
+      Fondo:
+        Interoperabilidad de datos SDOH: 2-sdoh_challenges_gravity.html
+        Antecedentes de la atención clínica de SDOH: 3-sdoh_clinical_care_scope.html
+        Antecedentes técnicos: 4-technicalBackground.html
+        Glosario: 5-glossary.html
+      Guía de implementación:
+        Apoyo a los instrumentos de evalaución: 6-assessment_instrument_support.html
+        Flujo de trabajo de referencia: 7-referralWorkflow.html
+        Comprobación del estado de la tarea: 8-checking_taks_status.html
+        Conexión de aplicaciones con fuentes de datos de API: 9-connecting_applications_with_api_data_sources.html
+        Value sets del proyecto: 10-gravity_terminology.html
+      Artefactos y ejemplos FHIR: 
+        Perfiles: artifacts.html#profiles
+        Value Sets: artifacts.html#value-sets
+        Code Systems: artifacts.html#code-systems
+        Ejemplos: artifacts.html#examples
+        Listado completo: artifacts.html
+      Especificaciones:
+        Privacidad y seguridad: 12-privacy_and_security.html
+        Must Support y Missing data: 11-mustsupport_and_missing_data.html 
+     ```
+    * Grupos: permite agrupar los elementos desarrollados de forma ordenada.
+    ```
+    groups:
+       Profiles:
+         name: Profiles
+         resources:
+         - SDOHCCConditionCL
+         - SDOHCCConsentCL
+         - SDOHCCGoalCL
+         - SDOHCCGroupCL
+         - SDOHCCHealthcareServiceCL
+         - SDOHCCLocationCL
+         - SDOHCCObservacionAssessmentCL
+         - SDOHCCObservationScreeninigResponseCL
+         - SDOHCCProcedureCL
+         - SDOHCCServiceRequestCL
+         - SDOHCCTaskForPatientCL
+         - SDOHCCTaskForReferralManagementCL
 
+       ValueSets:
+         name: Value Sets
+         resources:
+         - SDOHCCValueSetLOINCSNOMEDCTCL
+         - SDOHCCValueSetObservationStatusCL
+         - SDOHCCValueSetSDOHCategoryCL
+         - SDOHCCValueSetSDOHQuestionnaireCategoryCL
+         - SDOHCCValueSetReferralTaskStatusCL
+         - SDOHCCValueSetTaskCodeCL
+         - SDOHCCValueSetTaskPriorityCL
+         - SDOHCCValueSetTaskStatusCL
+         - CLCoreProcedureCodes
 
+       CodeSystems:
+         name: Code Systems
+         resources:
+         - SDOHCCCodeSystemTemporaryCodesCL
+         - CodigoMAIFONASSA
+
+       Extensions:
+         name: Extensions
+         resources:
+         - SDOHCCExtensionHealthcareServiceTelecomAppointmentCL
+         - SDOHCCExtensionConditionAsserterCL
+
+       Examples:
+         name: Examples
+         resources:
+         - Ejemplo-Paciente
+         - Ejemplo-CondicionDesempleo
+         - Ejemplo-ConsentimientoInformado
+         - Ejemplo-MetaSegAlimentaria
+         - Ejemplo-GrupoPacientes
+         - Ejemplo-CitadeAtencion
+         - Ejemplo-Ubicacion
+         - Ejemplo-EvObsIngestaAlimentos
+         - Ejemplo-EvObsTransporte
+         - Ejemplo-Organizacionprestadora
+         - Ejemplo-PlataformaCoordinacion
+         - Ejemplo-OrganizacionPagadora
+         - Ejemplo-Prestador
+         - Ejemplo-RolPrestador
+         - Ejemplo-ProcedAsistSolicitudProgramBancoAlim
+         - Ejemplo-ProcedimientoSuministroAlim
+         - Ejemplo-AsistenciaSolicitudProgramAlimentos
+         - Ejemplo-SolServAplicacionBancoAlim
+         - Ejemplo-SubderivProgramaHuertos
+         - Ejemplo-SubderivSolicitudServProgramaAlimentos
+         - Ejemplo-InformacionRevisionTarea
+         - Ejemplo-SolicitudInformacionTarea
+         - Ejemplo-CumplimientoAcepOrdenGestionRefTarea
+         - Ejemplo-CumplimientoOrdenTareasRef
+         - Ejemplo-AceptacionSubtareaCumpTareasRef
+         - Ejemplo-SubtareaCompletadaCumpOrGestTareaRef
+         - Ejemplo-TareaparaProgramarCitaconPaciente
+         - Ejemplo-TareaCompletadaCuestionarioRiesgo
+         - Ejemplo-DocumentoReferencia
+
+       ExamplesPRAPARE:
+         name: PRAPARE Examples
+         description: Para el instrumento de evaluació PRAPARE, estos son ejemplos de Cuestionario, Respuesta al Cuestionario, además de observaciones y una condición derivada de la respuesta al cuestionario utilizando StructureMap.
+         resources:
+         - Ejemplo-CuestionarioPRAPARE
+         - Ejemplo-RespuestaCuestionarioPRAPARE
+         - Ejemplo-RespuestaObsCuidadoInfantil
+         - Ejemplo-RespuestaObsNecesidaddeRopa
+         - Ejemplo-RespuestaObsEstadoLaboral
+         - Ejemplo-RespuestaObsEstadoVivienda
+         - Ejemplo-CondicionDeDesamparo
+
+       EXAMPLESHVS:
+         name: Hunger Vital Sign Examples
+         description: Para el instrumento de evaluación Hunger Vital Sign, estos son ejemplos de Cuestionario, Respuesta al Cuestionario, además de una observación y condición derivada de la respuesta al cuestionario utilizando StructureMap.
+         resources:
+         - Ejemplo-QuestionnaireHunger
+         - Ejemplo-QuestionnaireRespHunger
+         - Ejemplo-RespuestaObsPreg3Hunger
+         - Ejemplo-CondicionInsAlimentaria
+         - Ejemplo-DeviceSoftware
+         - Ejemplo-DispositivoConfirmacion
+    ```
+
+Para concluir este trabajo, es necesario publicar la guía de implementación y realizar modificaciones en los cuestionarios y tablas de preguntas generadas por Garvity, ajustándolos a la realidad específica de nuestro país utilizando sus propios códigos. Esto permitirá adaptar y personalizar cada uno de los elementos para asegurar su pertinencia y utilidad en el contexto local, facilitando una mejor integración y aplicación de los recursos en la práctica clínica y administrativa.
 
 
 
