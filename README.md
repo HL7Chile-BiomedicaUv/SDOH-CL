@@ -243,13 +243,13 @@ La iamgen a continuación muestra la transformación de código utilizando FSH O
 <figure>
     <img src="input/imagesReadme/FSHEjemplocondition.png"  width="700" />
     <figcaption>Ejemplo de utilización de FSH para el ejemplo para Condition.</figcaption>
- \n
+
 En la siguiente imagen, se presenta un ejemplo de código desarrollado para "Condición de desempleo", ilustrando cómo se adapta y programa un perfil específico para las condiciones de los determinantes sociales de la salud.
 
 <figure>
     <img src="input/imagesReadme/VSCEjemploCondicion.png"  width="700" />
     <figcaption>Ejemplo programación ejemplo condición.</figcaption>
-\n
+
 Para darle una estructura a la guía de implementación se modificó el archivo **sushi-config.yaml**, el cual es una configuración utilizada por SUSHI. Este archivo especifica las directrices y parámetros necesarios para la compilación y validación de los artefactos definidos mediante FSH. Los elementos modificados dentro de este archivo fueron: 
  * Dependencias:
    
