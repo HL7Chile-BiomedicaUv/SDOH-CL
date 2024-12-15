@@ -122,7 +122,7 @@ Los value sets se emplean para definir terminologías relacionadas con los deter
 
 **Inclusión de Value sets nacionales:** En el desarrollo de la guía de implementación nacional se añadió un nuevo value set denominado *"Códigos de procedimientos Cl"*. Este está diseñado para trabajar con los procedimientos definidos por FONASA, asegurando que los códigos sean compatibles con el contexto y las normativas específicas de nuestro país. 
 
-**AGREGAR IMAGEN**
+<img src="input/imagesReadme/Valuesetejemplo.png" title="Diagrama de procesos" width="600" />
 
 **2. Code Systems:** 
 Los code systems contienen todos los términos disponibles dentro de un dominio específico; en este caso, están relacionados con los determinantes sociales de la salud. Estos sitemas permiten estandarizar la terminología utilizada en los recursos FHIR, asegurando interoperabilidad y consistencia en la captura e intercambio de datos.
@@ -134,7 +134,7 @@ Los code systems contienen todos los términos disponibles dentro de un dominio 
 
 **Inclusión de Code System nacional:** en el desarrollo de esta GI se añadió un code system denominado *Código MAI de Fonasa*, el cual contiene códigos personalizados relacionados con los procedimientos realizados en chile. Este sistema se basa en la clasificación establecida por FONASA, adaptando la terminología internacional a las necesidades del contexto nacional. 
 
-** AGREGAR IMAGEN**
+<img src="input/imagesReadme/Codesystemejemplo.png" title="Diagrama de procesos" width="600" />
 
 #### Creación de Perfiles:
 Garvity propone un total de 12 perfiles, los cuales se muestran en la siguiente imagen. 
@@ -143,7 +143,7 @@ Garvity propone un total de 12 perfiles, los cuales se muestran en la siguiente 
   <img src="input/imagesReadme/Perfiles.png" title="Perfiles propuestos por Gravity" width="600">
 </div>
 
-De estos 12 perfiles, cuatro se desarrollaron en base a perfiles desarrollados en la guía de implementación  [CL Core](https://hl7chile.cl/fhir/ig/clcore/1.9.1/index.html) y ocho se desarrollaron en base al estándar FHIR R4, tal como se muestra en la siguiente tabla.
+De estos 12 perfiles, cuatro se diseñaron basándose en los perfiles descritos en la guía de implementación  [CL Core](https://hl7chile.cl/fhir/ig/clcore/1.9.1/index.html), mientras que los ocho restantes se desarrollaron conforme al estándar FHIR R4, como se detalla en la siguiente tabla.
 
 | Perfil | Base |
 | ------ | ---- |
@@ -160,7 +160,70 @@ De estos 12 perfiles, cuatro se desarrollaron en base a perfiles desarrollados e
 | Task for patient | [Task](https://hl7.org/fhir/R4/task.html) |
 | Task for referral management | [Task](https://hl7.org/fhir/R4/task.html) |
 
-Al momento de realizar la programación de los perfiles 
+Los perfiles desarrollados basándose en la estructura definida por [CL Core](https://hl7chile.cl/fhir/ig/clcore/1.9.1/index.html) fueron ajustados mediante la adición o eliminación de elementos según correspondiera, en relación con los lineamientos de [SDOH Clinical Care](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/). Este proceso implicó una especie de comparación entre ambos estándares. Por otro lado, para los perfiles creados a partir del estándar FHIR R4 y la GI SDOH Clinical Care, se realizó una traducción adecuada y se adaptaron conceptos cuando fue necesario para garantizar la alineación con los requerimientos locales.
+
+```
+Alias: $CorePacienteCl = https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CorePacienteCl
+Alias: $condition-clinical = http://hl7.org/fhir/ValueSet/condition-clinical
+Alias: $condition-ver-status = http://hl7.org/fhir/ValueSet/condition-ver-status
+Alias: $VSDiagnosticosSCT = https://hl7chile.cl/fhir/ig/clcore/ValueSet/VSDiagnosticosSCT
+Alias: $CoreDiagnosticoCL = https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CoreDiagnosticoCl
+Alias: $CorePrestadorCl = https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CorePrestadorCl
+Alias: $CoreRolClinicoCl = https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CoreRolClinicoCl
+Alias: $sdc-questionnaireresponse = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse
+Alias: $SDOHCC-ExtensionConditionAsserter = http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ExtensionConditionAsserter
+
+Profile: SDOHCCConditionCL
+Parent: $CoreDiagnosticoCL
+Id: SDOHCC-ConditionCL
+Title: "Condición SDOHCC"
+Description: "Perfil de las condiciones de los Determinantes Sociales de la Salud (SDOH)."
+
+* ^version = "0.1.0"
+* ^status = #draft
+* ^experimental = false
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
+* obeys SDOH-Con-1
+* . ^short = "Información detallada sobre las condiciones, problemas o diagnósticos de los Determinantes Sociales de la Salud (SDOH)."
+* . ^definition = "Para la representación de las condiciones de los Determinantes Sociales de la Salud (SDOH)."
+* . ^comment = "Muchos de los perfiles de SDOHCC se hacen referencia entre sí.Un flujo apoyado por esta IG es que las respuestas de los cuestionarios resultan en observaciones que pueden ser utilizadas como evidencia para condiciones que pueden llevar a metas, solicitudes de servicio y procedimientos. Sin embargo también son posibles caminos alternativos (por ejemplo, para llegar a las condiciones de SDOH).\r\n\r\nUn uso específico para este perfil es representar una preocupación de salud que sea: 1) directamente afirmada en base a la respuesta del paciente a una pregunta específica de un cuestionario de evaluación de SDOH, o 2) calculada/generada en base a las respuestas del paciente a múltiples preguntas. Las preguntas y respuestas del cuestionario de evaluación también se representan utilizando SDC Questionnaire, SDC QuestionnaireResponse y SDOHCC Screening Response Observation."
+
+* extension ^slicing.discriminator.type = #value
+* extension ^slicing.discriminator.path = "url"
+* extension ^slicing.rules = #open
+* extension contains $SDOHCC-ExtensionConditionAsserter named asserterDevice 0..1 MS
+* extension[asserterDevice] ^condition = "SDOH-Con-1"
+* extension[asserterDevice].value[x] only Reference(Device)
+
+* verificationStatus ^comment = "El estado de verificación no es obligatorio. Por ejemplo, cuando un paciente se queja de estrés durante una consulta con un proveedor, es poco probable que haya un estado de verificación. El tipo de datos es CodeableConcept porque el estado de verificación implica cierto juicio clínico, de modo que podría ser necesaria más especificidad de la que permite el conjunto de valores requerido de FHIR. Por ejemplo, una codificación SNOMED podría permitir una mayor especificidad.\r\n\r\nPara las condiciones SDOH que se generan automáticamente en función de la respuesta a un cuestionario, el asertor de la condición es un \"Dispositivo\" y la categoría de la condición debe ser \"preocupación de salud\". En ese caso, el estado de verificación de la condición debe ser \"no confirmado\" y debe cambiarse a \"confirmado\" solo después de una revisión y acuerdo por parte del proveedor y el paciente."
+
+* category ^slicing.discriminator.type = #value
+* category ^slicing.discriminator.path = "$this"
+* category ^slicing.rules = #open
+* category ^slicing.description = ""
+* category contains SDOH 0..*
+* category[SDOH] from SDOHCCValueSetSDOHCategoryCL (required)
+* category[SDOH] ^short = "Por ejemplo, inseguridad alimentaria | inseguridad en el transporte."
+* category[SDOH] ^definition = "Una categoría de SDOH asignada a la condición."
+* category[SDOH] ^requirements = "Los códigos de este conjunto de valores se pueden usar para asignar una o más categorías de SDOH (por ejemplo, inseguridad alimentaria, inseguridad en el transporte, etc.) a una condición. Se recomienda utilizar los códigos de categorías de SDOH para facilitar la búsqueda de condiciones de SDOH."
+* category[SDOH] ^binding.description = "Códigos para categorías de SDOH de alto nivel."
+
+* code 1..1 MS
+* code from $VSDiagnosticosSCT (required)
+* code ^requirements = "El código es obligatorio y debe seleccionarse del value set enlazado."
+* code ^binding.description = "Value set para describir el problema real experimentado por el paciente."
+
+* bodySite ..0
+
+* onset[x] only dateTime or Period
+* onset[x] MS
+* onset[x] ^short = "Fecha y hora o período estimados."
+* onset[x] ^definition = "Fecha y hora o período estimado o real en que comenzó la condición."
+* onset[x] ^comment = "Para las condiciones de SDOH que tienen su inicio en un período prolongado (o difuso)(por ejemplo, el mes pasado), el inicio de la condición puede utilizar una representación de menor precisión (por ejemplo, mes/año o año) en lugar de una representación de mayor precisión (por ejemplo, año/mes/fecha/hora/minuto)."
+```
+
+
 
 
 
