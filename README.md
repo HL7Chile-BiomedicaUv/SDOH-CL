@@ -105,7 +105,7 @@ Para crear la estructura de directorios necesaria para el desarrollo de esta gu�
 
 Para desarrollar los perfiles presentados en la guía de implementación *SDOH Clinical Care* en una primera instancia se desarrolló: 
 
-**1. Value Sets**
+#### 1. Value Sets
 Los value sets se emplean para definir terminologías relacionadas con los determinantes sociales de la salud, incluyendo conceptos clínicos como necesidades, intervenciones, resultados y otros datos relevantes. Estos value sets garantizan la estandarización en la captura y el intercambio de infromación, permitiendo la interoperabilidad entre diferentes sistemas de salud. 
 
 | Value Sest Gravity | Value Sets GI nacional |
@@ -124,7 +124,7 @@ Los value sets se emplean para definir terminologías relacionadas con los deter
 
 <img src="input/imagesReadme/Valuesetejemplo.png" title="Ejemplo programación value set" width="600" />
 
-**2. Code Systems:** 
+#### 2. Code Systems
 Los code systems contienen todos los términos disponibles dentro de un dominio específico; en este caso, están relacionados con los determinantes sociales de la salud. Estos sitemas permiten estandarizar la terminología utilizada en los recursos FHIR, asegurando interoperabilidad y consistencia en la captura e intercambio de datos.
 
 | Code System Gravity | Code System GI nacional |
@@ -136,7 +136,7 @@ Los code systems contienen todos los términos disponibles dentro de un dominio 
 
 <img src="input/imagesReadme/Codesystemejemplo.png" title="Ejemplo programación Code system" width="600" />
 
-**3. Creación de perfiles**
+#### 3. Creación de perfiles
 Garvity propone un total de 12 perfiles, los cuales se muestran en la siguiente imagen. 
 
 <div style="text-align: center;">
@@ -235,7 +235,7 @@ Para realizar la programación de los elementos mencionados anteriormente, se ut
     <figcaption>Ejemplo utilización FSH Perfil Diagnóstico CL.</figcaption>
 </figure>
 
-**4. Creación de ejemplos**
+#### 4. Creación de ejemplos
 Para crear instancias, se tomaron como base los Examples, PRAPARE Examples y Hunger Vital Sign Examples de la guía de implementación SDOH Clinical Care. La metodología seguida consistió en extraer el código JSON de cada ejemplo y aplicar FSH Online para transformar estos códigos en estructuras más manejables. El código en FSH se programó utilizando Visual Studio Code, o que permitió una edición detallada y controlada.  
  
 La iamgen a continuación muestra la transformación de código utilizando FSH Online.
