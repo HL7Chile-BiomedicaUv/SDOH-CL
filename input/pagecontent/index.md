@@ -29,6 +29,13 @@ El desarrollo de esta IG se basa en lo implementado por el proyecto “Gravity P
 {% include ip-statements.xhtml %}
 
 
+**Esta Guía de Implementación ha sido posible gracias a las atentas contribuciones de las siguientes personas:**
+<br>
+* Catalina Orostizaga, Tesista
+* Cesar Galindo, Profesor Guia
+* Franco Ulloa, Co-Guia
+
+
 -----------------------------------------------------------------------------------------------------
 [^1]: [Healthy People 2030](https://health.gov/healthypeople/priority-areas/social-determinants-health)
 
