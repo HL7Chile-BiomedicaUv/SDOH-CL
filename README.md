@@ -418,7 +418,7 @@ Dentro de estos se encuentra:
   ```
   sushi .
   ```
-<img src="input/imagesReadme/Sushi.png"  width="700" />
+<img src="input/imagesReadme/Sushi.png"  width="500" />
 
 * **git add .** :este se utiliza en Git para agregar todos los cambios realizados en los archivos del directorio actual al área de preparación.
  ```
