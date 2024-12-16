@@ -411,6 +411,29 @@ Para darle una estructura a la guía de implementación se modificó el archivo 
          - Ejemplo-DispositivoConfirmacion
     ```
 
+
+**COMANDOS IMPORTANTES**
+Dentro de estos se encuentra: 
+* **sushi .** : este comando ejecuta SUSHI dentro del directorio actual para procesar los archivos FSH y generar artefactos FHIR como perfiles, extenciones, value sets y otros. Escencialmente tomaa los archivos escritos en FSH Shorthand y compila en recursos FHIR en formatos como JSON. Además, permite visualizar errores o warning dentro de los códigos ejecutados.
+  ```
+  sushi .
+  ```
+<img src="input/imagesReadme/Sushi.png"  width="700" />
+
+* **git add .** :este se utiliza en Git para agregar todos los cambios realizados en los archivos del directorio actual al área de preparación.
+ ```
+ git add .
+ ```
+* **git commit -m ""** : se tuiliza en Git para crear un commit, el cual corresponde a un registro de cambios en el repositorio, y al mismo tiempo asignarle un mensaje descriptivo mediante el argumento -m.
+  ```
+  git commit -m ""
+  ```
+* **git push origin main** : se utiliza en Git para enviar los commits realizados en la rama local main al repositorio remoto asociado.
+  ```
+  git push origin main
+  ```
+Estos comandos se recomienda repetirlos cada ciertas modificaciones para tener un control ordenado de las mismas. 
+
 Para concluir este trabajo, es necesario publicar la guía de implementación y realizar modificaciones en los cuestionarios y tablas de preguntas generadas por Garvity, ajustándolos a la realidad específica de nuestro país utilizando sus propios códigos. Esto permitirá adaptar y personalizar cada uno de los elementos para asegurar su pertinencia y utilidad en el contexto local, facilitando una mejor integración y aplicación de los recursos en la práctica clínica y administrativa.
 
 
