@@ -421,9 +421,9 @@ Dentro de estos se encuentra:
 <img src="input/imagesReadme/Sushi.png"  width="500" />
 
 * **git add .** :este se utiliza en Git para agregar todos los cambios realizados en los archivos del directorio actual al área de preparación.
- ```
- git add .
- ```
+  ```
+  git add .
+  ```
 * **git commit -m ""** : se tuiliza en Git para crear un commit, el cual corresponde a un registro de cambios en el repositorio, y al mismo tiempo asignarle un mensaje descriptivo mediante el argumento -m.
   ```
   git commit -m ""
