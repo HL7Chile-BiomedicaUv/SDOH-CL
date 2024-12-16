@@ -413,6 +413,8 @@ Para darle una estructura a la guía de implementación se modificó el archivo 
 
 
 **COMANDOS IMPORTANTES**
+
+
 Dentro de estos se encuentra: 
 * **sushi .** : este comando ejecuta SUSHI dentro del directorio actual para procesar los archivos FSH y generar artefactos FHIR como perfiles, extenciones, value sets y otros. Escencialmente tomaa los archivos escritos en FSH Shorthand y compila en recursos FHIR en formatos como JSON. Además, permite visualizar errores o warning dentro de los códigos ejecutados.
   ```
