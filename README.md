@@ -100,7 +100,7 @@ Agregar "java" en las variables de entorno siguiendo los siguientes puntos:
  * Finalmente cree una variable JAVA_HOME y busque la carpera correspondiente. 
 
 
-### 3. Creación de perfiles
+### CREACIÓN DE ARTEFACTOS
 Para crear la estructura de directorios necesaria para el desarrollo de esta guía de implementación, se utilizó el comando *sushi init* tras haber instalado los programas previamente mencionados. Este comando generó la estructura base del proyecto. La organización inicial se basó en la guía de implementación [SDOH Clinical Care](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/), estableciendo ademaás una dependencia con la guía [CL Core](https://hl7chile.cl/fhir/ig/clcore/1.9.1/index.html). Ambas guías proporcionaron una estructura que fue analizada y comparada para diseñar perfiles necesarios de manera adecuada. 
 
 Para desarrollar los perfiles presentados en la guía de implementación *SDOH Clinical Care* en una primera instancia se desarrolló: 
@@ -136,7 +136,7 @@ Los code systems contienen todos los términos disponibles dentro de un dominio 
 
 <img src="input/imagesReadme/Codesystemejemplo.png" title="Ejemplo programación Code system" width="600" />
 
-#### CREACIÓN DE PERFILES
+**3. Creación de perfiles**
 Garvity propone un total de 12 perfiles, los cuales se muestran en la siguiente imagen. 
 
 <div style="text-align: center;">
@@ -235,7 +235,7 @@ Para realizar la programación de los elementos mencionados anteriormente, se ut
     <figcaption>Ejemplo utilización FSH Perfil Diagnóstico CL.</figcaption>
 </figure>
 
-#### 4. Creación de ejemplos
+**4. Creación de ejemplos**
 Para crear instancias, se tomaron como base los Examples, PRAPARE Examples y Hunger Vital Sign Examples de la guía de implementación SDOH Clinical Care. La metodología seguida consistió en extraer el código JSON de cada ejemplo y aplicar FSH Online para transformar estos códigos en estructuras más manejables. El código en FSH se programó utilizando Visual Studio Code, o que permitió una edición detallada y controlada.  
  
 La iamgen a continuación muestra la transformación de código utilizando FSH Online.
