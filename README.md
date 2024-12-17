@@ -239,7 +239,7 @@ Para realizar la programación de los elementos mencionados anteriormente, se ut
 #### 4. Creación de ejemplos
 Para crear instancias, se tomaron como base los Examples, PRAPARE Examples y Hunger Vital Sign Examples de la guía de implementación SDOH Clinical Care. La metodología seguida consistió en extraer el código JSON de cada ejemplo y aplicar FSH Online para transformar estos códigos en estructuras más manejables. El código en FSH se programó utilizando Visual Studio Code, lo que permitió una edición detallada y controlada.  
  
-La iamgen a continuación muestra la transformación de código utilizando FSH Online.
+La imagen a continuación muestra la transformación de código utilizando FSH Online.
 
 <img src="input/imagesReadme/FSHEjemplocondition.png"  width="700" />
 
