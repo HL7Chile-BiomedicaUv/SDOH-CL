@@ -41,14 +41,15 @@ Este es un editor de código fuente ligero y multiplataforma. Su proceso de inst
   * Accede al sitio oficial de [Visual Studio Code](https://code.visualstudio.com/)
   *  Hacer clic en el botón **Download** según el sistema operativo.
 
-   *Para Windows*:
-     * Una vez descargado el instalador (VSCodeSetup.exe), ábralo.
-     * Acepte términos de licencia y seleccione las siguientes opciones:
-         * Crear un acceso directo en el escritorio.
-         * Añadir VS Code al menú contextual o al PATH (opción recomendada para usar la terminal)
-         * Haz clic en **Instalar** y espere que el proceso finalice.
-         * Una vez completada la instalación, haga clic en **finalizar** para abrir el panel.
-         * Al abrir Visual Studio Code, se debe instlar la extensión de Git.
+*Para Windows*:
+* Una vez descargado el instalador (VSCodeSetup.exe), ábralo.
+* Acepte términos de licencia y seleccione las siguientes opciones:
+* Crear un acceso directo en el escritorio.
+* Añadir VS Code al menú contextual o al PATH (opción recomendada para usar la terminal)
+* Haz clic en **Instalar** y espere que el proceso finalice.
+* Una vez completada la instalación, haga clic en **finalizar** para abrir el panel.
+* Al abrir Visual Studio Code, se debe instlar la extensión de Git.
+
 Con esto, Visual Studio Code está listo para comenzar.
 
 #### 2. Instalación "Java jdk": 
