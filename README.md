@@ -33,7 +33,7 @@ Al tratarse de una guía de implementación CORE, no fue necesario desarrollar e
 En este apartado se describen los programas y metodología empleada para el desarrollo de la guía de implementación. El propósito es proporcionar una visión clara y estructurada sobre los enfoques adoptados, las herramientas utilizadas y los procesos seguidos para garantizar la coherencia, eficacia y aplicabilidad de la guía, facilitando la replicabilidad y la adaptación del contenido, asegurando su utilidad práctica para los usuarios. 
 
 ### INSTALACIÓN DE SOFTWARES 
-**IMPORTANTE:** Toda la intalación descrita debe ser en modo administrador.
+**IMPORTANTE:** Toda la instalación descrita debe ser en modo administrador.
 
 #### 1. **Instalación Visual Studio Code**: 
 
