@@ -48,12 +48,12 @@ Este es un editor de código fuente ligero y multiplataforma. Su proceso de inst
 * Añadir VS Code al menú contextual o al PATH (opción recomendada para usar la terminal)
 * Haz clic en **Instalar** y espere que el proceso finalice.
 * Una vez completada la instalación, haga clic en **finalizar** para abrir el panel.
-* Al abrir Visual Studio Code, se debe instlar la extensión de Git.
+* Al abrir Visual Studio Code, se debe instalar la extensión de Git.
 
 Con esto, Visual Studio Code está listo para comenzar.
 
 #### 2. Instalación "Java jdk": 
-**Java Development Kit (JDK)** es un conjunto de herramientas escenciales para desarrollar, compilar, depurar y ejecutar aplicaciones en el lenguaje de programación Java. 
+**Java Development Kit (JDK)** es un conjunto de herramientas esenciales para desarrollar, compilar, depurar y ejecutar aplicaciones en el lenguaje de programación Java. 
 Para descargar: 
  * Visita el sitio de descarga de [Oracle](https://www.oracle.com/cl/java/technologies/downloads/).
  * Selecciona la versión de JDK adecuada para el sistema operativo. 
