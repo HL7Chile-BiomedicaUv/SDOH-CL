@@ -427,7 +427,7 @@ Dentro de estos se encuentra:
   ```
   git add .
   ```
-* **git commit -m ""** : se tuiliza en Git para crear un commit, el cual corresponde a un registro de cambios en el repositorio, y al mismo tiempo asignarle un mensaje descriptivo mediante el argumento -m.
+* **git commit -m ""** : se utiliza en Git para crear un commit, el cual corresponde a un registro de cambios en el repositorio, y al mismo tiempo asignarle un mensaje descriptivo mediante el argumento -m.
   ```
   git commit -m ""
   ```
