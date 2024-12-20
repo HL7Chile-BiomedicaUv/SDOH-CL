@@ -441,7 +441,7 @@ Dentro de estos se encuentra:
   ```
 Estos comandos se recomienda repetirlos cada ciertas modificaciones para tener un control ordenado de las mismas. 
 
-Para concluir este trabajo, es necesario publicar la guía de implementación y realizar modificaciones en los cuestionarios y tablas de preguntas generadas por Garvity, ajustándolos a la realidad específica de nuestro país utilizando sus propios códigos. Esto permitirá adaptar y personalizar cada uno de los elementos para asegurar su pertinencia y utilidad en el contexto local, facilitando una mejor integración y aplicación de los recursos en la práctica clínica y administrativa.
+Para concluir este trabajo, es necesario publicar la guía de implementación y realizar modificaciones en los cuestionarios y tablas de preguntas generadas por Gravity, ajustándolos a la realidad específica de nuestro país utilizando sus propios códigos. Esto permitirá adaptar y personalizar cada uno de los elementos para asegurar su pertinencia y utilidad en el contexto local, facilitando una mejor integración y aplicación de los recursos en la práctica clínica y administrativa.
 
 
 
