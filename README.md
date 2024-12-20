@@ -30,7 +30,7 @@ El flujo culmina con la emisión de los informes finales, que documentan los res
 Al tratarse de una guía de implementación CORE, no fue necesario desarrollar el modelado ni flujo de datos correspondiente, ya que estos elementos no forman parte del alcance establecido. Del mismo modo, tampoco se consideró necesario el desarrollo de casos de uso, dado que la guía se enfoca en proporcionar lineamientos generales. 
 
 ## Construcción Guía de Implementación
-En este apartado se describen los programas y metodología empleada para el desarrollo de la guía de implementación. El propósito es proporcionar una visión clara y estructurada sobre los enfoques adoptados, las herramientas utilizadas y los procesos seguidos para garantizar la coherencia, eficacia y aplicabilidad de la guía, facilitando la replicabilidad y la adptación del contenido, asegurando su utilidad práctica para los usuarios. 
+En este apartado se describen los programas y metodología empleada para el desarrollo de la guía de implementación. El propósito es proporcionar una visión clara y estructurada sobre los enfoques adoptados, las herramientas utilizadas y los procesos seguidos para garantizar la coherencia, eficacia y aplicabilidad de la guía, facilitando la replicabilidad y la adaptación del contenido, asegurando su utilidad práctica para los usuarios. 
 
 ### INSTALACIÓN DE SOFTWARES 
 **IMPORTANTE:** Toda la intalación descrita debe ser en modo administrador.
