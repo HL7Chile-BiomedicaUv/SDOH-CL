@@ -11,7 +11,7 @@ A partir de la información presentada en la página del proyecto mencionada ant
 <img src="input/imagesReadme/Proceso.png" title="Diagrama de procesos" width="600" />
 
 El presente proceso describe una metodología estructurada para integrar los SDOH en la atención clínica, asegurando una atención personalizada y efectiva.
-  * **Screening**: el flujo inicia con la evaluación del paciente, en la que se identifican factores relevantes relacionados con los determinantes sociales de la salud. Esta información se recolecta a través de un formulario, cuyos datos son almacenados en sistemas electrónicos como el EHR o FHIR, permitiendo su análisis porsterior.
+  * **Screening**: el flujo inicia con la evaluación del paciente, en la que se identifican factores relevantes relacionados con los determinantes sociales de la salud. Esta información se recolecta a través de un formulario, cuyos datos son almacenados en sistemas electrónicos como el EHR o FHIR, permitiendo su análisis posterior.
   * **Assessment/Diagnosis**: En esta etapa, se realiza la evaluación de los SDOH, utilizando la información recolectada para determinar si existen problemáticas que puedan impactar la salud del paciente.
       * Si no se identifican problemas, el proceso finaliza.
       * En caso de detectarse problemáticas, se procede a la siguiente etapa para abordarlas.
@@ -19,7 +19,7 @@ El presente proceso describe una metodología estructurada para integrar los SDO
       * Identificación de problemáticas de salud: se detallan los factores sociales que afectan al paciente.
       * Creación de un plan de atención: se desarrolla un plan personalizado, orientado a mitigar las problemáticas identificadas.
       * Definición de metas: se establecen objetivos claros y medibles que guiarán las intervenciones.
-  Un punto crítico del proceso es la evalaución de estas metas:
+  Un punto crítico del proceso es la evaluación de estas metas:
     * Si no se cumplen, se ajustan las estrategias y se redefine el plan.
     * Si se cumplen, el flujo avanza hacia la implementación de las intervenciones.
   * **Treatment/Interventions**: en esta fase, se ejecutan las tareas o intervenciones definidas en el plan de atención. Posteriormente, se verifica si estas acciones fueron implementados con éxito:
